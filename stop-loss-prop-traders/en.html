@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stop-Loss for Prop Traders: Daily Loss Limit Guide 2026</title>
+<meta name="description" content="How to set a stop-loss on a funded account: daily loss limit calculations, common mistakes, and capital protection strategies for prop firm traders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog'">
+        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-text">Hash Hedge Blog</div>
+      </div>
+
+      <div class="article-hook">HOW TO PROTECT YOUR FUNDED ACCOUNT WITH A SMARTER STOP-LOSS</div>
+
+      <div class="t-title">Stop-Loss for Prop Traders: How to Avoid Violating the Daily Loss Limit</div>
+
+      <div class="article-meta">
+        <span>6 min read</span>
+        <span class="article-meta-sep">|</span>
+        <span>June 17, 2026</span>
+      </div>
+
+      <!-- Paste the image URL into the src="" attribute below. -->
+      <img class="article-hero" src="" alt="A prop trader placing a stop-loss on a crypto chart inside a funded trading account">
+
+      <div class="article-toc">
+        <div class="article-toc-title">Table of Contents</div>
+        <div class="article-toc-list">
+          <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">Why Stop-Loss Works Differently in Prop Trading</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">How to Calculate a Stop-Loss Based on the Daily Loss Limit</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">Common Mistakes: When a Stop-Loss Doesn't Save You</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">Building a System to Protect Your Daily Loss Limit</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">Stop-Loss as the Foundation of Funded Account Discipline</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-faq').scrollIntoView({behavior:'smooth'})">Frequently Asked Questions</div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">Why Stop-Loss Works Differently in Prop Trading</div>
+        <div class="t-descr">Most traders do not lose their funded accounts because of a bad strategy. They lose them because of a single trade that violates the daily loss limit. The stop-loss is there, but it is placed incorrectly.</div>
+        <div class="t-descr">In regular trading, a stop-loss protects your deposit. On a funded account, a stop-loss protects your right to keep trading. That is a fundamental difference.</div>
+        <div class="t-descr">A <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/'">prop firm</span> provides you with capital. To protect that capital, every firm has a strict rule: the maximum loss allowed during a trading day. This is commonly known as the <span class="t-b">daily loss limit</span> or <span class="t-b">daily drawdown</span>.</div>
+        <div class="t-descr">At Hash Hedge, this limit is <span class="t-b">5% of the account balance</span>. On a $25,000 account, that equals <span class="t-b">$1,250</span>. If you lose more than that during the day, the account is automatically terminated.</div>
+        <div class="t-descr">It is important to understand how this limit is calculated. It is not a limit per trade. It applies to the entire trading day.</div>
+
+        <!-- Paste the image URL into the src="" attribute below. -->
+        <img class="article-inline-image" src="" alt="Diagram showing how the daily loss limit is calculated on a $25,000 prop trading account">
+
+        <div class="t-descr">Let's look at a $25K account example. If your first trade loses $500, you have only $750 left for the rest of the day. If the second trade loses another $400, only $350 remains. Every loss reduces the amount you can afford to lose going forward.</div>
+        <div class="t-descr">That is why stop-loss management works differently in prop trading. Simply placing a stop is not enough. The stop must fit within the remaining daily loss limit, not just sit behind a technical level.</div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">How to Calculate a Stop-Loss Based on the Daily Loss Limit</div>
+        <div class="t-descr">The most common mistake traders make is choosing a setup first, placing a stop behind a level, and only then looking at <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-crypto-risk-management'">position size</span>. That is the wrong order. The correct process is:</div>
+
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Calculate the Daily Loss Limit in Dollars</div>
+              <div class="article-number-text">Account Balance × Daily Loss Percentage = Maximum Daily Loss. Example: $25,000 × 5% = $1,250.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Divide the Limit by the Number of Planned Trades</div>
+              <div class="article-number-text">If you plan to take three trades: $1,250 ÷ 3 = $416 maximum loss per trade.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Calculate Position Size Based on Acceptable Risk</div>
+              <div class="article-number-text">If your stop-loss is 2% away from entry and your maximum loss per trade is $416: Position Size = $416 ÷ 2% = $20,800. Only after this calculation should you evaluate whether the setup makes sense.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-descr">After every losing trade, recalculate. Divide the remaining daily loss allowance by the number of remaining trades.</div>
+
+        <div class="t-descr"><span class="t-b">Risk per trade by account size (5% daily loss limit):</span></div>
+
+        <div class="article-table">
+          <div class="article-table-row article-table-head">
+            <div class="article-table-cell">Account Size</div>
+            <div class="article-table-cell">Daily Loss Limit</div>
+            <div class="article-table-cell">Max Loss (3 Trades)</div>
+            <div class="article-table-cell">Max Loss (5 Trades)</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">$10,000</div>
+            <div class="article-table-cell">$500</div>
+            <div class="article-table-cell">$167</div>
+            <div class="article-table-cell">$100</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">$25,000</div>
+            <div class="article-table-cell">$1,250</div>
+            <div class="article-table-cell">$416</div>
+            <div class="article-table-cell">$250</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">$50,000</div>
+            <div class="article-table-cell">$2,500</div>
+            <div class="article-table-cell">$833</div>
+            <div class="article-table-cell">$500</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">$150,000</div>
+            <div class="article-table-cell">$7,500</div>
+            <div class="article-table-cell">$2,500</div>
+            <div class="article-table-cell">$1,500</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Trade up to $150,000 in capital with clear risk rules</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://app.hashhedge.com/en/register/'">Start Challenge</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">Common Mistakes: When a Stop-Loss Doesn't Save You</div>
+        <div class="t-descr">Many traders know about the daily loss limit. They use <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/types-of-orders-in-trading'">stop-losses</span>. Yet they still violate the rules. How does that happen?</div>
+
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">The Stop Is Too Wide</div>
+              <div class="article-number-text">On a $25K account, a trader places a $1,000 stop on a single trade. Just one or two losing trades are enough to violate the daily limit. Before every trade, ask yourself: does this stop fit within my planned risk allocation?</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Averaging Down Instead of Exiting</div>
+              <div class="article-number-text">The market moves against you. Instead of accepting the stop-loss, you add to the position. The total loss grows larger and larger. One trade that is supposedly "about to reverse" ends up consuming the entire daily loss limit.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Multiple Open Positions</div>
+              <div class="article-number-text">Every open trade carries floating risk. Three losing positions can exceed the daily loss limit before any individual stop-loss is hit. Always calculate the combined risk across all open positions.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Continuing to Trade Without Recalculating</div>
+              <div class="article-number-text">Your first trade loses $600 from a $1,250 daily allowance. Only $650 remains. If you continue using the same risk size, the next loss may automatically violate the daily limit. Recalculate after every losing trade.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Building a System to Protect Your Daily Loss Limit</div>
+        <div class="t-descr">The rules themselves are simple. The challenge is following them consistently, especially after a series of losses.</div>
+
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Calculate Your Limit Before Trading</div>
+              <div class="article-number-text">Before taking the first trade, write down: What is today's daily loss limit in dollars? How many trades do you plan to take? What is the maximum acceptable loss per trade?</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Use the 50% Rule</div>
+              <div class="article-number-text">If you lose half of your daily limit, take a pause. You do not necessarily need to stop trading for the day. However, review your setups and reduce position size by 50%.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Keep an Intraday Loss Journal</div>
+              <div class="article-number-text">Track your cumulative losses after every trade. Many traders try to keep this number in their heads and make mistakes. Keep it visible.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Monitor Total Floating Loss</div>
+              <div class="article-number-text">When multiple positions are open, focus on total floating drawdown across the account, not on each trade separately.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">5</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Stop Trading If Discipline Breaks</div>
+              <div class="article-number-text">If you averaged down, removed a stop-loss, or failed to recalculate position size, end the trading day — even if the daily limit has not technically been violated. Once discipline breaks down, the quality of future decisions usually deteriorates.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-crypto-risk-management'">Proper position sizing</span> combined with disciplined stop-loss execution is one of the key factors behind long-term success in <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/'">prop challenges</span>.</div>
+      </div>
+
+      <!-- Paste the image URL into the src="" attribute below. -->
+      <img class="article-inline-image" src="" alt="A trader keeping an intraday loss journal to control the daily loss limit">
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">Stop-Loss as the Foundation of Funded Account Discipline</div>
+        <div class="t-descr">The daily loss limit may seem restrictive. In reality, it is a tool that forces proper risk management.</div>
+        <div class="t-descr">Traders who learn to manage stop-losses within daily drawdown limits rarely violate prop firm rules. They trade longer, build larger data sets, improve consistency, and eventually achieve stable profitability.</div>
+        <div class="t-descr">Hash Hedge is looking for exactly these types of traders. If your strategy is supported by disciplined risk management, take the challenge and trade with up to $150,000 in capital.</div>
+      </div>
+
+      <div class="article-section" id="section-faq">
+        <div class="article-section-title">Frequently Asked Questions</div>
+        <div class="faq-block">
+        <div class="faq-item faq-item-open">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <div class="faq-question">What Is a Daily Loss Limit in Prop Trading?</div>
+            <div class="faq-toggle-icon">−</div>
+          </div>
+          <div class="faq-answer">The daily loss limit (daily drawdown) is the maximum amount you can lose during a single trading day. Most prop firms set this limit between 4% and 5% of account balance. If the limit is violated, the account is automatically terminated.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <div class="faq-question">How Do I Calculate the Maximum Stop-Loss for One Trade?</div>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">Multiply account balance by the daily loss percentage. This gives your maximum daily loss. Then divide that amount by the number of trades you plan to take. The result is the maximum acceptable loss per trade. Use that number to determine position size.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <div class="faq-question">What Happens If I Violate the Daily Loss Limit?</div>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">The trading account is automatically terminated and all positions are closed. Trading cannot continue unless you start a new challenge. Unlike a personal account where you simply lose money, violating the daily loss limit in prop trading ends your current evaluation period.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <div class="faq-question">How Are Stop-Loss and Position Size Connected?</div>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">Position size should be determined by acceptable risk. Example: maximum loss per trade = $400, stop distance = 2%, so position size = $400 ÷ 2% = $20,000.</div>
+        </div>
+      </div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Ready to Trade Prop Firm Capital?</div>
+        <div class="article-final-promo-descr">Hash Hedge is the #1 crypto prop trading platform. Get funding up to <span class="t-b">$150K</span> and withdraw up to <span class="t-b">90% of your profits</span> in USDT straight to your wallet.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://app.hashhedge.com/en/register/'">Start Challenge</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function toggleFaq(el) {
+      var item = el.parentElement;
+      var willOpen = !item.classList.contains('faq-item-open');
+      var items = document.querySelectorAll('.faq-item');
+      items.forEach(function (it) {
+        it.classList.remove('faq-item-open');
+        var icon = it.querySelector('.faq-toggle-icon');
+        if (icon) icon.textContent = '+';
+      });
+      if (willOpen) {
+        item.classList.add('faq-item-open');
+        var ic = item.querySelector('.faq-toggle-icon');
+        if (ic) ic.textContent = '−';
+      }
+    }
+  </script>
+</div>
+</body>
+</html>

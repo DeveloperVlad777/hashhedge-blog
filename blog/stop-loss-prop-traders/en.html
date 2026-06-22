@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
 <div class="t-article-wrapper">
@@ -16,7 +16,7 @@
     <div class="article-content">
 
       <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog'">
-        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-arrow">в†ђ</div>
         <div class="article-backlink-text">Hash Hedge Blog</div>
       </div>
 
@@ -69,21 +69,21 @@
             <div class="article-number-badge">1</div>
             <div class="article-number-content">
               <div class="article-number-title">Calculate the Daily Loss Limit in Dollars</div>
-              <div class="article-number-text">Account Balance × Daily Loss Percentage = Maximum Daily Loss. Example: $25,000 × 5% = $1,250.</div>
+              <div class="article-number-text">Account Balance Г— Daily Loss Percentage = Maximum Daily Loss. Example: $25,000 Г— 5% = $1,250.</div>
             </div>
           </div>
           <div class="article-number-item">
             <div class="article-number-badge">2</div>
             <div class="article-number-content">
               <div class="article-number-title">Divide the Limit by the Number of Planned Trades</div>
-              <div class="article-number-text">If you plan to take three trades: $1,250 ÷ 3 = $416 maximum loss per trade.</div>
+              <div class="article-number-text">If you plan to take three trades: $1,250 Г· 3 = $416 maximum loss per trade.</div>
             </div>
           </div>
           <div class="article-number-item">
             <div class="article-number-badge">3</div>
             <div class="article-number-content">
               <div class="article-number-title">Calculate Position Size Based on Acceptable Risk</div>
-              <div class="article-number-text">If your stop-loss is 2% away from entry and your maximum loss per trade is $416: Position Size = $416 ÷ 2% = $20,800. Only after this calculation should you evaluate whether the setup makes sense.</div>
+              <div class="article-number-text">If your stop-loss is 2% away from entry and your maximum loss per trade is $416: Position Size = $416 Г· 2% = $20,800. Only after this calculation should you evaluate whether the setup makes sense.</div>
             </div>
           </div>
         </div>
@@ -214,7 +214,7 @@
             <div class="article-number-badge">5</div>
             <div class="article-number-content">
               <div class="article-number-title">Stop Trading If Discipline Breaks</div>
-              <div class="article-number-text">If you averaged down, removed a stop-loss, or failed to recalculate position size, end the trading day — even if the daily limit has not technically been violated. Once discipline breaks down, the quality of future decisions usually deteriorates.</div>
+              <div class="article-number-text">If you averaged down, removed a stop-loss, or failed to recalculate position size, end the trading day вЂ” even if the daily limit has not technically been violated. Once discipline breaks down, the quality of future decisions usually deteriorates.</div>
             </div>
           </div>
         </div>
@@ -238,7 +238,7 @@
         <div class="faq-item faq-item-open">
           <div class="faq-toggle" onclick="toggleFaq(this)">
             <div class="faq-question">What Is a Daily Loss Limit in Prop Trading?</div>
-            <div class="faq-toggle-icon">−</div>
+            <div class="faq-toggle-icon">в€’</div>
           </div>
           <div class="faq-answer">The daily loss limit (daily drawdown) is the maximum amount you can lose during a single trading day. Most prop firms set this limit between 4% and 5% of account balance. If the limit is violated, the account is automatically terminated.</div>
         </div>
@@ -261,7 +261,7 @@
             <div class="faq-question">How Are Stop-Loss and Position Size Connected?</div>
             <div class="faq-toggle-icon">+</div>
           </div>
-          <div class="faq-answer">Position size should be determined by acceptable risk. Example: maximum loss per trade = $400, stop distance = 2%, so position size = $400 ÷ 2% = $20,000.</div>
+          <div class="faq-answer">Position size should be determined by acceptable risk. Example: maximum loss per trade = $400, stop distance = 2%, so position size = $400 Г· 2% = $20,000.</div>
         </div>
       </div>
       </div>
@@ -288,10 +288,11 @@
       if (willOpen) {
         item.classList.add('faq-item-open');
         var ic = item.querySelector('.faq-toggle-icon');
-        if (ic) ic.textContent = '−';
+        if (ic) ic.textContent = 'в€’';
       }
     }
   </script>
 </div>
 </body>
 </html>
+

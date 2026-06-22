@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
 <div class="t-article-wrapper">
@@ -16,7 +16,7 @@
     <div class="article-content">
 
       <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog'">
-        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-arrow">в†ђ</div>
         <div class="article-backlink-text">Hash Hedge Blog</div>
       </div>
 
@@ -65,17 +65,17 @@
 
         <div class="article-checklist">
           <div class="article-check-item">
-            <div class="article-check-icon">✓</div>
+            <div class="article-check-icon">вњ“</div>
             <div class="article-check-text">The trader receives 80% of the profits.</div>
           </div>
           <div class="article-check-item">
-            <div class="article-check-icon">✓</div>
+            <div class="article-check-icon">вњ“</div>
             <div class="article-check-text">The prop firm keeps 20% as compensation for providing capital.</div>
           </div>
         </div>
 
         <div class="t-descr">The formula is straightforward:</div>
-        <div class="t-descr"><span class="t-b">Trader Payout = Profit × 0.80</span></div>
+        <div class="t-descr"><span class="t-b">Trader Payout = Profit Г— 0.80</span></div>
         <div class="t-descr">Example: account size $25,000, monthly profit 10% ($2,500). The trader receives $2,000, the firm receives $500.</div>
 
         <!-- Paste the image URL into the src="" attribute below. -->
@@ -199,7 +199,7 @@
 
       <div class="article-section" id="section-6">
         <div class="article-section-title">Final Thoughts: How to Maximize Your Payouts</div>
-        <div class="t-descr">Prop firm payouts follow a transparent structure. The trader receives a percentage of the net profits generated during the payout period — typically 80%.</div>
+        <div class="t-descr">Prop firm payouts follow a transparent structure. The trader receives a percentage of the net profits generated during the payout period вЂ” typically 80%.</div>
 
         <div class="article-number-list">
           <div class="article-number-item">
@@ -232,7 +232,7 @@
           <div class="faq-item faq-item-open">
             <div class="faq-toggle" onclick="toggleFaq(this)">
               <div class="faq-question">When Does the First Prop Firm Payout Happen?</div>
-              <div class="faq-toggle-icon">−</div>
+              <div class="faq-toggle-icon">в€’</div>
             </div>
             <div class="faq-answer">The first payout becomes available after successfully completing the challenge and activating a funded account. The key requirement is generating profits while respecting all risk management rules.</div>
           </div>
@@ -255,7 +255,7 @@
               <div class="faq-question">How Is a Prop Trader's Payout Calculated?</div>
               <div class="faq-toggle-icon">+</div>
             </div>
-            <div class="faq-answer">The ending account balance is compared to the starting balance for the payout period. The difference represents net profit. The trader then receives their profit split percentage — typically 80%.</div>
+            <div class="faq-answer">The ending account balance is compared to the starting balance for the payout period. The difference represents net profit. The trader then receives their profit split percentage вЂ” typically 80%.</div>
           </div>
         </div>
       </div>
@@ -282,10 +282,11 @@
       if (willOpen) {
         item.classList.add('faq-item-open');
         var ic = item.querySelector('.faq-toggle-icon');
-        if (ic) ic.textContent = '−';
+        if (ic) ic.textContent = 'в€’';
       }
     }
   </script>
 </div>
 </body>
 </html>
+

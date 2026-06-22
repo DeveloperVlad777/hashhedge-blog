@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stop-Loss para Traders de Prop Firms: Guia do Limite de Perda DiГЎria 2026</title>
+<meta name="description" content="Como definir um stop-loss em uma conta funded: cГЎlculo do limite de perda diГЎria, erros comuns e estratГ©gias de proteГ§ГЈo de capital para traders de prop firms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog/pt'">
+        <div class="article-backlink-arrow">в†ђ</div>
+        <div class="article-backlink-text">Hash Hedge Blog</div>
+      </div>
+
+      <div class="article-hook">COMO PROTEGER SUA CONTA FUNDED COM UM STOP-LOSS MAIS INTELIGENTE</div>
+
+      <div class="t-title">Stop-Loss para Traders de Prop Firms: Como Evitar Violar o Limite de Perda DiГЎria</div>
+
+      <div class="article-meta">
+        <span>6 min de leitura</span>
+        <span class="article-meta-sep">|</span>
+        <span>17 de junho de 2026</span>
+      </div>
+
+      <!-- Insira o link da imagem no atributo src="" abaixo. -->
+      <img class="article-hero" src="" alt="Trader posicionando um stop-loss em um grГЎfico de criptomoeda em uma conta funded de prop firm">
+
+      <div class="article-toc">
+        <div class="article-toc-title">ГЌndice</div>
+        <div class="article-toc-list">
+          <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">Por Que o Stop-Loss Funciona de Forma Diferente no Prop Trading</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">Como Calcular o Stop-Loss com Base no Limite de Perda DiГЎria</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">Erros Comuns: Quando o Stop-Loss NГЈo Te Salva</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">Como Construir um Sistema Para Proteger Seu Limite DiГЎrio</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">Stop-Loss Como Base da Disciplina em uma Conta Funded</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-faq').scrollIntoView({behavior:'smooth'})">Perguntas Frequentes</div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">Por Que o Stop-Loss Funciona de Forma Diferente no Prop Trading</div>
+        <div class="t-descr">A maioria dos traders nГЈo perde suas contas funded por causa de uma estratГ©gia ruim. Eles perdem porque uma Гєnica operaГ§ГЈo viola o limite de perda diГЎria. O stop-loss existe, mas foi posicionado da maneira errada.</div>
+        <div class="t-descr">No trading tradicional, o stop-loss protege o seu depГіsito. Em uma conta funded, o stop-loss protege o seu direito de continuar operando. Essa Г© uma diferenГ§a fundamental.</div>
+        <div class="t-descr">Uma <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/pt'">prop firm</span> fornece capital para vocГЄ operar. Para proteger esse capital, toda empresa estabelece uma regra rГ­gida: a perda mГЎxima permitida durante um Гєnico dia de trading. Essa regra Г© conhecida como <span class="t-b">limite de perda diГЎria (daily loss limit)</span> ou <span class="t-b">drawdown diГЎrio</span>.</div>
+        <div class="t-descr">Na Hash Hedge, esse limite Г© de <span class="t-b">5% do saldo da conta</span>. Em uma conta de US$25.000, isso equivale a <span class="t-b">US$1.250</span>. Se vocГЄ perder mais do que isso durante o dia, a conta serГЎ encerrada automaticamente.</div>
+        <div class="t-descr">Г‰ importante entender como esse limite Г© calculado. NГЈo Г© um limite por operaГ§ГЈo. Ele se aplica ao dia inteiro de negociaГ§ГЈo.</div>
+
+        <!-- Insira o link da imagem no atributo src="" abaixo. -->
+        <img class="article-inline-image" src="" alt="Diagrama mostrando como o limite de perda diГЎria Г© calculado em uma conta de prop trading de US$25.000">
+
+        <div class="t-descr">Vamos usar uma conta de US$25K como exemplo. Se sua primeira operaГ§ГЈo gerar uma perda de US$500, vocГЄ terГЎ apenas US$750 restantes para perder naquele dia. Se a segunda operaГ§ГЈo perder mais US$400, restarГЈo apenas US$350. Cada perda reduz o valor que vocГЄ pode arriscar nas prГіximas operaГ§Гµes.</div>
+        <div class="t-descr">Г‰ por isso que a gestГЈo de stop-loss funciona de forma diferente no prop trading. NГЈo basta simplesmente colocar um stop. O stop precisa caber dentro do limite de perda diГЎria restante.</div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Como Calcular o Stop-Loss com Base no Limite de Perda DiГЎria</div>
+        <div class="t-descr">O erro mais comum Г© escolher o setup primeiro, posicionar o stop atrГЎs de um nГ­vel tГ©cnico e sГі depois calcular o <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-crypto-risk-management'">tamanho da posiГ§ГЈo</span>. A ordem correta Г©:</div>
+
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Calcule o Limite de Perda DiГЎria em DГіlares</div>
+              <div class="article-number-text">Saldo da Conta Г— Percentual de Perda DiГЎria = Perda MГЎxima DiГЎria. Exemplo: US$25.000 Г— 5% = US$1.250.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Divida o Limite Pelo NГєmero de OperaГ§Гµes Planejadas</div>
+              <div class="article-number-text">Se vocГЄ pretende fazer trГЄs operaГ§Гµes: US$1.250 Г· 3 = US$416 de perda mГЎxima por operaГ§ГЈo.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Calcule o Tamanho da PosiГ§ГЈo com Base no Risco AceitГЎvel</div>
+              <div class="article-number-text">Se seu stop-loss estГЎ a 2% da entrada e a perda mГЎxima aceitГЎvel Г© US$416: Tamanho da PosiГ§ГЈo = US$416 Г· 2% = US$20.800. Somente depois desse cГЎlculo vocГЄ deve avaliar se o setup vale a pena.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-descr">ApГіs cada operaГ§ГЈo perdedora, recalcule. Divida o limite restante pelo nГєmero de operaГ§Гµes que ainda pretende realizar.</div>
+
+        <div class="t-descr"><span class="t-b">Risco por operaГ§ГЈo conforme o tamanho da conta (limite diГЎrio de 5%):</span></div>
+
+        <div class="article-table">
+          <div class="article-table-row article-table-head">
+            <div class="article-table-cell">Tamanho da Conta</div>
+            <div class="article-table-cell">Limite DiГЎrio</div>
+            <div class="article-table-cell">MГЎx. Perda (3 Trades)</div>
+            <div class="article-table-cell">MГЎx. Perda (5 Trades)</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">US$10.000</div>
+            <div class="article-table-cell">US$500</div>
+            <div class="article-table-cell">US$167</div>
+            <div class="article-table-cell">US$100</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">US$25.000</div>
+            <div class="article-table-cell">US$1.250</div>
+            <div class="article-table-cell">US$416</div>
+            <div class="article-table-cell">US$250</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">US$50.000</div>
+            <div class="article-table-cell">US$2.500</div>
+            <div class="article-table-cell">US$833</div>
+            <div class="article-table-cell">US$500</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">US$150.000</div>
+            <div class="article-table-cell">US$7.500</div>
+            <div class="article-table-cell">US$2.500</div>
+            <div class="article-table-cell">US$1.500</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Opere com atГ© US$150.000 em capital com regras claras de risco</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://app.hashhedge.com/pt/register/'">ComeГ§ar Challenge</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">Erros Comuns: Quando o Stop-Loss NГЈo Te Salva</div>
+        <div class="t-descr">Muitos traders conhecem o limite de perda diГЎria. Usam <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/types-of-orders-in-trading'">stop-loss</span>. Mesmo assim, acabam violando as regras. Como isso acontece?</div>
+
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Stop Muito Largo</div>
+              <div class="article-number-text">Em uma conta de US$25K, o trader coloca um stop de US$1.000 em uma Гєnica operaГ§ГЈo. Uma ou duas perdas jГЎ sГЈo suficientes para violar o limite diГЎrio. Antes de cada trade, pergunte: esse stop cabe dentro do risco que planejei assumir?</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Fazer PreГ§o MГ©dio Contra a PosiГ§ГЈo</div>
+              <div class="article-number-text">O mercado vai contra vocГЄ. Em vez de aceitar o stop, vocГЄ aumenta a posiГ§ГЈo. A perda cresce cada vez mais. Uma operaГ§ГЈo que "vai virar a qualquer momento" acaba consumindo todo o limite diГЎrio.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">MГєltiplas PosiГ§Гµes Abertas</div>
+              <div class="article-number-text">Toda posiГ§ГЈo aberta possui risco flutuante. TrГЄs posiГ§Гµes negativas podem ultrapassar o limite diГЎrio antes mesmo que qualquer stop seja atingido. Sempre calcule o risco combinado de todas as posiГ§Гµes abertas.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Continuar Operando Sem Recalcular</div>
+              <div class="article-number-text">Sua primeira operaГ§ГЈo perde US$600 de um limite diГЎrio de US$1.250. Restam apenas US$650. Se vocГЄ continuar utilizando o mesmo risco por operaГ§ГЈo, a prГіxima perda pode encerrar a conta automaticamente. Recalcule apГіs cada operaГ§ГЈo negativa.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Como Construir um Sistema Para Proteger Seu Limite DiГЎrio</div>
+        <div class="t-descr">As regras sГЈo simples. O desafio Г© segui-las com consistГЄncia, especialmente apГіs uma sequГЄncia de perdas.</div>
+
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Calcule Seu Limite Antes de Operar</div>
+              <div class="article-number-text">Antes da primeira operaГ§ГЈo, anote: qual Г© o limite diГЎrio em dГіlares? Quantas operaГ§Гµes vocГЄ pretende fazer? Qual Г© a perda mГЎxima aceitГЎvel por operaГ§ГЈo?</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Use a Regra dos 50%</div>
+              <div class="article-number-text">Se vocГЄ perder metade do limite diГЎrio, faГ§a uma pausa. VocГЄ nГЈo precisa necessariamente encerrar o dia. Mas revise seus setups e reduza o tamanho das posiГ§Гµes em 50%.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Mantenha um DiГЎrio de Perdas Intraday</div>
+              <div class="article-number-text">Registre sua perda acumulada apГіs cada operaГ§ГЈo. Muitos traders tentam controlar isso mentalmente e acabam errando. Mantenha esse nГєmero visГ­vel.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Monitore a Perda Flutuante Total</div>
+              <div class="article-number-text">Quando houver vГЎrias posiГ§Гµes abertas, acompanhe o drawdown total da conta. NГЈo analise cada operaГ§ГЈo isoladamente.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">5</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Pare de Operar se a Disciplina Quebrar</div>
+              <div class="article-number-text">Se vocГЄ fez preГ§o mГ©dio, removeu um stop-loss ou nГЈo recalculou o tamanho da posiГ§ГЈo, encerre o dia вЂ” mesmo que ainda nГЈo tenha atingido o limite diГЎrio. Quando a disciplina se quebra, a qualidade das prГіximas decisГµes normalmente piora.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-descr">O dimensionamento correto das posiГ§Гµes combinado com uma execuГ§ГЈo disciplinada do stop-loss Г© um dos principais fatores para o sucesso de longo prazo em <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/pt'">challenges de prop firms</span>.</div>
+      </div>
+
+      <!-- Insira o link da imagem no atributo src="" abaixo. -->
+      <img class="article-inline-image" src="" alt="Trader mantendo um diГЎrio de perdas intraday para controlar o limite diГЎrio">
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">Stop-Loss Como Base da Disciplina em uma Conta Funded</div>
+        <div class="t-descr">O limite de perda diГЎria pode parecer restritivo. Na prГЎtica, ele Г© uma ferramenta que forГ§a uma gestГЈo de risco adequada.</div>
+        <div class="t-descr">Traders que aprendem a administrar seus stop-losses dentro dos limites de drawdown diГЎrio raramente violam as regras das prop firms. Eles operam por mais tempo, acumulam mais dados, melhoram sua consistГЄncia e, eventualmente, alcanГ§am lucratividade sustentГЎvel.</div>
+        <div class="t-descr">A Hash Hedge procura exatamente esse tipo de trader. Se sua estratГ©gia Г© sustentada por uma gestГЈo de risco disciplinada, aceite o challenge e opere com atГ© US$150.000 em capital.</div>
+      </div>
+
+      <div class="article-section" id="section-faq">
+        <div class="article-section-title">Perguntas Frequentes</div>
+        <div class="faq-block">
+        <div class="faq-item faq-item-open">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <div class="faq-question">O Que Г‰ o Limite de Perda DiГЎria no Prop Trading?</div>
+            <div class="faq-toggle-icon">в€’</div>
+          </div>
+          <div class="faq-answer">Г‰ o valor mГЎximo que vocГЄ pode perder durante um Гєnico dia de negociaГ§ГЈo. A maioria das prop firms utiliza limites entre 4% e 5% do saldo da conta. Se esse limite for violado, a conta Г© encerrada automaticamente.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <div class="faq-question">Como Calcular o Stop-Loss MГЎximo por OperaГ§ГЈo?</div>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">Multiplique o saldo da conta pelo percentual de perda diГЎria. Isso fornece a perda mГЎxima diГЎria. Depois divida esse valor pelo nГєmero de operaГ§Гµes planejadas. O resultado serГЎ a perda mГЎxima aceitГЎvel por trade. Use esse nГєmero para determinar o tamanho da posiГ§ГЈo.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <div class="faq-question">O Que Acontece se Eu Violar o Limite de Perda DiГЎria?</div>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">A conta serГЎ encerrada automaticamente e todas as posiГ§Гµes serГЈo fechadas. VocГЄ nГЈo poderГЎ continuar operando atГ© iniciar um novo challenge. Diferente de uma conta pessoal, onde vocГЄ apenas perde dinheiro, em uma prop firm a violaГ§ГЈo do limite encerra todo o processo de avaliaГ§ГЈo.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <div class="faq-question">Qual Г© a RelaГ§ГЈo Entre Stop-Loss e Tamanho da PosiГ§ГЈo?</div>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">O tamanho da posiГ§ГЈo deve ser definido pelo risco aceitГЎvel. Exemplo: perda mГЎxima por operaГ§ГЈo = US$400, distГўncia do stop = 2%, entГЈo o tamanho da posiГ§ГЈo = US$400 Г· 2% = US$20.000.</div>
+        </div>
+      </div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Pronto para Operar com Capital de Prop Firm?</div>
+        <div class="article-final-promo-descr">A Hash Hedge Г© a plataforma de prop trading de cripto nВє 1. Receba financiamento de atГ© <span class="t-b">US$150 mil</span> e saque atГ© <span class="t-b">90% dos seus lucros</span> em USDT direto na sua carteira.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://app.hashhedge.com/pt/register/'">ComeГ§ar Challenge</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function toggleFaq(el) {
+      var item = el.parentElement;
+      var willOpen = !item.classList.contains('faq-item-open');
+      var items = document.querySelectorAll('.faq-item');
+      items.forEach(function (it) {
+        it.classList.remove('faq-item-open');
+        var icon = it.querySelector('.faq-toggle-icon');
+        if (icon) icon.textContent = '+';
+      });
+      if (willOpen) {
+        item.classList.add('faq-item-open');
+        var ic = item.querySelector('.faq-toggle-icon');
+        if (ic) ic.textContent = 'в€’';
+      }
+    }
+  </script>
+</div>
+</body>
+</html>
+

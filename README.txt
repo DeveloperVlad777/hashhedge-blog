@@ -15,7 +15,11 @@ hashhedge-blog/
     │   ├── ru.html
     │   ├── en.html
     │   └── pt.html
-    └── prop-firm-payouts-profit-split/
+    ├── prop-firm-payouts-profit-split/
+    │   ├── ru.html
+    │   ├── en.html
+    │   └── pt.html
+    └── false-breakout-vs-liquidity-grab-vs-stop-hunt/
         ├── ru.html
         ├── en.html
         └── pt.html
@@ -41,6 +45,11 @@ hashhedge-blog/
 
 3. «Как работают выплаты в проп-фирмах: разбираем профит-сплит»
    папка: blog/prop-firm-payouts-profit-split/
+   языки: ru, en, pt
+   статус: готово
+
+4. «Ложный пробой, захват ликвидности и охота на стопы: в чём разница»
+   папка: blog/false-breakout-vs-liquidity-grab-vs-stop-hunt/
    языки: ru, en, pt
    статус: готово
 

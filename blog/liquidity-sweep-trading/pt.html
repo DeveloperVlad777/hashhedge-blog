@@ -1,0 +1,275 @@
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog/pt'">← Hash Hedge Blog</div>
+
+      <div class="article-hook">A ARMADILHA DO VAREJO: COMO AS INSTITUIÇÕES USAM SUA LIQUIDEZ CONTRA VOCÊ</div>
+
+      <div class="t-title">Liquidity Sweep no Trading: o que é e como usar</div>
+
+      <div class="article-meta">
+        <span>10 min de leitura</span>
+        <span>|</span>
+        <span>1 de julho de 2025</span>
+      </div>
+
+      <img class="article-hero" src="hero-pt.png" alt="Liquidity sweep no gráfico BTC/USDT — rompimento de nível e reversão">
+
+      <div class="article-toc">
+        <div class="article-toc-title">Índice</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">1. Liquidity Sweep vs. Liquidity Grab vs. Stop Hunt</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">2. Como os Liquidity Sweeps Funcionam</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">3. Sweeps Bullish e Bearish: como diferenciar</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">4. Fair Value Gap como Confirmação</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">5. Como Operar um Liquidity Sweep</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">6. Altcoins vs. BTC e ETH</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">7. Sweeps em Prop Trading</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-8').scrollIntoView({behavior:'smooth'})">8. Método Multi-Timeframe</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-faq').scrollIntoView({behavior:'smooth'})">FAQ</div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">Liquidity Sweep vs. Liquidity Grab vs. Stop Hunt</div>
+        <div class="t-descr">Na comunidade cripto, três termos costumam ser usados quase como sinônimos: <span class="t-b">liquidity sweep</span>, <span class="t-b">liquidity grab</span> e <span class="t-b">stop hunt</span>. Embora descrevam comportamentos parecidos do mercado, eles não são a mesma coisa.</div>
+        <div class="t-descr">Um <span class="t-b">Liquidity Sweep</span> acontece quando o preço rompe um nível importante, aciona ordens de stop-loss agrupadas e depois reverte. Um <span class="t-b">Liquidity Grab</span> é um conceito mais amplo — qualquer movimento do preço em direção a uma área onde há grande concentração de ordens. Um <span class="t-b">Stop Hunt</span> é um movimento deliberado em direção a uma zona específica de liquidez onde a maioria dos traders posicionou seus stop-losses.</div>
+
+        <div class="article-table">
+          <div class="article-table-row article-table-head">
+            <div class="article-table-cell">Característica</div>
+            <div class="article-table-cell">Liquidity Sweep</div>
+            <div class="article-table-cell">Liquidity Grab</div>
+            <div class="article-table-cell">Stop Hunt</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">O que acontece</div>
+            <div class="article-table-cell">O preço rompe um nível-chave, aciona stop-losses e depois reverte</div>
+            <div class="article-table-cell">Spike agressivo além do nível seguido de reversão imediata</div>
+            <div class="article-table-cell">O preço se move intencionalmente em direção a um grande cluster de stop-loss</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">Velocidade</div>
+            <div class="article-table-cell">Moderada, vários candles</div>
+            <div class="article-table-cell">Extremamente rápida, 1–2 candles</div>
+            <div class="article-table-cell">Pode se desenvolver por mais tempo</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">Timeframe típico</div>
+            <div class="article-table-cell">Timeframes maiores: H4, D1</div>
+            <div class="article-table-cell">Qualquer TF, geralmente M15–H1</div>
+            <div class="article-table-cell">Normalmente perto de níveis importantes</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">Confirmação</div>
+            <div class="article-table-cell">Fair Value Gap (FVG), BOS/MSS</div>
+            <div class="article-table-cell">Pin bar, candle de engolfo</div>
+            <div class="article-table-cell">Reversão forte com volume</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">Exemplos em cripto</div>
+            <div class="article-table-cell">BTC/USDT e ETH/USDT no H4–D1</div>
+            <div class="article-table-cell">Altcoins voláteis</div>
+            <div class="article-table-cell">Frequentemente antes de CPI ou FOMC</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Como os Liquidity Sweeps Funcionam</div>
+        <div class="t-descr">A liquidez se acumula naturalmente onde a maioria dos traders posiciona seus stop-losses. Essas são áreas previsíveis de preço: <span class="t-b">Equal Lows</span>, <span class="t-b">Equal Highs</span>, Swing Highs e Swing Lows, suportes e resistências testados várias vezes.</div>
+        <div class="t-descr">Na terminologia de Smart Money, essas zonas são divididas em: <span class="t-b">BSL (Buy-Side Liquidity)</span> — acima do preço atual, onde vendedores em short posicionam seus stop-losses; <span class="t-b">SSL (Sell-Side Liquidity)</span> — abaixo do preço atual, onde os stop-losses de traders comprados ficam concentrados. No BTC/USDT, os pools de liquidez são mais fáceis de identificar nos timeframes H4 e Diário.</div>
+
+        <div class="t-descr"><span class="t-b">As três etapas de um Liquidity Sweep clássico:</span></div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">O rompimento</div>
+              <div class="article-number-text">O preço se aproxima de uma zona de liquidez e rompe esse nível. Stop-losses agrupados são acionados, causando um aumento temporário no volume de negociação.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">A reversão</div>
+              <div class="article-number-text">O candle de reversão fecha de volta acima do nível rompido (sweep bullish) ou de volta abaixo dele (sweep bearish). Esse é o sinal-chave de que o rompimento não conseguiu se sustentar.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Displacement</div>
+              <div class="article-number-text">O preço se afasta da zona de liquidez com forte momentum, muitas vezes deixando para trás um Fair Value Gap (FVG). Esse displacement é o que diferencia um liquidity sweep real de uma consolidação comum perto de um nível.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-descr">A duração depende do timeframe. No D1, um liquidity sweep pode levar de 2 a 5 candles para se completar. No H4, o processo geralmente acontece ao longo de várias horas ou até um dia inteiro de trading. No H1 e em timeframes menores, os sweeps se desenvolvem muito mais rápido, mas o ruído do mercado também aumenta bastante.</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">Bullish vs. Bearish Liquidity Sweeps: como diferenciar</div>
+        <div class="t-descr">Um <span class="t-b">Bullish Liquidity Sweep</span> se forma quando o preço se move abaixo de uma sequência de mínimas, aciona os stop-losses dos traders comprados (SSL) e depois reverte para cima. No gráfico de BTC/USDT, isso geralmente aparece como um pavio inferior longo no H4, com o candle fechando novamente acima do suporte rompido. Depois disso, o preço acelera para cima com forte momentum. Um sweep bullish sinaliza que traders institucionais acumularam posições long usando os stop-losses acionados como fonte de liquidez.</div>
+        <div class="t-descr">Um <span class="t-b">Bearish Liquidity Sweep</span> é o espelho do setup bullish. O preço se move acima de uma sequência de máximas (BSL), aciona buy-stops e stop-losses de vendedores em short, e depois reverte para baixo. No ETH/USDT, liquidity sweeps bearish acontecem com frequência depois de notícias bullish, quando traders de varejo correm para comprar o rompimento acima da resistência — e acabam presos quando o preço reverte rapidamente.</div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Como os Fair Value Gaps Confirmam um Liquidity Sweep</div>
+        <div class="t-descr">Depois que um liquidity sweep termina, a fase de displacement muitas vezes deixa para trás um <span class="t-b">Fair Value Gap (FVG)</span> — um desequilíbrio criado entre os pavios de três candles consecutivos. O mercado frequentemente revisita esses desequilíbrios antes de continuar a nova tendência.</div>
+        <div class="t-descr">O surgimento de um FVG logo após um liquidity sweep oferece confirmação adicional de que o movimento tem suporte de fluxo institucional — e não é apenas volatilidade aleatória. <span class="t-b">Sweep + displacement forte + FVG bem definido</span> = probabilidade significativamente maior de uma reversão real.</div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-logo">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="#FFD700"/>
+            <path d="M16 6L26 11V21L16 26L6 21V11L16 6Z" fill="#000" stroke="#000" stroke-width="0.5"/>
+            <path d="M16 10L22 13.5V20.5L16 24L10 20.5V13.5L16 10Z" fill="#FFD700"/>
+          </svg>
+        </div>
+        <div class="article-banner-title">Opere liquidity sweeps com capital real</div>
+        <div class="article-banner-text">Receba financiamento de até $150.000 e retire até 90% dos lucros em USDT — diretamente na sua carteira.</div>
+        <div class="article-banner-btn" onclick="window.location.href='https://app.hashhedge.com/pt/register/'">Começar Challenge</div>
+      </div>
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">Como Operar um Liquidity Sweep</div>
+        <div class="t-descr">O erro mais comum dos traders é entrar assim que o preço rompe um nível-chave. Nesse momento, é impossível saber se o preço está fazendo um liquidity sweep ou simplesmente rompendo para continuar a tendência. Um trade de reversão só deve ser considerado depois que o candle de reversão fecha de volta além do nível rompido.</div>
+        <div class="t-descr"><span class="t-b">Três sinais de confirmação:</span></div>
+        <div class="article-checklist">
+          <div class="article-check-item">
+            <div class="article-check-icon">✓</div>
+            <div class="article-check-text"><span class="t-b">Volume:</span> um aumento forte no volume durante o rompimento, seguido por menor volume no candle de reversão, sugere que compradores ou vendedores agressivos concluíram suas ordens — um sinal de acumulação ou distribuição institucional.</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon">✓</div>
+            <div class="article-check-text"><span class="t-b">Tamanho do pavio:</span> um pavio longo com o candle fechando perto da máxima (sweep bullish) ou perto da mínima (sweep bearish) é um dos sinais de rejeição mais fortes depois de capturar liquidez além do nível-chave.</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon">✓</div>
+            <div class="article-check-text"><span class="t-b">Fechamento do candle:</span> o candle de reversão deve fechar de forma clara de volta além do nível rompido. Apenas tocar o nível não é suficiente.</div>
+          </div>
+        </div>
+        <div class="t-descr"><span class="t-b">Posicionamento do stop-loss:</span> o stop deve sempre ser colocado além do extremo do liquidity sweep. Para um sweep bullish, coloque o stop abaixo do pavio mais baixo. Para um sweep bearish, coloque o stop acima do pavio mais alto. Esse é o ponto lógico de invalidação do setup.</div>
+      </div>
+
+      <div class="article-section" id="section-6">
+        <div class="article-section-title">Liquidity Sweeps em Altcoins vs. BTC e ETH</div>
+        <div class="t-descr">Em BTC/USDT e ETH/USDT, liquidity sweeps normalmente seguem o padrão clássico: níveis de liquidez bem definidos, volume de negociação suficiente, reversões limpas com boa continuação. Isso acontece principalmente por causa da liquidez profunda desses mercados — traders institucionais preferem Bitcoin e Ethereum ao montar posições grandes.</div>
+        <div class="t-descr">Altcoins de baixa capitalização se comportam de forma diferente. Os pools de liquidez são muito menores, tornando os sweeps significativamente mais agressivos. O preço pode se mover 5–10% além de um nível em poucos minutos e depois reverter com a mesma velocidade. Esses mercados são mais difíceis de operar: execução menos previsível, slippage maior, volatilidade aumenta drasticamente depois do sweep.</div>
+        <div class="t-descr">Geralmente é melhor dominar o trading de liquidity sweep primeiro em BTC/USDT e ETH/USDT. Depois de ganhar confiança na identificação do padrão, você pode avançar gradualmente para altcoins, reduzindo o tamanho da posição para lidar com a volatilidade maior.</div>
+      </div>
+
+      <div class="article-section" id="section-7">
+        <div class="article-section-title">Trading de Liquidity Sweeps em Conta de Prop Firm</div>
+        <div class="t-descr">Operar um liquidity sweep significa entrar contra o impulso de curto prazo do mercado. Se o sweep ainda não terminou, o preço pode continuar se movendo na direção do rompimento, causando uma perda significativa. Em uma conta pessoal, isso é frustrante, mas administrável. Em uma conta de prop firm, porém, pode resultar em violação do limite de drawdown diário.</div>
+        <div class="t-descr">No Two-Step Challenge da Hash Hedge, o limite de drawdown diário é de <span class="t-b">5%</span> e o drawdown máximo total é de <span class="t-b">10%</span>. Se você arrisca 2% da conta em uma única operação, um liquidity sweep mal sucedido geralmente ainda é administrável. Mas arriscar 4–5% em um setup que parece "óbvio" pode colocar sua conta perigosamente perto de violar as regras do challenge depois de apenas uma operação perdedora.</div>
+      </div>
+
+      <div class="article-section" id="section-8">
+        <div class="article-section-title">Usando Múltiplos Timeframes para Confirmar um Liquidity Sweep</div>
+        <div class="t-descr">Uma das formas mais eficazes de melhorar a qualidade do trade é aplicar análise multi-timeframe.</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Identificar um pool de liquidez no TF maior</div>
+              <div class="article-number-text">Marcar a zona de liquidez no H4 ou no Diário.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Esperar o sweep acontecer</div>
+              <div class="article-number-text">Aguardar até que o liquidity sweep ocorra.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Mudar para um TF menor</div>
+              <div class="article-number-text">Passar para H1 ou M15 e procurar confirmação de mudança de estrutura de mercado. Para um setup bullish, procure o primeiro fundo mais alto. Para um setup bearish, procure o primeiro topo mais baixo.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Entrar somente após confirmação da estrutura</div>
+              <div class="article-number-text">Só depois que a estrutura de mercado confirmar a reversão vale considerar a entrada.</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-descr">Essa abordagem reduz significativamente sinais falsos e torna os setups de liquidity sweep mais confiáveis dentro dos limites rígidos de risco do prop trading.</div>
+      </div>
+
+      <div class="article-section" id="section-faq">
+        <div class="article-section-title">FAQ</div>
+        <div class="faq-block">
+
+          <div class="faq-item faq-item-open">
+            <div class="faq-toggle" onclick="toggleFaq(this)">
+              <div class="faq-question">Como um liquidity sweep se diferencia de um rompimento comum?</div>
+              <div class="faq-toggle-icon">−</div>
+            </div>
+            <div class="faq-answer">Em um rompimento comum, o preço rompe o nível e continua na mesma direção. Em um liquidity sweep, o preço rompe o nível, aciona stop-losses agrupados e depois reverte. A diferença principal é que o candle de reversão fecha de volta além do nível rompido, seguido de um movimento impulsivo forte na direção oposta.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-toggle" onclick="toggleFaq(this)">
+              <div class="faq-question">Como saber se o sweep foi concluído?</div>
+              <div class="faq-toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">O sweep é considerado concluído quando o candle de reversão fecha de volta além do nível rompido no timeframe onde você o identificou. Por exemplo, se o sweep ocorreu no H4, aguarde o candle H4 fechar. Só então vale mudar para H1 ou M15 para procurar um setup de entrada.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-toggle" onclick="toggleFaq(this)">
+              <div class="faq-question">Posso operar liquidity sweeps em uma conta de prop firm?</div>
+              <div class="faq-toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">Sim, mas com cuidado. Sweeps são setups de alto potencial, mas também com risco elevado, pois você entra contra o impulso de curto prazo. No challenge da Hash Hedge, o limite de drawdown diário é de 5%, então é recomendado arriscar no máximo 1–2% por operação e aguardar a confirmação completa do sweep antes de entrar.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-toggle" onclick="toggleFaq(this)">
+              <div class="faq-question">Quais timeframes funcionam melhor para operar sweeps?</div>
+              <div class="faq-toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">O ideal é identificar as zonas de liquidez e o próprio sweep no H4 ou no Diário, e depois buscar o ponto de entrada no H1 ou M15. Isso reduz os sinais falsos — muito mais frequentes em timeframes menores — e proporciona um stop-loss com posicionamento claro e lógico.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-toggle" onclick="toggleFaq(this)">
+              <div class="faq-question">Por que os sweeps em altcoins são mais perigosos?</div>
+              <div class="faq-toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">Altcoins de baixa capitalização têm pools de liquidez menores, então os sweeps são muito mais agressivos — o preço pode se mover 5–10% além de um nível e reverter com a mesma velocidade. A execução é menos previsível, o slippage é maior e a volatilidade aumenta drasticamente após o sweep. Recomenda-se dominar o padrão primeiro em BTC/USDT e ETH/USDT.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Pronto para operar com capital de prop firm?</div>
+        <div class="article-final-promo-text">Hash Hedge é a plataforma #1 de crypto prop trading. Receba financiamento de até $150K e retire até 90% dos lucros em USDT diretamente na sua carteira.</div>
+        <div class="article-final-promo-btn" onclick="window.location.href='https://app.hashhedge.com/pt/register/'">Começar Challenge</div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    function toggleFaq(el) {
+      var item = el.parentElement;
+      var isOpen = item.classList.contains('faq-item-open');
+      var allItems = item.parentElement.querySelectorAll('.faq-item');
+      allItems.forEach(function(i) {
+        i.classList.remove('faq-item-open');
+        i.querySelector('.faq-toggle-icon').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('faq-item-open');
+        el.querySelector('.faq-toggle-icon').textContent = '−';
+      }
+    }
+  </script>
+</div>

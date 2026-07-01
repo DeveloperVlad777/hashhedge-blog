@@ -19,10 +19,17 @@ hashhedge-blog/
     │   ├── ru.html
     │   ├── en.html
     │   └── pt.html
-    └── false-breakout-vs-liquidity-grab-vs-stop-hunt/
+    ├── false-breakout-vs-liquidity-grab-vs-stop-hunt/
+    │   ├── ru.html
+    │   ├── en.html
+    │   └── pt.html
+    └── liquidity-sweep-trading/
         ├── ru.html
         ├── en.html
-        └── pt.html
+        ├── pt.html
+        ├── hero-ru.png
+        ├── hero-en.png
+        └── hero-pt.png
 
 Как это работает
 ----------------
@@ -50,6 +57,11 @@ hashhedge-blog/
 
 4. «Ложный пробой, захват ликвидности и охота на стопы: в чём разница»
    папка: blog/false-breakout-vs-liquidity-grab-vs-stop-hunt/
+   языки: ru, en, pt
+   статус: готово
+
+5. «Снятие ликвидности в трейдинге (Liquidity Sweep): что это и как использовать»
+   папка: blog/liquidity-sweep-trading/
    языки: ru, en, pt
    статус: готово
 

@@ -1,0 +1,214 @@
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog/ru'">← Hash Hedge Blog</div>
+
+      <div class="article-hook">ЦЕНОВОЙ ДИСБАЛАНС: ЧТО ОСТАВЛЯЕТ ИМПУЛЬС И КАК ЭТО ИСПОЛЬЗОВАТЬ</div>
+
+      <div class="t-title">Что такое Fair Value Gap (FVG) в крипто-трейдинге и как его использовать</div>
+
+      <div class="article-meta">
+        <span>10 мин чтения</span>
+        <span>|</span>
+        <span>1 июля 2025</span>
+      </div>
+
+      <img class="article-hero" src="https://raw.githubusercontent.com/DeveloperVlad777/hashhedge-blog/refs/heads/main/blog/fair-value-gap-crypto-trading/hero-ru.png" alt="Fair Value Gap на графике BTC/USDT — трёхсвечная формация FVG">
+
+      <div class="article-toc">
+        <div class="article-toc-title">Содержание</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">1. Что такое Fair Value Gap на самом деле</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">2. Как определить FVG на графике</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">3. Какие таймфреймы лучше работают</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">4. Почему цена возвращается заполнять гэп</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">5. Как торговать FVG: вход, стоп, цель</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">6. FVG и структура рынка</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">7. FVG и ложные пробои</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-8').scrollIntoView({behavior:'smooth'})">8. Торговля FVG в проп-трейдинге</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-faq').scrollIntoView({behavior:'smooth'})">FAQ</div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">Что такое Fair Value Gap на самом деле</div>
+        <div class="t-descr">Термин <span class="t-b">FVG (Fair Value Gap)</span> встречается в каждом втором видео по Smart Money Concept и ICT, но большинство объяснений построены на форексных примерах с EUR/USD. В крипте механика та же, но детали важны: BTC и ETH движутся иначе, чем валютные пары.</div>
+        <div class="t-descr">Fair Value Gap — это не паттерн в классическом смысле. Это <span class="t-b">ценовой дисбаланс</span>: зона на графике, которую цена прошла слишком быстро, не оставив достаточно ордеров с обеих сторон. Рынок, стремясь к эффективности, возвращается в эту зону, чтобы «заполнить» её — то есть дать участникам возможность исполнить ордера по ценам, которые были пропущены при импульсном движении.</div>
+        <div class="t-descr">На практике FVG формируется после импульсных движений: после снятия ликвидности (liquidity sweep), после выхода на новость, после opening gap в периоды низкой ликвидности (выходные, азиатская сессия).</div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Как определить Fair Value Gap на графике</div>
+        <div class="t-descr">FVG определяется по <span class="t-b">трём последовательным свечам</span>. Смотрим на среднюю (импульсную) свечу.</div>
+
+        <div class="t-descr"><span class="t-b">Бычий FVG:</span> Low свечи 3 выше High свечи 1. Зазор между High свечи 1 и Low свечи 3 — это и есть fair value gap.</div>
+        <div class="t-descr"><span class="t-b">Медвежий FVG:</span> High свечи 3 ниже Low свечи 1. Зазор между Low свечи 1 и High свечи 3 — медвежий FVG.</div>
+
+        <div class="article-table">
+          <div class="article-table-row article-table-head">
+            <div class="article-table-cell">Свеча</div>
+            <div class="article-table-cell">Роль</div>
+            <div class="article-table-cell">Уровень</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">Свеча 1</div>
+            <div class="article-table-cell">Бычья</div>
+            <div class="article-table-cell">High: 67 200</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">Свеча 2</div>
+            <div class="article-table-cell">Импульсная</div>
+            <div class="article-table-cell">Gap = 67 200 – 68 400</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">Свеча 3</div>
+            <div class="article-table-cell">Бычья</div>
+            <div class="article-table-cell">Low: 68 400</div>
+          </div>
+        </div>
+
+        <div class="t-descr">Зона 67 200–68 400 — бычий FVG. При следующей коррекции цена стремится вернуться в этот диапазон.</div>
+
+        <div class="t-descr"><span class="t-b">Бычий FVG</span> формируется при движении вверх. Импульсная свеча бычья, зазор — ниже неё. Когда цена корректируется вниз в этот зазор — потенциальная зона покупки. <span class="t-b">Медвежий FVG</span> — зеркально: формируется при движении вниз, зазор выше импульсной свечи, откат в него — потенциальная зона продажи.</div>
+        <div class="t-descr">Важно: не все FVG одинаковы. FVG, сформированный после снятия ликвидности на H4, весит значительно больше, чем FVG на M5 в случайной зоне.</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">Какие таймфреймы лучше работают для FVG на BTC и ETH</div>
+        <div class="t-descr">На <span class="t-b">BTC/USDT</span> наиболее надёжные FVG формируются на <span class="t-b">H4 и D1</span>. На этих таймфреймах за импульсной свечой стоит реальный институциональный объём, и вероятность возврата к гэпу выше.</div>
+        <div class="t-descr">На <span class="t-b">ETH/USDT</span> H1 и H4 тоже дают рабочие зоны. M15 и ниже — зоны существуют, но соотношение сигнал/шум хуже.</div>
+        <div class="t-descr"><span class="t-b">Рекомендуемый метод:</span> определяйте FVG на H4/D1, ищите вход на H1 или M15, когда цена возвращается в зону гэпа.</div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Почему цена возвращается заполнять гэп</div>
+        <div class="t-descr">Рынок — это система ордеров. Импульсное движение происходит тогда, когда на одной стороне резко больше ордеров, чем на другой. После такого движения остаётся зона, где ордера не были исполнены. Маркет-мейкеры и алгоритмические системы возвращают цену в эту зону, чтобы исполнить накопленные ордера. Это не магия — это логика исполнения.</div>
+        <div class="t-descr"><span class="t-b">Когда гэпы заполняются, а когда нет.</span> Большинство FVG заполняются, но не все. Сильный тренд на D1 может оставлять незаполненные FVG на H4 неделями. Гэпы, сформированные после критически важных уровней (пробой многомесячного сопротивления, реакция на крупное событие), заполняются реже. <span class="t-b">Практическое правило:</span> FVG на H4 внутри бокового рынка или коррекции заполняется с более высокой вероятностью, чем FVG на D1 в начале нового тренда.</div>
+        <div class="t-descr"><span class="t-b">Частичное vs полное заполнение.</span> Цена не обязана проходить FVG насквозь. Часто достаточно «коснуться» верхней или нижней границы зоны — и движение возобновляется (частичное заполнение). Для торговли важнее начало заполнения: именно там ищем вход. Цель — первая значимая структурная точка после FVG.</div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="8" fill="#FFD700"/>
+              <path d="M16 6L26 11V21L16 26L6 21V11L16 6Z" fill="#000" stroke="#000" stroke-width="0.5"/>
+              <path d="M16 10L22 13.5V20.5L16 24L10 20.5V13.5L16 10Z" fill="#FFD700"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Торгуйте FVG-сетапы на реальном капитале до $150 000</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://app.hashhedge.com/ru/register/'">Начать челлендж</div>
+      </div>
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">Как торговать Fair Value Gap: вход, стоп, цель</div>
+        <div class="t-descr"><span class="t-b">Классическая ошибка</span> — заходить сразу после формирования FVG в направлении импульса. Правильный подход: ждать, пока цена вернётся в зону гэпа на коррекции, и только там искать вход. На BTC/USDT это значит: если сформировался бычий FVG после пробоя уровня, ждём коррекцию вниз в диапазон гэпа и ищем признаки возобновления роста. Такой вход улучшает соотношение риска и прибыли: вход ближе к нижней границе FVG даёт узкий стоп и более широкий потенциал движения.</div>
+
+        <div class="t-descr"><span class="t-b">Постановка стоп-лосса:</span></div>
+        <div class="article-checklist">
+          <div class="article-check-item">
+            <div class="article-check-icon">✓</div>
+            <div class="article-check-text">Бычий сетап: стоп ниже зоны FVG</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon">✓</div>
+            <div class="article-check-text">Медвежий сетап: стоп выше зоны FVG</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon">✓</div>
+            <div class="article-check-text">Если цена прошла зону насквозь и закрылась за ней — FVG сломан, сетап инвалидирован</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-6">
+        <div class="article-section-title">Комбинирование FVG со структурой рынка</div>
+        <div class="t-descr">FVG работает значительно лучше в сочетании со структурой рынка. <span class="t-b">Бычий FVG, сформированный выше предыдущего максимума структуры (HH)</span>, весит больше, чем FVG в середине диапазона. <span class="t-b">Медвежий FVG ниже предыдущего минимума структуры (LL)</span> — сильный сигнал продолжения нисходящего тренда.</div>
+        <div class="t-descr">На ETH/USDT это особенно актуально в периоды чёткого тренда: цепочка FVG в направлении тренда, каждый из которых формируется выше (бычий тренд) или ниже (медвежий тренд) предыдущего — один из признаков сильного направленного движения.</div>
+      </div>
+
+      <div class="article-section" id="section-7">
+        <div class="article-section-title">FVG и ложные пробои: прямая связь</div>
+        <div class="t-descr">FVG и ложные пробои связаны напрямую. Когда цена делает <span class="t-b">liquidity grab</span> (захват ликвидности) или <span class="t-b">liquidity sweep</span> (снятие ликвидности) и разворачивается, за этим разворотом почти всегда остаётся fair value gap. Именно поэтому захваты ликвидности и ложные пробои — ключевая связка в Smart Money анализе.</div>
+        <div class="t-descr"><span class="t-b">Почему захват ликвидности оставляет FVG.</span> Захват ликвидности — быстрое движение. Когда цена выбрасывается за уровень на 1–2 свечи и возвращается, импульсная свеча разворота практически всегда создаёт FVG. Этот гэп — след институционального набора позиции: рынок набирал позицию против розничных трейдеров, которые ловили пробой. На BTC/USDT после major liquidity sweep на H4, разворотный импульс часто оставляет FVG на H1.</div>
+        <div class="t-descr"><span class="t-b">Классическая последовательность:</span> снятие ликвидности (sweep) → формирование FVG → цена уходит в направлении разворота → возврат в FVG для ретеста → продолжение тренда. Вход в этот ретест — одна из самых высоковероятных точек входа в Smart Money методологии. Критерий качества: FVG должен находиться выше зоны свипа (бычий сетап) или ниже (медвежий).</div>
+      </div>
+
+      <div class="article-section" id="section-8">
+        <div class="article-section-title">Торговля FVG в условиях проп-трейдингового аккаунта</div>
+        <div class="t-descr">Вход в FVG — это вход по лимитному ордеру или с подтверждением после коррекции. В отличие от погони за пробоем, здесь есть чёткая точка входа, стоп и цель. Это делает FVG-сетапы более совместимыми с правилами риск-менеджмента проп-фирм.</div>
+        <div class="t-descr">В двухэтапном челлендже Hash Hedge прибыль делится в соотношении <span class="t-b">90/10</span> в пользу трейдера. Стабильная стратегия с чёткими правилами входа даёт преимущество: именно дисциплина риск-менеджмента определяет, пройдёт ли трейдер челлендж.</div>
+        <div class="t-descr"><span class="t-b">Что делать, если FVG формируется близко к лимиту дневной просадки.</span> Если к концу дня просадка уже близка к 3–4% (при лимите 5%), а на графике формируется привлекательный FVG — не открывайте позицию. Размер позиции рассчитывается до входа. Если оставшийся «буфер» до дневного лимита меньше риска на сделку — сделки в этот день нет. FVG никуда не денется: если зона не заполнена к следующему торговому дню, сетап остаётся актуальным.</div>
+      </div>
+
+      <div class="article-section" id="section-faq">
+        <div class="article-section-title">FAQ</div>
+        <div class="faq-block">
+
+          <div class="faq-item faq-item-open">
+            <div class="faq-toggle" onclick="toggleFaq(this)">
+              <div class="faq-question">Что такое Fair Value Gap простыми словами?</div>
+              <div class="faq-toggle-icon">−</div>
+            </div>
+            <div class="faq-answer">Fair Value Gap — это зона на графике, которую цена прошла слишком быстро, не оставив достаточно ордеров с обеих сторон. Рынок стремится вернуться в эту зону, чтобы «закрыть» дисбаланс. Определяется по трём свечам: если между максимумом первой и минимумом третьей есть зазор — это бычий FVG; если между минимумом первой и максимумом третьей — медвежий.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-toggle" onclick="toggleFaq(this)">
+              <div class="faq-question">Все ли FVG заполняются?</div>
+              <div class="faq-toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">Большинство — да, но не все. Сильный тренд на D1 может оставлять незаполненные FVG на H4 неделями. Гэпы после пробоя крупных структурных уровней или реакции на важные макроэкономические события заполняются реже. Практическое правило: FVG внутри бокового рынка или коррекции заполняется с более высокой вероятностью, чем FVG в начале нового тренда.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-toggle" onclick="toggleFaq(this)">
+              <div class="faq-question">На каких таймфреймах лучше торговать FVG?</div>
+              <div class="faq-toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">Оптимальный подход: определять FVG на H4 или D1, где за импульсом стоит реальный институциональный объём, а затем искать точку входа на H1 или M15. Это снижает количество ложных сигналов и даёт логичное место для стоп-лосса. FVG на M15 и ниже существуют, но соотношение сигнал/шум значительно хуже.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-toggle" onclick="toggleFaq(this)">
+              <div class="faq-question">Как FVG связан с ложными пробоями?</div>
+              <div class="faq-toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">Напрямую. Когда цена делает liquidity grab или liquidity sweep и разворачивается, импульсная свеча разворота почти всегда оставляет за собой FVG. Это след институционального набора позиции. Именно поэтому связка «ложный пробой → FVG → ретест» считается одной из самых высоковероятных точек входа в Smart Money методологии.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-toggle" onclick="toggleFaq(this)">
+              <div class="faq-question">Можно ли торговать FVG в проп-фирме?</div>
+              <div class="faq-toggle-icon">+</div>
+            </div>
+            <div class="faq-answer">Да, и FVG-сетапы особенно хорошо подходят для проп-трейдинга: есть чёткая точка входа, логичный стоп и измеримая цель. В отличие от погони за пробоем, FVG-вход не требует «угадывать» импульс. Главное — не входить, если оставшийся буфер до дневного лимита просадки меньше риска на сделку.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Готовы торговать на капитале проп-фирмы?</div>
+        <div class="article-final-promo-descr">Hash Hedge — #1 крипто проп-трейдинговая платформа. Получите фондирование до <span class="t-b">$150 000</span> и выводите до <span class="t-b">90% прибыли</span> в USDT прямо на свой кошелёк.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://app.hashhedge.com/ru/register/'">Начать челлендж</div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    function toggleFaq(el) {
+      var item = el.parentElement;
+      var isOpen = item.classList.contains('faq-item-open');
+      var allItems = item.parentElement.querySelectorAll('.faq-item');
+      allItems.forEach(function(i) {
+        i.classList.remove('faq-item-open');
+        i.querySelector('.faq-toggle-icon').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('faq-item-open');
+        el.querySelector('.faq-toggle-icon').textContent = '−';
+      }
+    }
+  </script>
+</div>

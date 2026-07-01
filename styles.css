@@ -472,13 +472,14 @@ html, body {
   background: #18181b;
 }
 .t-article-wrapper .article-table-row {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  display: flex;
 }
 .t-article-wrapper .article-table-row + .article-table-row {
   border-top: 1px solid #1f1f22;
 }
 .t-article-wrapper .article-table-cell {
+  flex: 1 1 0;
+  min-width: 0;
   padding: 14px 16px;
   font-size: 15px;
   line-height: 1.45;
@@ -489,10 +490,6 @@ html, body {
   font-weight: 700;
   background: #1d1d20;
   font-size: 14px;
-}
-/* 3-column comparison table variant */
-.t-article-wrapper .article-table.cols-3 .article-table-row {
-  grid-template-columns: 1fr 1.35fr 1.35fr;
 }
 
 /* ============================================================

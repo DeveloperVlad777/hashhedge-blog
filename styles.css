@@ -660,4 +660,37 @@ html, body {
 
   .t-article-wrapper .article-table-cell { padding: 10px 8px; font-size: 12.5px; }
   .t-article-wrapper .article-table-head .article-table-cell { font-size: 11px; }
+  .t-article-wrapper .article-links-footer { padding: 16px; }
+}
+
+/* ============================================================
+   Article links-footer & disclaimer — added for interview/story articles
+   New classes only, do not affect any existing articles.
+   ============================================================ */
+.t-article-wrapper .article-links-footer {
+  margin: 36px 0 0;
+  padding: 24px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.t-article-wrapper .article-links-footer-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-family: 'Onest', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(187, 184, 200, 0.75);
+}
+.t-article-wrapper .article-disclaimer {
+  font-family: 'Onest', Arial, sans-serif;
+  font-size: 12px;
+  color: rgba(187, 184, 200, 0.35);
+  line-height: 1.65;
+  margin-top: 20px;
 }

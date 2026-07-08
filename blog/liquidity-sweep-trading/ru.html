@@ -1,259 +1,169 @@
-﻿<div class="t-article-wrapper">
+<div class="t-article-wrapper">
   <div class="t-container">
     <div class="article-content">
 
       <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog/ru'">← Hash Hedge Blog</div>
 
-      <div class="article-hook">ЛОВУШКА ДЛЯ РОЗНИЧНЫХ ТРЕЙДЕРОВ: КАК ИНСТИТУЦИОНАЛЫ ИСПОЛЬЗУЮТ ВАШУ ЛИКВИДНОСТЬ</div>
+      <div class="article-hook">СНЯТИЕ ЛИКВИДНОСТИ: ЧТО ЭТО И КАК ТОРГОВАТЬ В КРИПТЕ</div>
 
       <div class="t-title">Снятие ликвидности в трейдинге (Liquidity Sweep): что это и как использовать</div>
 
-      <div class="article-meta">
-        <span>10 мин чтения</span>
-        <span>|</span>
-        <span>26 июня 2026</span>
-      </div>
+      <div class="article-meta">10 мин · 26 июня 2026</div>
 
       <img class="article-hero" src="https://raw.githubusercontent.com/DeveloperVlad777/hashhedge-blog/refs/heads/main/blog/liquidity-sweep-trading/hero-ru.png" alt="Liquidity sweep на графике BTC/USDT — пробой уровня и разворот">
 
+      <div class="t-descr">В русскоязычных Telegram-каналах три термина используются почти как синонимы: снятие ликвидности, сбор ликвидности и охота на стопы. Это не одно и то же.</div>
+      <div class="t-descr">Снятие ликвидности (liquidity sweep) – это когда цена пробивает значимый уровень, срабатывают стоп-лоссы других участников рынка, и цена разворачивается. Сбор ликвидности – более широкое понятие: любое движение цены к зоне скопления ордеров.</div>
+      <div class="t-descr">Охота на стопы – целенаправленное движение к конкретной зоне, где у большинства трейдеров выставлены стопы. В этой статье разберём механику свипа подробно: где он формируется, как его читать на графике BTC/USDT и ETH/USDT, и как строить вход после него.</div>
+
       <div class="article-toc">
         <div class="article-toc-title">Содержание</div>
-        <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">1. Liquidity Sweep vs. Liquidity Grab vs. Stop Hunt</div>
-        <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">2. Как работают Liquidity Sweeps</div>
-        <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">3. Bullish и Bearish свипы: как отличить</div>
-        <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">4. Fair Value Gap как подтверждение</div>
-        <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">5. Как торговать Liquidity Sweep</div>
-        <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">6. Альткоины vs BTC и ETH</div>
-        <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">7. Свипы в проп-трейдинге</div>
-        <div class="article-toc-item" onclick="document.getElementById('section-8').scrollIntoView({behavior:'smooth'})">8. Мультитаймфреймный метод</div>
-        <div class="article-toc-item" onclick="document.getElementById('section-faq').scrollIntoView({behavior:'smooth'})">FAQ</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">1. Снятие, сбор, охота на стопы: в чём разница</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">2. Как работает снятие ликвидности: механика</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">3. Бычье снятие ликвидности и медвежье: как их различать</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">4. Как FVG подтверждает направление свипа</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">5. Как торговать снятие ликвидности</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">6. Снятие ликвидности в альткоинах против BTC/ETH</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">7. Торговля свипами на аккаунте проп-трейдинговой фирмы</div>
+        <div class="article-toc-item" onclick="document.getElementById('section-8').scrollIntoView({behavior:'smooth'})">8. Ключевые выводы</div>
       </div>
 
       <div class="article-section" id="section-1">
-        <div class="article-section-title">Liquidity Sweep vs. Liquidity Grab vs. Stop Hunt</div>
-        <div class="t-descr">В крипто-сообществе три термина часто используются как синонимы: <span class="t-b">liquidity sweep</span>, <span class="t-b">liquidity grab</span> и <span class="t-b">stop hunt</span>. Хотя все они описывают схожее поведение рынка, между ними есть принципиальные различия.</div>
-        <div class="t-descr"><span class="t-b">Liquidity Sweep</span> — цена пробивает важный уровень, активирует скопившиеся стоп-лоссы и разворачивается. <span class="t-b">Liquidity Grab</span> — более широкое понятие: любое движение цены в зону высокой концентрации ордеров. <span class="t-b">Stop Hunt</span> — целенаправленное движение к конкретной зоне ликвидности, где большинство трейдеров разместили стопы.</div>
-
+        <div class="article-section-title">Снятие, сбор, охота на стопы: в чём разница</div>
+        <div class="t-descr">Прежде чем работать со свипами, нужно чётко понять, что именно происходит в каждом случае. Путаница в терминах ведёт к ошибкам в чтении графика.</div>
+        <div class="t-descr"><span class="t-b">Снятие ликвидности (Liquidity Sweep)</span> – цена пробивает уровень (например, серию равных минимумов на H4), собирает скопившиеся стоп-лоссы, после чего разворачивается и уходит в противоположном направлении. Пробой уровня реальный, но за ним нет продолжения тренда. Разворот подтверждается структурой: формируется fair value gap или смена структуры рынка (BOS/MSB).</div>
+        <div class="t-descr"><span class="t-b">Захват ликвидности (Liquidity Grab)</span> – более быстрое и резкое движение. Цена выбрасывается за уровень на 1-2 свечи и немедленно возвращается. На графике это выглядит как длинный фитиль свечи. Характерен для высоковолатильных альткоинов и внутридневных таймфреймов.</div>
+        <div class="t-descr"><span class="t-b">Охота на стопы (Stop Hunt)</span> – движение цены к конкретной зоне скопления ордеров. Может быть растянутым во времени, особенно перед крупными событиями (публикация CPI, заседание ФРС). После срабатывания стопов происходит разворот.</div>
+        <div class="t-descr">Для детального разбора ложных пробоёв и захватов ликвидности смотрите статью <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/false-breakouts-in-trading/ru'">ложные пробои</span> и охота на стопы.</div>
+        <div class="t-descr"><span class="t-b">Таблица сравнения: Sweep vs Grab vs Hunt</span></div>
         <div class="article-table">
           <div class="article-table-row article-table-head">
-            <div class="article-table-cell">Характеристика</div>
-            <div class="article-table-cell">Liquidity Sweep</div>
-            <div class="article-table-cell">Liquidity Grab</div>
-            <div class="article-table-cell">Stop Hunt</div>
+            <div class="article-table-cell">Параметр</div>
+            <div class="article-table-cell">Снятие ликвидности (Sweep)</div>
+            <div class="article-table-cell">Захват ликвидности (Grab)</div>
+            <div class="article-table-cell">Охота на стопы (Hunt)</div>
           </div>
           <div class="article-table-row">
             <div class="article-table-cell">Что происходит</div>
-            <div class="article-table-cell">Пробой ключевого уровня, активация стопов, разворот</div>
-            <div class="article-table-cell">Агрессивный спайк за уровень с немедленным возвратом</div>
-            <div class="article-table-cell">Целенаправленное движение к кластеру стоп-лоссов</div>
+            <div class="article-table-cell">Цена пробивает уровень, собирает стопы, разворачивается</div>
+            <div class="article-table-cell">Быстрый выброс за уровень и немедленный возврат</div>
+            <div class="article-table-cell">Целенаправленное движение к зоне скопления стопов</div>
           </div>
           <div class="article-table-row">
             <div class="article-table-cell">Скорость</div>
             <div class="article-table-cell">Умеренная, несколько свечей</div>
-            <div class="article-table-cell">Очень быстрая, 1–2 свечи</div>
-            <div class="article-table-cell">Может развиваться дольше</div>
+            <div class="article-table-cell">Очень быстрая, 1-2 свечи</div>
+            <div class="article-table-cell">Может быть растянутой во времени</div>
           </div>
           <div class="article-table-row">
-            <div class="article-table-cell">Типичный таймфрейм</div>
-            <div class="article-table-cell">Крупные TF: H4, D1</div>
-            <div class="article-table-cell">Любой TF, чаще M15–H1</div>
-            <div class="article-table-cell">Около важных уровней рынка</div>
+            <div class="article-table-cell">Масштаб</div>
+            <div class="article-table-cell">Чаще на старших ТФ (H4, D1)</div>
+            <div class="article-table-cell">Любой ТФ, часто M15-H1</div>
+            <div class="article-table-cell">Обычно вокруг значимых уровней</div>
           </div>
           <div class="article-table-row">
-            <div class="article-table-cell">Подтверждение</div>
-            <div class="article-table-cell">Fair Value Gap (FVG), BOS/MSS</div>
+            <div class="article-table-cell">Сигнал после</div>
+            <div class="article-table-cell">FVG, смена структуры (BOS/MSB)</div>
             <div class="article-table-cell">Пин-бар, поглощение</div>
-            <div class="article-table-cell">Сильный разворот с объёмом</div>
+            <div class="article-table-cell">Резкий разворот с объёмом</div>
           </div>
           <div class="article-table-row">
-            <div class="article-table-cell">Примеры в крипто</div>
-            <div class="article-table-cell">BTC/USDT, ETH/USDT на H4–D1</div>
-            <div class="article-table-cell">Волатильные альткоины</div>
-            <div class="article-table-cell">Перед выходом данных CPI или FOMC</div>
+            <div class="article-table-cell">На крипте</div>
+            <div class="article-table-cell">BTC/USDT, ETH/USDT на H4-D1</div>
+            <div class="article-table-cell">Альткоины, высокая волатильность</div>
+            <div class="article-table-cell">Перед крупными новостями (CPI, FOMC)</div>
           </div>
         </div>
       </div>
 
       <div class="article-section" id="section-2">
-        <div class="article-section-title">Как работают Liquidity Sweeps</div>
-        <div class="t-descr">Ликвидность естественным образом накапливается там, где большинство трейдеров размещают стоп-лоссы. Это предсказуемые ценовые зоны: <span class="t-b">Equal Lows</span>, <span class="t-b">Equal Highs</span>, Swing High/Low, неоднократно протестированные поддержки и сопротивления.</div>
-        <div class="t-descr">В терминологии Smart Money эти зоны делятся на: <span class="t-b">BSL (Buy-Side Liquidity)</span> — выше текущей цены, где шортисты держат стопы; <span class="t-b">SSL (Sell-Side Liquidity)</span> — ниже текущей цены, где лонгисты держат стопы. На BTC/USDT пулы ликвидности лучше всего видны на H4 и D1.</div>
-
-        <div class="t-descr"><span class="t-b">Три этапа классического Liquidity Sweep:</span></div>
-        <div class="article-number-list">
-          <div class="article-number-item">
-            <div class="article-number-badge">1</div>
-            <div class="article-number-content">
-              <div class="article-number-title">Пробой</div>
-              <div class="article-number-text">Цена подходит к зоне ликвидности и пробивает уровень. Скопившиеся стоп-лоссы срабатывают, временно увеличивая объём торгов.</div>
-            </div>
-          </div>
-          <div class="article-number-item">
-            <div class="article-number-badge">2</div>
-            <div class="article-number-content">
-              <div class="article-number-title">Разворот</div>
-              <div class="article-number-text">Разворотная свеча закрывается обратно выше пробитого уровня (бычий свип) или ниже него (медвежий свип). Это ключевой сигнал: пробой не удержался.</div>
-            </div>
-          </div>
-          <div class="article-number-item">
-            <div class="article-number-badge">3</div>
-            <div class="article-number-content">
-              <div class="article-number-title">Displacement</div>
-              <div class="article-number-text">Цена уходит от зоны ликвидности с сильным импульсом, часто оставляя позади Fair Value Gap (FVG). Именно displacement отличает настоящий свип от обычной консолидации у уровня.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="t-descr">Продолжительность зависит от таймфрейма. На D1 — от 2 до 5 свечей. На H4 — несколько часов или целый торговый день. На H1 и ниже — значительно быстрее, но рыночный шум резко возрастает.</div>
+        <div class="article-section-title">Как работает снятие ликвидности: механика</div>
+        <div class="t-descr"><span class="t-b">Где формируются пулы ликвидности на крипто-графике</span></div>
+        <div class="t-descr">Ликвидность концентрируется там, где большинство трейдеров ставят стопы. Это предсказуемые уровни: серии равных минимумов (Equal Lows) и равных максимумов (Equal Highs), локальные максимумы и минимумы свингов (Swing High/Low), уровни поддержки и сопротивления, которые часто тестировались. В терминологии Smart Money эти зоны обозначают как BSL (Buy Side Liquidity) – ликвидность выше рынка, где стоят стопы продавцов, и SSL (Sell Side Liquidity) – ликвидность ниже рынка, где стоят стопы покупателей.</div>
+        <div class="t-descr">На BTC/USDT пулы ликвидности хорошо читаются на таймфреймах H4 и D1. На ETH/USDT свипы происходят чаще и агрессивнее из-за более высокой относительной волатильности.</div>
+        <div class="t-descr"><span class="t-b">Последовательность свипа: пробой, разворот, смещение</span></div>
+        <div class="t-descr">Классический свип разворачивается в три этапа.</div>
+        <div class="t-descr">Первый – цена подходит к уровню ликвидности и пробивает его. Стоп-лоссы срабатывают, объём временно растёт.</div>
+        <div class="t-descr">Второй – разворотная свеча закрывается обратно выше (при бычьем свипе) или ниже (при медвежьем) пробитого уровня. Это ключевой сигнал: пробой не удержался.</div>
+        <div class="t-descr">Третий – displacement (смещение): цена уходит в сторону разворота с импульсом, часто оставляя за собой fair value gap.</div>
+        <div class="t-descr">Именно displacement отличает свип от обычной консолидации у уровня. Если после пробоя нет импульса, свип либо не завершён, либо перед вами не свип.</div>
+        <div class="t-descr"><span class="t-b">Сколько длится свип: таймфреймный контекст</span></div>
+        <div class="t-descr">На D1 свип может занимать 2-5 свечей. На H4 – от нескольких часов до суток. На H1 и ниже события разворачиваются быстрее, но и шум выше. Оптимальный подход: определять уровень ликвидности на H4/D1, а вход искать на H1 или M15 после подтверждения разворота.</div>
       </div>
 
       <div class="article-section" id="section-3">
-        <div class="article-section-title">Bullish и Bearish свипы: как отличить</div>
-        <div class="t-descr"><span class="t-b">Bullish Liquidity Sweep</span> формируется, когда цена опускается ниже серии минимумов, активирует стопы лонгистов (SSL) и разворачивается вверх. На графике BTC/USDT это выглядит как длинный нижний фитиль на H4 со свечой, закрывающейся выше пробитой поддержки, после чего цена ускоряется вверх с сильным импульсом.</div>
-        <div class="t-descr"><span class="t-b">Bearish Liquidity Sweep</span> — зеркальная ситуация. Цена уходит выше серии максимумов (BSL), активирует бай-стопы и стопы шортистов, затем разворачивается вниз. На ETH/USDT медвежьи свипы часто происходят после позитивных новостей: розничные трейдеры покупают пробой вверх — и оказываются в ловушке, когда цена быстро разворачивается.</div>
+        <div class="article-section-title">Бычье снятие ликвидности и медвежье: как их различать</div>
+        <div class="t-descr"><span class="t-b">Бычий свип: цена пробивает минимумы и разворачивается вверх</span></div>
+        <div class="t-descr">Бычий свип (Bullish Liquidity Sweep) формируется, когда цена уходит ниже серии минимумов, собирает стопы покупателей (SSL), после чего разворачивается вверх. На графике BTC/USDT это часто выглядит как длинный нижний фитиль на H4 с закрытием свечи выше пробитого уровня. После этого цена уходит вверх с импульсом.</div>
+        <div class="t-descr">Бычий свип сигнализирует: крупные участники рынка набрали лонговые позиции, использовав срабатывание стопов как источник ликвидности для входа.</div>
+        <div class="t-descr"><span class="t-b">Медвежий свип: цена пробивает максимумы и разворачивается вниз</span></div>
+        <div class="t-descr">Медвежий свип (Bearish Liquidity Sweep) работает зеркально: цена пробивает серию максимумов (BSL), собирает стопы продавцов и разворачивается вниз. На ETH/USDT медвежьи свипы часто происходят на фоне позитивных новостей, когда розничные трейдеры покупают пробой максимума – и оказываются в ловушке.</div>
       </div>
 
       <div class="article-section" id="section-4">
-        <div class="article-section-title">Fair Value Gap как подтверждение Liquidity Sweep</div>
-        <div class="t-descr">После завершения liquidity sweep фаза displacement часто оставляет <span class="t-b">Fair Value Gap (FVG)</span> — дисбаланс, созданный между фитилями трёх последовательных свечей. Рынок нередко возвращается к этим дисбалансам перед продолжением нового тренда.</div>
-        <div class="t-descr">Появление FVG сразу после свипа — дополнительное подтверждение того, что движение поддержано институциональным потоком, а не является случайной волатильностью. <span class="t-b">Свип + сильный displacement + чёткий FVG</span> = значительно более высокая вероятность реального разворота.</div>
-      </div>
-
-            <div class="article-banner">
-        <div class="article-banner-content">
-          <div class="article-banner-logo">
-            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
-              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
-              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
-              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
-            </svg>
-          </div>
-          <div class="article-banner-title">Торгуйте свипы ликвидности на реальном капитале. Получите финансирование до $150 000 и выводите до 90% прибыли в USDT.</div>
-        </div>
-        <div class="article-banner-button" onclick="window.location.href='https://app.hashhedge.com/ru/register/'">Начать челлендж</div>
+        <div class="article-section-title">Как FVG подтверждает направление свипа</div>
+        <div class="t-descr">После завершения свипа в зоне displacement часто формируется fair value gap – ценовой разрыв между фитилями трёх последовательных свечей, который рынок стремится заполнить. Наличие FVG после свипа подтверждает: движение реальное, за ним стоит институциональный импульс.</div>
+        <div class="t-descr">Подробнее о том, как читать fair value gap, который формируется после свипа, читайте <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/fair-value-gap/ru'">в статье</span>.</div>
       </div>
 
       <div class="article-section" id="section-5">
-        <div class="article-section-title">Как торговать Liquidity Sweep</div>
-        <div class="t-descr">Самая распространённая ошибка — войти в сделку, как только цена пробивает ключевой уровень. В этот момент невозможно понять: это свип или продолжение тренда. Разворотную сделку можно рассматривать только после того, как разворотная свеча закрылась обратно за пробитый уровень.</div>
-        <div class="t-descr"><span class="t-b">Три ключевых сигнала подтверждения:</span></div>
-        <div class="article-checklist">
-          <div class="article-check-item">
-            <div class="article-check-icon">✓</div>
-            <div class="article-check-text"><span class="t-b">Объём:</span> резкий рост в момент пробоя, затем снижение на разворотной свече — признак того, что институционалы завершили набор позиции.</div>
-          </div>
-          <div class="article-check-item">
-            <div class="article-check-icon">✓</div>
-            <div class="article-check-text"><span class="t-b">Размер фитиля:</span> длинный фитиль, закрытие свечи у максимума (бычий) или минимума (медвежий) — один из сильнейших сигналов отклонения цены.</div>
-          </div>
-          <div class="article-check-item">
-            <div class="article-check-icon">✓</div>
-            <div class="article-check-text"><span class="t-b">Закрытие свечи:</span> разворотная свеча должна чётко закрыться за пробитый уровень. Просто коснуться уровня недостаточно.</div>
-          </div>
-        </div>
-        <div class="t-descr"><span class="t-b">Постановка стоп-лосса:</span> стоп всегда за экстремумом свипа. При бычьем свипе — ниже нижнего фитиля. При медвежьем — выше верхнего фитиля. Это логическая точка инвалидации сетапа.</div>
+        <div class="article-section-title">Как торговать снятие ликвидности: вход, подтверждение, инвалидация</div>
+        <div class="t-descr"><span class="t-b">Дождаться завершения свипа перед входом</span></div>
+        <div class="t-descr">Главная ошибка – входить в момент, когда цена только пробивает уровень. В этот момент неизвестно, закончится ли движение свипом или продолжится в направлении пробоя. Вход на разворот возможен только после закрытия разворотной свечи обратно за уровень.</div>
+        <div class="t-descr">На практике это значит: если BTC/USDT пробил серию минимумов на H4, ждём закрытия H4-свечи выше пробитого уровня. Только после этого ищем вход на M15 или H1.</div>
+        <div class="t-descr"><span class="t-b">Сигналы подтверждения: объём, размер фитиля, закрытие свечи</span></div>
+        <div class="t-descr">Три фактора усиливают сигнал свипа.</div>
+        <div class="t-descr"><span class="t-b">Объём:</span> резкий рост объёма в момент пробоя и снижение на разворотной свече говорит о том, что агрессивные продавцы (или покупатели) получили то, что хотели.</div>
+        <div class="t-descr"><span class="t-b">Размер фитиля:</span> длинный фитиль с закрытием в верхней части тела свечи (при бычьем свипе) – сильный сигнал.</div>
+        <div class="t-descr"><span class="t-b">Закрытие свечи:</span> разворотная свеча должна закрыться чётко за пробитым уровнем, не просто касание.</div>
+        <div class="t-descr"><span class="t-b">Где ставить стоп и что инвалидирует сетап</span></div>
+        <div class="t-descr">Стоп в сетапе на свип ставится за экстремум свипа – ниже минимума фитиля (бычий свип) или выше максимума фитиля (медвежий). Это логичная точка инвалидации: если цена вернулась за экстремум свипа и закрепилась там, структура сломана и сетап отменяется.</div>
+        <div class="t-descr">Подробные правила выставления стопов при торговле свипов – <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/patience-in-trading-risk-management-discipline/ru'">в статье о риск-менеджменте</span>.</div>
       </div>
 
       <div class="article-section" id="section-6">
-        <div class="article-section-title">Liquidity Sweeps в альткоинах vs BTC и ETH</div>
-        <div class="t-descr">На BTC/USDT и ETH/USDT свипы ликвидности, как правило, следуют классическому паттерну: чётко выраженные уровни ликвидности, достаточный объём торгов, чистые развороты с хорошим продолжением. Это обусловлено глубокой ликвидностью этих рынков — институционалы предпочитают биткоин и эфириум при наборе крупных позиций.</div>
-        <div class="t-descr">Альткоины с низкой капитализацией ведут себя иначе. Пулы ликвидности значительно меньше, свипы — агрессивнее. Цена может за несколько минут уйти на 5–10% за уровень и с такой же скоростью вернуться. Такие рынки сложнее торговать: непредсказуемое исполнение, высокий slippage, резкий рост волатильности после свипа.</div>
-        <div class="t-descr">Рекомендуется сначала освоить торговлю свипами на BTC/USDT и ETH/USDT, а затем постепенно переходить к альткоинам, уменьшая размер позиции для компенсации повышенной волатильности.</div>
+        <div class="article-section-title">Снятие ликвидности в альткоинах против BTC/ETH</div>
+        <div class="t-descr">На BTC/USDT и ETH/USDT свипы чаще работают по классической схеме: уровень чёткий, объём есть, разворот читабельный. Это связано с высокой ликвидностью рынка – крупным игрокам нужны именно эти монеты для набора больших позиций.</div>
+        <div class="t-descr">На альткоинах с низкой капитализацией картина другая. Пулы ликвидности меньше, поэтому свипы более агрессивны: цена может уйти за уровень на 5-10% за несколько минут. После свипа разворот тоже резкий. Работать с такими движениями сложнее: разрыв между сигналом и исполнением выше, проскальзывание значительнее.</div>
+        <div class="t-descr">Практический вывод: отрабатывать стратегию снятия ликвидности лучше начинать на BTC/USDT и ETH/USDT. После того как паттерн читается уверенно, переходить к альткоинам с пониженным размером позиции.</div>
       </div>
 
       <div class="article-section" id="section-7">
-        <div class="article-section-title">Торговля Liquidity Sweeps в проп-трейдинге</div>
-        <div class="t-descr">Торговля свипами ликвидности означает вход против краткосрочного импульса рынка. Если свип ещё не завершён, цена может продолжить движение в направлении пробоя и создать значительный убыток. На личном счёте это неприятно, но управляемо. В аккаунте проп-фирмы это может привести к нарушению лимита дневного дродауна.</div>
-        <div class="t-descr">В рамках двухэтапного челленджа Hash Hedge лимит дневного дродауна составляет <span class="t-b">5%</span>, максимальный общий дродаун — <span class="t-b">10%</span>. Если рискуешь 2% счёта на одну сделку, неудачный свип, как правило, управляем. Но риск в 4–5% на «очевидный» сетап способен опасно приблизить аккаунт к нарушению правил уже после одной убыточной сделки.</div>
+        <div class="article-section-title">Торговля свипами на аккаунте проп-трейдинговой фирмы</div>
+        <div class="t-descr"><span class="t-b">Почему свипы – высокорисковые сетапы на челлендже</span></div>
+        <div class="t-descr">Сетап на снятие ликвидности предполагает вход против краткосрочного импульса. Если свип не завершён, цена продолжает движение в сторону пробоя, и позиция идёт в глубокий убыток. На личном счёте это неприятно. На счёте проп-фирмы это может означать нарушение лимита дневной просадки.</div>
+        <div class="t-descr">В двухэтапном челлендже Hash Hedge лимит дневной просадки составляет 5%, максимальная просадка – 10%. При размере позиции 2% от счёта один неудачный свип ещё не критичен. Но если войти с 4-5% риска на «очевидный» сетап – одна сделка может поставить аккаунт на грань нарушения.</div>
+        <div class="t-descr">Детали расчёта размера позиции для высоковолатильных сетапов и правила управления рисками на фондированном счёте – <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-crypto-risk-management/ru'">в отдельной статье</span>.</div>
+        <div class="t-descr"><span class="t-b">Метод нескольких таймфреймов: свип как сигнал разворота</span></div>
+        <div class="t-descr">Для повышения качества входа используйте принцип нескольких таймфреймов. Определите уровень ликвидности на старшем ТФ (H4 или D1). Дождитесь свипа. Перейдите на младший ТФ (H1 или M15) и ищите подтверждение смены структуры: первый более высокий минимум (при бычьем свипе) или первый более низкий максимум (при медвежьем). Только после этого – вход.</div>
+        <div class="t-descr">Такой подход снижает количество ложных срабатываний и делает сетапы более предсказуемыми в условиях ограничений проп-трейдинга.</div>
       </div>
 
       <div class="article-section" id="section-8">
-        <div class="article-section-title">Мультитаймфреймный метод подтверждения</div>
-        <div class="t-descr">Один из наиболее эффективных способов повысить качество сделки — применять мультитаймфреймный анализ.</div>
-        <div class="article-number-list">
-          <div class="article-number-item">
-            <div class="article-number-badge">1</div>
-            <div class="article-number-content">
-              <div class="article-number-title">Определить пул ликвидности на старшем TF</div>
-              <div class="article-number-text">Выявить зону ликвидности на H4 или D1.</div>
-            </div>
+        <div class="article-section-title">Ключевые выводы</div>
+        <div class="article-checklist">
+          <div class="article-check-item">
+            <div class="article-check-icon">—</div>
+            <div class="article-check-text">Снятие ликвидности (liquidity sweep) – это пробой уровня с немедленным разворотом, за которым стоит институциональный сбор ордеров. Отличается от захвата ликвидности (grab) скоростью и масштабом, от охоты на стопы (hunt) – наличием чёткой структурной реакции после пробоя.</div>
           </div>
-          <div class="article-number-item">
-            <div class="article-number-badge">2</div>
-            <div class="article-number-content">
-              <div class="article-number-title">Дождаться свипа</div>
-              <div class="article-number-text">Ждать, пока liquidity sweep не произойдёт.</div>
-            </div>
+          <div class="article-check-item">
+            <div class="article-check-icon">—</div>
+            <div class="article-check-text">Читать свипы на BTC/USDT и ETH/USDT проще, чем на альткоинах: уровни чище, объём читабельнее. На младших монетах свипы агрессивнее и требуют меньшего размера позиции.</div>
           </div>
-          <div class="article-number-item">
-            <div class="article-number-badge">3</div>
-            <div class="article-number-content">
-              <div class="article-number-title">Переключиться на младший TF</div>
-              <div class="article-number-text">Перейти на H1 или M15 и искать подтверждение смены рыночной структуры. Для бычьего сетапа — первый более высокий минимум. Для медвежьего — первый более низкий максимум.</div>
-            </div>
+          <div class="article-check-item">
+            <div class="article-check-icon">—</div>
+            <div class="article-check-text">Вход строится только после завершения свипа – закрытия разворотной свечи за уровнем. Стоп – за экстремумом свипа. Дополнительное подтверждение: FVG в зоне displacement и смена структуры на младшем таймфрейме.</div>
           </div>
-          <div class="article-number-item">
-            <div class="article-number-badge">4</div>
-            <div class="article-number-content">
-              <div class="article-number-title">Войти только после подтверждения структуры</div>
-              <div class="article-number-text">Только после подтверждения смены структуры рынка рассматривать вход в сделку.</div>
-            </div>
+          <div class="article-check-item">
+            <div class="article-check-icon">—</div>
+            <div class="article-check-text">На аккаунте проп-фирмы свипы требуют строгого контроля размера позиции. Высокая потенциальная прибыль сетапа не компенсирует нарушение правил аккаунта.</div>
           </div>
-        </div>
-        <div class="t-descr">Такой подход значительно снижает количество ложных сигналов и делает сетапы на свипы ликвидности более надёжными в рамках жёстких правил риск-менеджмента проп-трейдинга.</div>
-      </div>
-
-      <div class="article-section" id="section-faq">
-        <div class="article-section-title">FAQ</div>
-        <div class="faq-block">
-
-          <div class="faq-item faq-item-open">
-            <div class="faq-toggle" onclick="toggleFaq(this)">
-              <div class="faq-question">Чем liquidity sweep отличается от обычного пробоя уровня?</div>
-              <div class="faq-toggle-icon">−</div>
-            </div>
-            <div class="faq-answer">При обычном пробое цена преодолевает уровень и продолжает движение в том же направлении. При liquidity sweep цена пробивает уровень, активирует скопившиеся стоп-лоссы и затем разворачивается. Ключевое отличие — разворотная свеча закрывается обратно за пробитый уровень, а после этого начинается сильное импульсное движение в противоположную сторону.</div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-toggle" onclick="toggleFaq(this)">
-              <div class="faq-question">Как определить, что свип завершён?</div>
-              <div class="faq-toggle-icon">+</div>
-            </div>
-            <div class="faq-answer">Свип считается завершённым, когда разворотная свеча закрылась обратно за пробитый уровень на том таймфрейме, где вы его идентифицировали. Например, если свип произошёл на H4 — ждите закрытия H4-свечи. После этого можно перейти на H1 или M15 для поиска точки входа.</div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-toggle" onclick="toggleFaq(this)">
-              <div class="faq-question">Можно ли торговать свипы в проп-фирме?</div>
-              <div class="faq-toggle-icon">+</div>
-            </div>
-            <div class="faq-answer">Да, но с осторожностью. Свипы — сетапы с высоким потенциалом, но также с повышенным риском, так как вход происходит против краткосрочного импульса. В челлендже Hash Hedge лимит дневного дродауна — 5%, поэтому рекомендуется рисковать не более 1–2% на одну сделку и дожидаться полного подтверждения свипа.</div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-toggle" onclick="toggleFaq(this)">
-              <div class="faq-question">На каких таймфреймах лучше торговать свипы?</div>
-              <div class="faq-toggle-icon">+</div>
-            </div>
-            <div class="faq-answer">Оптимально идентифицировать зоны ликвидности и сам свип на H4 или D1, а искать точку входа на H1 или M15. Это снижает количество ложных сигналов, которых значительно больше на мелких таймфреймах, и даёт чёткое логическое место для стоп-лосса.</div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-toggle" onclick="toggleFaq(this)">
-              <div class="faq-question">Почему свипы на альткоинах опаснее?</div>
-              <div class="faq-toggle-icon">+</div>
-            </div>
-            <div class="faq-answer">Альткоины с низкой капитализацией имеют меньшие пулы ликвидности, поэтому свипы там значительно агрессивнее — цена может уйти на 5–10% за уровень и так же быстро вернуться. Исполнение менее предсказуемо, slippage выше, а волатильность после свипа резко возрастает. Рекомендуется сначала освоить паттерн на BTC/USDT и ETH/USDT.</div>
-          </div>
-
         </div>
       </div>
 
       <div class="article-final-promo">
         <div class="article-final-promo-title">Готовы торговать на капитале проп-фирмы?</div>
-        <div class="article-final-promo-descr">Hash Hedge — #1 крипто проп-трейдинговая платформа. Получите фондирование до $150К и выводите до 90% прибыли в USDT прямо на свой кошелёк.</div>
+        <div class="article-final-promo-descr">Hash Hedge — #1 крипто проп-трейдинговая платформа. Получите фондирование до <span class="t-b">$150 000</span> и выводите до <span class="t-b">90% прибыли</span> в USDT прямо на свой кошелёк.</div>
         <div class="article-final-promo-button" onclick="window.location.href='https://app.hashhedge.com/ru/register/'">Начать челлендж</div>
       </div>
 

@@ -694,3 +694,46 @@ html, body {
   line-height: 1.65;
   margin-top: 20px;
 }
+
+/* ============================================================
+   YouTube video player widget — new class, does not affect existing articles
+   ============================================================ */
+.t-article-wrapper .article-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 24px 0 32px;
+  cursor: pointer;
+  background: #000;
+  flex-shrink: 0;
+}
+.t-article-wrapper .article-video img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+.t-article-wrapper .article-video:hover img {
+  transform: scale(1.02);
+}
+.t-article-wrapper .article-video .article-video-play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; height: 80px;
+  background: rgba(252, 213, 53, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.t-article-wrapper .article-video:hover .article-video-play-btn {
+  background: #FCD535;
+  transform: translate(-50%, -50%) scale(1.08);
+}

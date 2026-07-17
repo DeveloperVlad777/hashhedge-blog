@@ -23,13 +23,18 @@ hashhedge-blog/
     │   ├── ru.html
     │   ├── en.html
     │   └── pt.html
-    └── liquidity-sweep-trading/
+    ├── liquidity-sweep-trading/
+    │   ├── ru.html
+    │   ├── en.html
+    │   ├── pt.html
+    │   ├── hero-ru.png
+    │   ├── hero-en.png
+    │   └── hero-pt.png
+    └── trader-interview-mardon/
         ├── ru.html
         ├── en.html
         ├── pt.html
-        ├── hero-ru.png
-        ├── hero-en.png
-        └── hero-pt.png
+        └── payout-screenshot.png
 
 Как это работает
 ----------------
@@ -72,6 +77,11 @@ hashhedge-blog/
 
 7. «От участия в пирамидах до Funded-счёта: история Дениса»
    папка: blog/trader-story-funded-account/
+   языки: ru, en, pt
+   статус: готово
+
+8. «Пересек границу США с помощью картелей: $10 000 – $15 000 в месяц на трейдинге в 22 года»
+   папка: blog/trader-interview-mardon/
    языки: ru, en, pt
    статус: готово
 

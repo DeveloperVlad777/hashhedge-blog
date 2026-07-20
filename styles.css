@@ -273,6 +273,14 @@ html, body {
   max-width: 980px;
 }
 
+.t-article-wrapper .article-section-subtitle {
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 28px 0 12px 0;
+}
+
 .t-article-wrapper .article-checklist {
   margin: 24px 0 28px 0;
   display: flex;
@@ -521,6 +529,7 @@ html, body {
   .t-article-wrapper .article-backlink-arrow { font-size: 18px; width: 16px; height: 16px; }
   .t-article-wrapper .t-title { font-size: 30px; letter-spacing: -0.3px; }
   .t-article-wrapper .article-section-title { font-size: 22px; }
+  .t-article-wrapper .article-section-subtitle { font-size: 18px; }
   .t-article-wrapper .t-descr { font-size: 16px; line-height: 1.65; }
   .t-article-wrapper .article-toc { padding: 18px 18px; }
   .t-article-wrapper .article-toc-title { font-size: 16px; }
@@ -629,6 +638,7 @@ html, body {
     line-height: 1.55;
   }
   .t-article-wrapper .article-section-title,
+  .t-article-wrapper .article-section-subtitle,
   .t-article-wrapper .article-final-promo-title {
     font-size: 20px;
   }

@@ -1,0 +1,291 @@
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog/pt'">
+        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-text">Hash Hedge Blog</div>
+      </div>
+
+      <div class="article-hook">DEPOIS PERDEM O CHALLENGE EM 3 DIAS E FICAM SEM ENTENDER O QUE ACONTECEU</div>
+
+      <div class="t-title">Regras do prop challenge: limites de drawdown e meta de lucro</div>
+
+      <div class="article-meta">
+        <span>12 min de leitura</span>
+        <span class="article-meta-sep">|</span>
+        <span>20 de julho de 2026</span>
+      </div>
+
+      <img class="article-hero" src="" alt="Regras do prop challenge: drawdown diário, drawdown máximo e meta de lucro explicados">
+
+      <div class="t-descr">A maioria dos traders que acessa a página de uma prop firm pela primeira vez olha para dois números: tamanho da conta e valor do challenge. As regras quase nunca são lidas até o final.</div>
+      <div class="t-descr">Depois perdem o challenge em 3 dias e ficam sem entender o que aconteceu.</div>
+      <div class="t-descr">Este artigo desmonta a mecânica da fase de avaliação (estágio #1) até o último detalhe. Sem promessas de marketing e sem simplificações.</div>
+      <div class="t-descr">Se você está planejando comprar um challenge em breve, leia até o final antes de pagar.</div>
+
+      <div class="article-toc">
+        <div class="article-toc-title">Índice</div>
+        <div class="article-toc-list">
+          <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">O que a fase de avaliação realmente testa</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">Limite de drawdown diário: como funciona e erros comuns</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">Limite máximo de drawdown</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">Meta de lucro: o que conta e o que não conta</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">Regra de consistência: a parte mais mal compreendida do challenge</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">O que mais leva ao fracasso</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">Como abordar a avaliação como um profissional</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-8').scrollIntoView({behavior:'smooth'})">Conclusões principais</div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">O que a fase de avaliação realmente testa</div>
+        <div class="t-descr">Por fora, a tarefa do challenge parece simples: ganhar X por cento e não perder mais que Y.</div>
+        <div class="t-descr">Na prática, a firma testa não a sua capacidade de ganhar dinheiro, mas a sua capacidade de não perdê-lo de forma previsível.</div>
+        <div class="t-descr">Uma prop firm entrega capital para você. O principal risco dela não é que o trader vá lucrar pouco. O risco é que o trader perca muito e rápido.</div>
+        <div class="t-descr">Por isso, as regras do challenge funcionam como um filtro: elas cortam comportamentos que levam a perdas descontroladas.</div>
+        <div class="t-descr">O lucro deve aparecer sozinho quando o risco está sob controle.</div>
+        <div class="t-descr">4 regras básicas formam a estrutura de qualquer challenge. Veja como elas funcionam.</div>
+
+        <div class="article-table">
+          <div class="article-table-row article-table-head">
+            <div class="article-table-cell">Regra</div>
+            <div class="article-table-cell">Descrição</div>
+            <div class="article-table-cell">Erro típico</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">Limite de drawdown diário</div>
+            <div class="article-table-cell">Perda máxima permitida em um único dia de negociação. Calculado em tempo real pela fórmula: Daily Loss = Equity - Saldo no início do dia</div>
+            <div class="article-table-cell">O trader esquece do P&amp;L flutuante das posições abertas e viola o limite antes de fechar a operação</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">Limite máximo de drawdown</div>
+            <div class="article-table-cell">Perda máxima permitida durante toda a fase. O valor depende do estágio do challenge.</div>
+            <div class="article-table-cell">O trader foca apenas no drawdown diário e ignora o drawdown total da conta</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">Meta de lucro</div>
+            <div class="article-table-cell">Percentual de lucro líquido necessário dentro do período estabelecido para passar de fase</div>
+            <div class="article-table-cell">O trader aumenta o tamanho das posições nos últimos dias tentando alcançar a meta e acaba violando o limite diário de drawdown</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Limite de drawdown diário: como funciona e erros comuns</div>
+
+        <div class="article-section-subtitle">Limite de drawdown diário (Max. Daily Loss)</div>
+        <div class="t-descr">Max. Daily Loss é o valor máximo que você pode perder em um único dia de negociação. Ao ultrapassá-lo, a conta é automaticamente encerrada.</div>
+        <div class="t-descr">Vamos analisar o limite de drawdown diário usando o exemplo do challenge de duas fases da Hash Hedge. O limite é de 5% do saldo inicial.</div>
+        <div class="t-descr">O dia de negociação é reiniciado diariamente às 00:00–00:10 (UTC+4).</div>
+        <div class="t-descr">O resultado diário atual (Daily Loss) é calculado em tempo real:</div>
+        <div class="t-descr"><span class="t-b">Daily Loss = Equity - Saldo no início do dia</span></div>
+
+        <div class="article-section-subtitle">Exemplo de cálculo para um challenge de $10.000 (Limite: $500)</div>
+        <div class="t-descr">Você abriu uma posição e o prejuízo atual é de -$400.</div>
+        <div class="t-descr">O saldo continua em $10.000, mas o equity cai para $9.600.</div>
+        <div class="t-descr">Seu drawdown atual: $9.600 - $10.000 = -$400. Restam apenas $100 antes de violar o limite.</div>
+
+        <div class="article-section-subtitle">Carregando posições para o dia seguinte</div>
+        <div class="t-descr">Se você deixar uma operação aberta até o próximo dia, o prejuízo flutuante de -$400 não é zerado.</div>
+        <div class="t-descr">O novo dia de negociação começará com $400 de limite já utilizados, e seu buffer restante para as novas 24 horas será os mesmos $100.</div>
+        <div class="t-descr">Observação: na negociação real, comissões e funding também afetam o resultado.</div>
+
+        <div class="article-section-subtitle">Violações mais comuns do limite diário e como evitá-las</div>
+        <div class="t-descr"><span class="t-b">Primeiro erro: contar apenas operações fechadas.</span> O limite diário acompanha o P&amp;L flutuante, incluindo posições abertas. O trader pode se recusar a fechar uma operação perdedora esperando uma reversão, mas se o prejuízo flutuante ultrapassar o limite, a conta é encerrada.</div>
+        <div class="t-descr"><span class="t-b">Segundo erro: operar vários instrumentos ao mesmo tempo e perder o controle do risco total.</span> 3 posições com 1,5% de risco cada significam 4,5% de risco agregado. Com um limite diário de 5%, um único movimento desfavorável fecha a conta.</div>
+        <div class="t-descr"><span class="t-b">Terceiro erro: ignorar spread e comissões.</span> Em derivativos cripto, a taker fee e o funding rate se acumulam. Em condições voláteis, o slippage no stop-loss pode transformar uma perda planejada de 1% em uma perda real de 1,5%.</div>
+
+        <div class="article-section-subtitle">O que acontece quando o limite é violado</div>
+        <div class="t-descr">Na maioria das prop firms, ultrapassar o limite diário significa o encerramento permanente da conta.</div>
+        <div class="t-descr">Porém, algumas plataformas oferecem recursos de proteção.</div>
+        <div class="t-descr">Por exemplo, a <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/pt'">Hash Hedge</span> tem a opção Daily Loss Protection: quando o limite é atingido, o sistema fecha automaticamente todas as operações e preserva a conta, permitindo que o trader continue o challenge.</div>
+        <div class="t-descr"><span class="t-b">Dica:</span> Defina seu stop-loss pessoal em 70-80% do limite oficial (por exemplo, 3,5-4% em vez de 5%). Isso cria uma margem de segurança para slippage do mercado.</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">Limite máximo de drawdown</div>
+        <div class="t-descr">Limite máximo de drawdown (Max Overall Drawdown) é o teto absoluto de perdas da conta durante toda a fase. Se o equity cair abaixo desse nível, a conta é automaticamente encerrada.</div>
+        <div class="t-descr">Existem duas abordagens para calcular esse limite na indústria prop:</div>
+        <div class="t-descr"><span class="t-b">Limite estático</span> — vinculado ao saldo inicial. Se você começou com $100.000 e o limite é de 10%, seu piso absoluto é $90.000. Mesmo que a conta cresça para $115.000, o limiar crítico permanece em $90.000. Este é o modelo mais transparente e confortável para o trader.</div>
+        <div class="t-descr"><span class="t-b">Limite trailing (flutuante)</span> — sobe acompanhando o crescimento do seu saldo ou equity. Se a conta cresceu de $100.000 para $108.000, com um limite de 10% seu limiar de encerramento sobe de $90.000 para $98.000. Este modelo penaliza quem fica sentado em lucros não realizados e deixa o ganho devolver.</div>
+
+        <div class="article-section-subtitle">Como funciona na Hash Hedge</div>
+        <div class="t-descr">Todos os challenges da Hash Hedge utilizam um limite estático transparente. Apenas os percentuais mudam dependendo do estágio do challenge.</div>
+        <div class="t-descr">Por exemplo, se a perda máxima total é fixada em 10% do saldo inicial:</div>
+        <div class="t-descr"><span class="t-b">Exemplo de cálculo para um challenge de $10.000:</span></div>
+        <div class="t-descr">Seu limiar de encerramento da conta: $9.000</div>
+        <div class="t-descr">Se você lucrou e elevou o saldo para $11.000, seu limiar crítico não se move e permanece em $9.000. A margem de segurança da conta aumenta para $2.000.</div>
+
+        <div class="article-section-subtitle">Como calcular o tamanho da posição para proteger o limite</div>
+        <div class="t-descr">Para controlar o limite máximo de drawdown, use duas abordagens para o cálculo de risco:</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Básico (por dias)</div>
+              <div class="article-number-text">Divida o buffer restante do limite pelo número de dias de negociação. Exemplo: $7.000 restantes até o limite, 15 dias pela frente. Risco máximo por dia não deve ultrapassar $460.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Avançado (por estratégia)</div>
+              <div class="article-number-text">Calcule o tamanho da posição vinculando o risco ao buffer de perda máxima. Este método leva em conta a volatilidade atual do mercado e a média de sequências perdedoras do seu sistema.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Meta de lucro: o que conta e o que não conta</div>
+
+        <div class="article-section-subtitle">Posições abertas contam para a meta?</div>
+        <div class="t-descr">Na maioria das firmas, a meta de lucro é contabilizada apenas por operações fechadas. Lucro não realizado não conta. Isso significa que, mesmo que você tenha atingido o percentual necessário, se parte do lucro estiver em posições abertas, você não passou de fase até fechar essas operações.</div>
+        <div class="t-descr">Algumas firmas contabilizam pelo equity (incluindo lucro flutuante). Verifique as regras antes de começar a operar.</div>
+
+        <div class="article-section-subtitle">Quantos dias de negociação você tem para atingir a meta?</div>
+        <div class="t-descr">O intervalo padrão é de 30 a 60 dias corridos na primeira fase. Parte das firmas não limita o prazo: opere por meio ano se quiser, o importante é não violar o limite.</div>
+        <div class="t-descr">O número mínimo de dias de negociação também importa. A maioria das firmas exige pelo menos 5-10 dias ativos de operação. Isso está ligado à regra de consistência: não dá para fazer 1 operação com todo o lucro e ir embora.</div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Passe o desafio e obtenha até $150.000 em capital financiado</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://app.hashhedge.com/pt/register/'">Começar Challenge</div>
+      </div>
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">Regra de consistência: a parte mais mal compreendida do challenge</div>
+
+        <div class="article-section-subtitle">O que a regra de consistência significa na prática</div>
+        <div class="t-descr">A regra de consistência proíbe a situação em que todo o lucro foi obtido em 1-2 dias, enquanto os demais foram neutros ou negativos. A lógica é simples: a firma quer ver uma habilidade repetível, não uma única entrada de sorte.</div>
+        <div class="t-descr">Formulação típica: nenhum dia de negociação deve representar mais do que um determinado percentual do lucro total do período. Se o limite é 30% e seu lucro total é $10.000, nenhum dia deve render mais de $3.000.</div>
+
+        <div class="article-section-subtitle">Métodos estruturados de entrada para consistência entre os dias</div>
+        <div class="t-descr">Estratégias com setups fixos ajudam a produzir resultados estáveis de um dia para o outro. Se você opera com métodos estruturados de entrada com critérios repetíveis, a distribuição de lucro entre os dias tende a ser mais uniforme do que na operação intuitiva.</div>
+        <div class="t-descr"><span class="t-b">Princípio-chave:</span> mesmo tamanho de posição, mesmos critérios de entrada, mesmos stop-losses. Esta é a disciplina que ajuda diretamente a passar na regra de consistência.</div>
+      </div>
+
+      <div class="article-section" id="section-6">
+        <div class="article-section-title">O que mais leva ao fracasso</div>
+
+        <div class="article-section-subtitle">As 2 principais violações de regras que encerram challenges</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Exceder o limite diário por causa de um prejuízo flutuante que o trader se recusou a cortar.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Exceder o limite máximo após uma sequência de 3-5 dias negativos sem reduzir o tamanho das posições.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-section-subtitle">Padrões emocionais de negociação que levam a desqualificação</div>
+        <div class="t-descr">Por trás de cada violação formal existe um padrão comportamental.</div>
+        <div class="t-descr">O mais destrutivo é o revenge trading.</div>
+        <div class="t-descr">O trader perdeu dinheiro de manhã, fica irritado e aumenta as posições à tarde tentando recuperar. O resultado é previsível.</div>
+        <div class="t-descr"><span class="t-b">Segundo padrão — entrada por FOMO.</span></div>
+        <div class="t-descr">O mercado já andou 3% sem você, você entra no topo e pega a correção.</div>
+        <div class="t-descr"><span class="t-b">Terceiro — "corrida atrás da meta"</span></div>
+        <div class="t-descr">Quando faltam alguns pontos percentuais para completar o plano, o trader aumenta o tamanho da posição várias vezes. O resultado é ou um acerto por sorte, ou uma conta estourada, e estatisticamente o segundo acontece com muito mais frequência.</div>
+      </div>
+
+      <div class="article-section" id="section-7">
+        <div class="article-section-title">Como abordar a avaliação como um profissional</div>
+        <div class="t-descr">A abordagem profissional do challenge começa não com a primeira operação, mas com a preparação.</div>
+        <div class="t-descr">Defina para si mesmo os canais e setups de negociação profissionais que proporcionam estabilidade no challenge, e opere apenas com eles.</div>
+
+        <div class="article-section-subtitle">Rotina diária durante a fase de avaliação</div>
+        <div class="article-checklist">
+          <div class="article-check-item">
+            <div class="article-check-icon">✓</div>
+            <div class="article-check-text"><span class="t-b">Antes da abertura da sessão:</span> verifique seu saldo, o buffer atual dos limites diário e máximo, o calendário econômico do dia. Registre a perda máxima permitida para o dia.</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon">✓</div>
+            <div class="article-check-text"><span class="t-b">Durante a negociação:</span> atualize a tabela de P&amp;L após cada operação. Monitore o risco agregado das posições abertas.</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon">✓</div>
+            <div class="article-check-text"><span class="t-b">Após o fechamento da sessão:</span> registre o resultado do dia, atualize a tabela de consistência, verifique o buffer restante.</div>
+          </div>
+        </div>
+
+        <div class="article-section-subtitle">Quando parar de operar no dia</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Primeira regra</div>
+              <div class="article-number-text">Se você perdeu 50-60% do limite diário, feche o terminal. O buffer restante é uma reserva para situações imprevistas, não "mais uma tentativa."</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Segunda regra</div>
+              <div class="article-number-text">Se você teve 2-3 operações perdedoras seguidas, faça uma pausa de pelo menos uma hora. Perdas consecutivas pioram a qualidade das decisões. Isso não é psicologia, é estatística.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Terceira regra</div>
+              <div class="article-number-text">Se o plano do dia foi cumprido e você está no lucro, não precisa "forçar mais." Uma operação extra em um bom dia estraga o resultado com mais frequência do que melhora. Profissionais travam o lucro do dia e saem. Iniciantes operam até o ganho virar prejuízo.</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-descr"><span class="t-b">Importante entender:</span> parar de operar no dia não é fraqueza. Faz parte da estratégia. O trader que regularmente cumpre o plano e para atinge a meta de lucro mais devagar, mas viola o limite com muito menos frequência. No longo prazo, é exatamente isso que determina a aprovação no challenge.</div>
+      </div>
+
+      <div class="article-section" id="section-8">
+        <div class="article-section-title">Conclusões principais</div>
+        <div class="t-descr">As regras do challenge não são inimigas do trader. São ferramentas que constroem disciplina.</div>
+        <div class="t-descr">O trader que aprendeu a passar na avaliação automaticamente adquire habilidades de gestão de risco que funcionam também fora do sistema prop.</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Conheça seus limites antes da primeira operação.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Mantenha uma tabela de resultados diários desde o primeiro dia.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Na dúvida, reduza o tamanho da posição, não aumente.</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-descr">O próximo passo é entender como funciona o caminho da compra até a conta funded, passo a passo. <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/pt'">Leia o guia completo aqui.</span></div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Pronto para Operar com Capital de Prop Firm?</div>
+        <div class="article-final-promo-descr">A Hash Hedge é a plataforma de prop trading de cripto nº 1. Receba financiamento de até <span class="t-b">US$150 mil</span> e saque até <span class="t-b">90% dos seus lucros</span> em USDT direto na sua carteira.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://app.hashhedge.com/pt/register/'">Começar Challenge</div>
+      </div>
+
+    </div>
+  </div>
+</div>

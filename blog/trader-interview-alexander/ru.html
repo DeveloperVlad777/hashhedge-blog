@@ -21,7 +21,16 @@
 
       <div class="t-descr">Александр приобрел два челленджа Hash Hedge: $5 000 и $100 000. Оба он успешно прошел с первой попытки, получил Funded-аккаунты и суммарно вывел более $15 000. За время торговли ему дважды пришлось закрыть позиции в убыток, хотя хотелось продолжать их удерживать. Оба решения помогли сохранить счета и избежать более крупных потерь. Эта история о том, почему в трейдинге дисциплина и контроль риска важнее уверенности в собственном прогнозе.</div>
 
-      <div class="t-descr">Полное интервью с Александром в подкасте на YouTube: [ СМОТРЕТЬ ]</div>
+      <div class="t-descr">Полное интервью с Александром в подкасте на YouTube: <span class="article-link" onclick="window.location.href='https://youtu.be/INofP2GMFL0'">СМОТРЕТЬ</span></div>
+
+      <div class="article-video" onclick="playYouTube(this,'INofP2GMFL0')">
+        <img src="https://img.youtube.com/vi/INofP2GMFL0/maxresdefault.jpg" alt="Полное интервью с Александром в подкасте на YouTube — $848 → $15 878 с помощью проп-трейдинга">
+        <div class="article-video-play-btn">
+          <svg width="32" height="36" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 18L2 35.3205L2 0.679491L32 18Z" fill="#101012"/>
+          </svg>
+        </div>
+      </div>
 
       <div class="article-toc">
         <div class="article-toc-title">Содержание</div>
@@ -194,5 +203,21 @@
 
     </div>
   </div>
+  <script>
+    function playYouTube(el, id) {
+      var wrapper = document.createElement('div');
+      wrapper.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%';
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.style.cssText = 'width:100%;height:100%;border:0';
+      wrapper.appendChild(iframe);
+      el.innerHTML = '';
+      el.appendChild(wrapper);
+      el.style.cursor = 'default';
+      el.onclick = null;
+    }
+  </script>
 </div>
 

@@ -1,0 +1,318 @@
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog/ru'">
+        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-text">Hash Hedge Blog</div>
+      </div>
+
+      <div class="article-hook">КАК УСТРОЕН ПРОП-ЧЕЛЛЕНДЖ: ПРОСАДКА, ЦЕЛЬ ПО ПРИБЫЛИ И ПРАВИЛО КОНСИСТЕНТНОСТИ</div>
+
+      <div class="t-title">Как устроен проп-челлендж: просадка, цель по прибыли и правило консистентности</div>
+
+      <div class="article-meta">
+        <span>12 мин чтения</span>
+        <span class="article-meta-sep">|</span>
+        <span>2 сентября 2026</span>
+      </div>
+
+      <img class="article-hero" src="https://raw.githubusercontent.com/DeveloperVlad777/hashhedge-blog/refs/heads/main/blog/prop-challenge-rules-drawdown-profit-consistency/hero-ru.png" alt="Как устроен проп-челлендж: просадка, цель по прибыли и правило консистентности">
+
+      <div class="t-descr">Большинство трейдеров, которые проваливают проп-челлендж, проваливают его не из-за неспособности торговать. Они проваливают его потому, что не разобрались в правилах до того, как начали.</div>
+      <div class="t-descr">В этой статье подробно разберём правила челленджа и посмотрим, где трейдеры чаще всего допускают ошибки. Также покажем, как выстроить прохождение так, чтобы соблюдать стратегию и повысить шансы на успешный результат.</div>
+
+      <div class="article-toc">
+        <div class="article-toc-title">Содержание</div>
+        <div class="article-toc-list">
+          <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">Что на самом деле тестирует этап оценки</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">Дневной лимит просадки: как он работает и типичные ошибки</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">Максимальный лимит просадки: абсолютный порог вашего челленджа</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">Цель по прибыли: что засчитывается и что нет</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">Правило консистентности: самая непонятная часть челленджа</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">За что трейдеров дисквалифицируют чаще всего</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">Как подойти к оценке как профессионал</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-takeaways').scrollIntoView({behavior:'smooth'})">Ключевые выводы</div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">Что на самом деле тестирует этап оценки</div>
+        <div class="t-descr">Стоит посмотреть на оценку глазами <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/what-is-a-prop-trading-firm/ru'">проп-фирмы</span>. Она тестирует не то, можете ли вы заработать за месяц. Она тестирует, можете ли вы заработать, не принимая рисков, которые в итоге уничтожат реальный счёт.</div>
+        <div class="t-descr">Правила – лимиты просадки, цель по прибыли, требования к консистентности – спроектированы как фильтр. Они отсеивают трейдеров, которым повезло с крупными ставками, от трейдеров, у которых есть повторяемый, дисциплинированный процесс.</div>
+        <div class="t-descr">Этот сдвиг в восприятии важен на практике: трейдеры, которые подходят к оценке как к тесту на результат («как быстро я выбью цель по прибыли?»), чаще проваливаются. Трейдеры, которые подходят как к тесту на процесс («могу ли я стабильно торговать свою стратегию в рамках этих ограничений?»), чаще проходят.</div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Дневной лимит просадки: как он работает и типичные ошибки</div>
+        <div class="t-descr">Дневной лимит просадки (Max. Daily Loss) – это максимальная сумма, которую можно потерять за один торговый день. Если лимит превышен, счёт автоматически закрывается.</div>
+
+        <div class="article-section-subtitle">Как считается дневная просадка: по балансу vs по эквити</div>
+        <div class="t-descr">Существуют 2 метода расчёта, и путаница между ними – одна из самых частых ошибок трейдеров.</div>
+        <div class="t-descr"><span class="t-b">Расчёт по балансу</span> – лимит считается от баланса счёта на начало дня (или на конец предыдущего). Если ваш стартовый баланс $100 000, а дневной лимит 5%, вы можете потерять до $5 000 за день. Открытые позиции не учитываются, пока не закрыты.</div>
+        <div class="t-descr"><span class="t-b">Расчёт по эквити</span> – лимит считается от вашего текущего эквити в реальном времени, включая открытые позиции. Если на счёте $100 000 и лимит просадки 5% по эквити, то в момент, когда открытые позиции опускают эквити ниже $95 000, аккаунт нарушает лимит. Даже если вы не закрыли ни одной сделки.</div>
+        <div class="t-descr">Расчёт по эквити строже и встречается чаще. Это значит, что позиция, движущаяся против вас, уже считается в дневной лимит до того, как вы её закроете.</div>
+
+        <div class="article-section-subtitle">Как это работает в Hash Hedge</div>
+        <div class="t-descr">На двухстадийном челлендже Hash Hedge дневной лимит просадки составляет 5% от начального баланса счёта.</div>
+        <div class="t-descr"><span class="t-b">Дневной лимит просадки = Эквити − Баланс на начало дня</span></div>
+        <div class="t-descr">Торговый день обновляется ежедневно в 00:00–00:10 (UTC+4).</div>
+        <div class="t-descr"><span class="t-b">Пример для челленджа $10 000:</span> Max. Daily Loss = $500. Баланс на начало дня: $10 000. Если открытая позиция −$400, то баланс остаётся $10 000, а Эквити снижается до $9 600. Тогда: Daily Loss = $9 600 − $10 000 = −$400. Это значит, что из дневного лимита $500 уже использовано $400, и запас остаётся $100.</div>
+        <div class="t-descr">Если перенести позицию на следующий торговый день, минус по ней не обнуляется – переносится и её текущий результат. Новый торговый день начнётся уже с Daily Loss = −$400, и плавающий убыток сразу уменьшает доступный запас по Max. Daily Loss в новом дне. В примере для простоты не учтены комиссии и фандинг, но в реальной торговле они тоже влияют на расчёт.</div>
+
+        <div class="article-section-subtitle">Самые частые нарушения дневного лимита и как их избежать</div>
+        <div class="t-descr"><span class="t-b">Перенос позиций через волатильные события.</span> Позиция, которая была слегка в плюсе при закрытии сессии, может оказаться существенно в минусе к открытию следующей. В крипте, которая торгуется 24/7, этот риск существует вокруг макро-событий, объявлений ФРС и запланированных ончейн-событий.</div>
+        <div class="t-descr"><span class="t-b">Добавление к убыточным позициям.</span> Усреднение на убыточной сделке сжигает дневной лимит просадки быстрее, чем почти любое другое поведение. Одна убыточная сделка превращается в 2, потом в 3, и убыток нарастает.</div>
+        <div class="t-descr"><span class="t-b">Торговля в конце дня, когда уже в минусе.</span> Психология «отбить убыток до конца дня» ведёт к завышенным позициям и плохим сетапам – ровно те условия, которые превращают управляемый убыток в нарушение дневного лимита.</div>
+        <div class="t-descr"><span class="t-b">Что делать:</span> Установите личный дневной <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/stop-loss-prop-trader/ru'">стоп-лосс</span> ниже лимита фирмы. Если лимит фирмы 5%, ваш личный стоп – 3%. Достигли 3% – торговля на сегодня окончена. Буфер защищает от одной плохой сделки, которая превратит тяжёлый день в дисквалификацию.</div>
+
+        <div class="article-section-subtitle">Что происходит при нарушении дневного лимита</div>
+        <div class="t-descr">В большинстве проп-фирм превышение дневного лимита означает безвозвратное закрытие аккаунта. Однако некоторые платформы предлагают защитные функции. Например, в Hash Hedge есть опция Daily Loss Protection: при достижении лимита система автоматически закрывает все сделки и сохраняет аккаунт, позволяя трейдеру продолжить челлендж.</div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Получите до 90% прибыли на фондированном счёте до $150 000</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://app.hashhedge.com/ru/register/'">Начать челлендж</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">Максимальный лимит просадки: абсолютный порог вашего челленджа</div>
+        <div class="t-descr">Максимальный лимит просадки устанавливает суммарный допустимый убыток за весь период оценки. Это абсолютный порог. Пересеките его в любой момент, и оценка заканчивается.</div>
+
+        <div class="article-section-subtitle">Статический vs трейлинг лимит просадки</div>
+        <div class="t-descr"><span class="t-b">Статический лимит.</span> Привязан к стартовому балансу. Начали с $100 000 при лимите 10% – ваш порог всегда $90 000. Прибыль его не меняет. Если счёт вырос до $115 000, а потом вы отдали $25 000, вы ниже порога и оценка заканчивается, хотя в какой-то момент вы были в прибыли.</div>
+        <div class="t-descr"><span class="t-b">Трейлинг (плавающий) лимит.</span> Следует за вашим максимальным достигнутым эквити. Если счёт вырос до $115 000, порог поднимается до $103 500 (при лимите 10%). Порог никогда не опускается, но поднимается вместе с прибылью. Это существенно строже, потому что период сильной торговли с последующей просадкой может дисквалифицировать аккаунт, который ранее был прибыльным.</div>
+        <div class="t-descr">Трейлинг-просадка всё чаще встречается в оценках и требует специфической адаптации: осторожно обращайтесь с новыми максимумами эквити. Большая прибыльная неделя поднимает порог навсегда. Аккаунт, которому было комфортно при первоначальном пороге, теперь оказывается в более жёстких условиях.</div>
+
+        <div class="article-section-subtitle">Как это работает в Hash Hedge</div>
+        <div class="t-descr">Все челленджи Hash Hedge используют статический лимит – прозрачный и понятный.</div>
+        <div class="t-descr">На двухфазном челлендже Hash Hedge общий лимит потерь зависит от стадии: 10% на стадии #1, 8% на стадии #2 и 8% на Funded-аккаунте. На однофазном челлендже Hash Hedge общий лимит потерь составляет 6% на фазе #1 и 6% на Funded-аккаунте.</div>
+        <div class="t-descr"><span class="t-b">Пример для двухфазного челленджа $10K (стадия #1):</span> Стартовый баланс: $10 000. Общий лимит потерь на этапе #1: 10% = $1 000 → порог $9 000. Если Эквити (с учётом открытых позиций) опускается до $9 000 – лимит считается достигнутым. Порог фиксирован на каждом этапе челленджа. Он не меняется, даже если до этого ты был в плюсе. Например: старт $10 000, заработал $1 000 (баланс $11 000) – порог всё равно остаётся $9 000.</div>
+
+        <div class="article-section-subtitle">Как рассчитать размер позиции для защиты лимита</div>
+        <div class="t-descr">Математика здесь простая, но её нужно делать до каждой сделки, а не во время. Если максимальный лимит просадки даёт вам $10 000 запаса от текущего эквити и вы рискуете $500 за сделку, у вас есть 20 убыточных сделок до конца оценки. При риске 2% на сделку от первоначального баланса – всего 5.</div>
+        <div class="t-descr">Рассчитайте <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-crypto-risk-management/ru'">размер позиции</span> заранее – это разница между структурированным подходом и ставкой на собственную дисциплину в моменте.</div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Цель по прибыли: что засчитывается и что нет</div>
+        <div class="t-descr">Цель по прибыли – минимальная прибыль, которую нужно достичь для прохождения этапа оценки. На первый взгляд всё просто. На практике есть детали, на которых спотыкаются трейдеры.</div>
+
+        <div class="article-section-subtitle">Засчитываются ли открытые позиции в цель?</div>
+        <div class="t-descr">Это зависит от фирмы. Одни учитывают нереализованную прибыль от открытых позиций в цель. Другие требуют реализованную прибыль – позиции закрыты, P&amp;L зафиксирован.</div>
+        <div class="t-descr">Консервативный подход: считайте, что открытые позиции не засчитываются, пока не узнаете наверняка. Не завершайте оценку с нереализованной прибылью на уровне цели, считая, что вы прошли. Уточните правила по этому конкретному пункту перед последней торговой сессией.</div>
+
+        <div class="article-section-subtitle">Сколько торговых дней даётся для достижения цели?</div>
+        <div class="t-descr">Большинство оценок требуют минимальное количество торговых дней помимо цели по прибыли – обычно от 5 до 10. Нельзя выбить цель в первый день и пройти. Это требование существует, чтобы исключить случайные одноразовые удачи и убедиться, что оценка отражает реальное торговое поведение во времени.</div>
+        <div class="t-descr">Планируйте оценку вокруг этого минимума. Если требуется 10 торговых дней и у вас 30 дней на весь период оценки, вы не гонитесь за дедлайном – есть время быть избирательным и ждать качественных сетапов.</div>
+      </div>
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">Правило консистентности: самая непонятная часть челленджа</div>
+        <div class="t-descr">Правило консистентности – требование оценки, которое застаёт врасплох больше всего трейдеров, часто в последний день, когда они думают, что уже прошли.</div>
+
+        <div class="article-section-subtitle">Что правило консистентности означает на практике</div>
+        <div class="t-descr">Правило ограничивает процент общей прибыли, который может приходиться на один торговый день. Типичная формулировка: ни один день не может составлять более 30–40% от общей цели по прибыли.</div>
+        <div class="t-descr">Итого: если ваша цель по прибыли $10 000 и правило консистентности 30%, ни один день не должен дать более $3 000 к общему P&amp;L. День с прибылью $5 000 не дисквалифицирует челлендж сразу, но создаёт математическое ограничение: оставшиеся дни должны сгенерировать достаточно дополнительной прибыли, чтобы день с $5 000 перестал составлять более 30% от итога.</div>
+        <div class="t-descr">Трейдеры попадают на это 2 способами. Первый – один удачный день в начале оценки, который становится проблемой-якорем на весь остальной челлендж. Второй – попытка в последний день закрыть цель по прибыли за одну сессию, что вызывает нарушение консистентности в тот самый момент, когда цель «достигнута».</div>
+
+        <div class="article-section-subtitle">Как планировать торговую неделю для выполнения правила</div>
+        <div class="t-descr">Практический подход: установите дневную цель по прибыли наряду с дневным лимитом убытка. Если цель по прибыли $10 000 и у вас 20 торговых дней, стабильные $500 в день приводят к цели без проблем с консистентностью.</div>
+        <div class="t-descr">Это также совпадает с задачей фильтрации: фирма хочет видеть, что вы генерируете доходность стабильно, а не что у вас был один исключительный день на фоне посредственности.</div>
+
+        <div class="article-section-subtitle">Структурированные методы входа для стабильных результатов</div>
+        <div class="t-descr">Консистентность результатов требует консистентности процесса. Погоня за сетапами, разные стратегии в разные дни, изменение размера позиции на основе «убеждённости» – всё это ведёт к высокой вариативности дневного P&amp;L, что именно и наказывает правило консистентности.</div>
+        <div class="t-descr">Определённый, повторяемый подход – с фиксированными критериями входа – даёт более предсказуемые результаты между сессиями. Когда <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/false-breakout-vs-liquidity-grab-vs-stop-hunt/ru'">сетапы определены заранее</span> и размер позиции систематический, дневная вариация P&amp;L естественно снижается.</div>
+      </div>
+
+      <div class="article-section" id="section-6">
+        <div class="article-section-title">За что трейдеров дисквалифицируют чаще всего</div>
+
+        <div class="article-section-subtitle">Топ-5 нарушений правил, которые заканчивают челленджи</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Нарушение дневного лимита из-за открытой позиции</div>
+              <div class="article-number-text">Самая частая дисквалификация, часто от трейдера, который не понимал, что нереализованный убыток учитывается.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Перенос позиции через волатильное событие</div>
+              <div class="article-number-text">Позиция, которая была управляемой во время сессии, становится нарушением лимита за ночь.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Нарушение правила консистентности в последний день</div>
+              <div class="article-number-text">Трейдер пытается выбить цель по прибыли за одну сессию после медленного старта.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Ошибка в размере позиции на «уверенной» сделке</div>
+              <div class="article-number-text">Сделка, в которой трейдер был убеждён, с завышенным размером, которая идёт не туда.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">5</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Торговля во время ограниченных часов (где применимо)</div>
+              <div class="article-number-text">Некоторые фирмы ограничивают торговлю вокруг крупных новостных событий.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-section-subtitle">Эмоциональные паттерны торговли, ведущие к дисквалификации</div>
+        <div class="t-descr">За каждым формальным нарушением стоит поведенческий паттерн.</div>
+        <div class="t-descr"><span class="t-b">Revenge trading</span> – убыточное утро, за которым следует увеличение позиций после обеда в попытке отыграться. <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/fear-greed-fomo-trading/ru'">Эмоциональная реакция на убыток</span> объективно ухудшает следующую сделку.</div>
+        <div class="t-descr"><span class="t-b">Переторговка вблизи цели</span> – когда трейдеры близки к цели, они торгуют чаще и принимают худшие сетапы. Ирония в том, что именно здесь дисквалификации происходят чаще всего.</div>
+        <div class="t-descr"><span class="t-b">Недоторговка вблизи лимита убытка</span> – паралич от близости к дневному лимиту ведёт к поздним, нерешительным входам, которые пропускают движение и потом гонятся за ним.</div>
+        <div class="t-descr">Распознать эти паттерны в себе до оценки ценнее, чем любая техническая стратегия.</div>
+      </div>
+
+      <div class="article-section" id="section-7">
+        <div class="article-section-title">Как подойти к оценке как профессионал</div>
+        <div class="t-descr">Трейдеры, которые стабильно проходят оценки, относятся к ним как к профессиональной задаче с определёнными правилами, а не как к соревнованию на результат. Это означает: правила прочитаны полностью до первой сделки; дневной лимит риска установлен ниже лимита фирмы; размер позиции рассчитан заранее, а не на глаз в моменте; сессия заканчивается при достижении личного дневного лимита убытка, а не лимита фирмы.</div>
+        <div class="t-descr">Второй стабильный фактор – качество самой торговой системы. Наличие определённого набора сетапов означает, что решения принимаются до сделки, а не во время неё. Субъективные решения во время открытой позиции – именно там, где оценочные аккаунты идут не так.</div>
+
+        <div class="article-section-subtitle">Дневная рутина во время этапа оценки</div>
+        <div class="t-descr">Структурированная дневная рутина во время оценки выглядит так:</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Проверить дневной лимит просадки (сколько запаса осталось на сегодня).</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Пересмотреть план: какие сетапы валидны сегодня, на каких уровнях.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Установить алерты на эти уровни – не смотреть на график непрерывно.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Когда алерт сработал – оценить сетап по заранее определённым критериям.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">5</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Войти с заранее рассчитанным размером позиции.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">6</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Когда личный дневной лимит убытка или прибыли достигнут – закрыть платформу.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-section-subtitle">Когда прекращать торговлю на день</div>
+        <div class="t-descr">Самая сложная дисциплина на оценке – остановиться, когда вы в минусе, до того как достигнете лимита. Каждый инстинкт говорит отыграть убыток. Профессиональный ответ – закрыть платформу и сохранить оставшийся буфер на завтра.</div>
+        <div class="t-descr">Торговый день, закончившийся на −2%, – плохой день. Торговый день, закончившийся на −5% (лимит), – дисквалификация. Разница между ними – одно решение, принятое в состоянии убытка, а это худшее время для принятия решений.</div>
+      </div>
+
+      <div class="article-section" id="section-takeaways">
+        <div class="article-section-title">Ключевые выводы</div>
+        <div class="article-table">
+          <div class="article-table-row article-table-head">
+            <div class="article-table-cell">Правило</div>
+            <div class="article-table-cell">Что измеряет</div>
+            <div class="article-table-cell">Ключевой риск</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell"><span class="t-b">Дневной лимит просадки</span></div>
+            <div class="article-table-cell">Максимальный убыток за день (часто по эквити)</div>
+            <div class="article-table-cell">Нереализованные убытки от открытых позиций учитываются</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell"><span class="t-b">Максимальный лимит просадки</span></div>
+            <div class="article-table-cell">Суммарный убыток от старта (или от пика при трейлинге)</div>
+            <div class="article-table-cell">Трейлинг-версия растёт с прибылью, обратного хода нет</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell"><span class="t-b">Цель по прибыли</span></div>
+            <div class="article-table-cell">Минимальная прибыль для прохождения этапа</div>
+            <div class="article-table-cell">Может требовать только реализованную прибыль + минимум торговых дней</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell"><span class="t-b">Правило консистентности</span></div>
+            <div class="article-table-cell">Ни один день не должен доминировать в общей прибыли</div>
+            <div class="article-table-cell">Попытки выбить цель в последний день – самый частый триггер</div>
+          </div>
+        </div>
+        <div class="article-checklist">
+          <div class="article-check-item">
+            <div class="article-check-icon"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L5.5 10.5L15 1" stroke="#FCD535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="article-check-text">Прочитайте конкретные правила вашей оценки до первой сделки – не предполагайте, что они совпадают со структурой другой фирмы.</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L5.5 10.5L15 1" stroke="#FCD535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="article-check-text">Установите личные лимиты ниже лимитов фирмы, чтобы создать буфер от эмоциональных решений.</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L5.5 10.5L15 1" stroke="#FCD535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="article-check-text">Правило консистентности застаёт трейдеров врасплох – отслеживайте дневной вклад в общий P&amp;L на протяжении всей оценки, а не только в конце.</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L5.5 10.5L15 1" stroke="#FCD535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="article-check-text">Оценка тестирует процесс, а не удачу – относитесь к ней соответственно.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-more">
+        <div class="article-section-title">Больше полезных статей</div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/why-traders-misuse-leverage-in-crypto-trading/ru'">Почему трейдеры неправильно используют кредитное плечо</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/best-crypto-prop-firms-2026/ru'">Лучшие крипто проп-фирмы 2026: как выбрать и не ошибиться</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/prop-firm-payouts-profit-split/ru'">Выплаты в проп-фирмах: как устроен профит-сплит в 2026</span></div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Готовы торговать на капитале проп-фирмы?</div>
+        <div class="article-final-promo-text">Hash Hedge — #1 крипто проп-трейдинговая платформа. Получите фондирование до $150К и выводите до 90% прибыли в USDT прямо на свой кошелёк.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://app.hashhedge.com/ru/register/'">Начать челлендж</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var isOpen = item.classList.contains('faq-item-open');
+  document.querySelectorAll('.faq-item').forEach(function(i) {
+    i.classList.remove('faq-item-open');
+    i.querySelector('.faq-toggle-icon').textContent = '+';
+  });
+  if (!isOpen) {
+    item.classList.add('faq-item-open');
+    item.querySelector('.faq-toggle-icon').textContent = '−';
+  }
+}
+</script>

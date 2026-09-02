@@ -1,0 +1,303 @@
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog'">
+        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-text">Hash Hedge Blog</div>
+      </div>
+
+      <div class="article-hook">HOW A PROP CHALLENGE WORKS: DRAWDOWN, PROFIT TARGET, AND THE CONSISTENCY RULE</div>
+
+      <div class="t-title">How a Prop Challenge Works: Drawdown, Profit Target, and the Consistency Rule</div>
+
+      <div class="article-meta">
+        <span>12 min read</span>
+        <span class="article-meta-sep">|</span>
+        <span>September 2, 2026</span>
+      </div>
+
+      <img class="article-hero" src="https://raw.githubusercontent.com/DeveloperVlad777/hashhedge-blog/refs/heads/main/blog/prop-challenge-rules-drawdown-profit-consistency/hero-en.png" alt="How a Prop Challenge Works: Drawdown, Profit Target, and the Consistency Rule">
+
+      <div class="t-descr">Most traders who fail a prop challenge do not fail because they are unable to trade. They fail because they did not fully understand the rules before they started.</div>
+      <div class="t-descr">In this article, we'll break down the Challenge rules in detail and look at where traders most often make mistakes. We'll also show how to structure your approach so you can follow your strategy while improving your chances of successfully completing the evaluation.</div>
+
+      <div class="article-toc">
+        <div class="article-toc-title">Table of Contents</div>
+        <div class="article-toc-list">
+          <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">What the Evaluation Stage Actually Tests</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">Daily Drawdown Limit: How It Works and Common Mistakes</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">Maximum Drawdown Limit: The Absolute Threshold of Your Challenge</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">Profit Target: What Counts and What Doesn't</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">The Consistency Rule: The Most Misunderstood Part of a Challenge</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">What Traders Are Most Often Disqualified For</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">How to Approach an Evaluation Like a Professional</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-takeaways').scrollIntoView({behavior:'smooth'})">Key Takeaways</div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">What the Evaluation Stage Actually Tests</div>
+        <div class="t-descr">It helps to look at the evaluation from the <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/what-is-a-prop-trading-firm'">prop firm's</span> perspective. It is not testing whether you can make money over one month. It is testing whether you can generate profit without taking risks that would eventually destroy a real trading account.</div>
+        <div class="t-descr">The rules – drawdown limits, profit targets, and consistency requirements – are designed as a filter. They separate traders who got lucky with a few oversized bets from traders who have a repeatable, disciplined process.</div>
+        <div class="t-descr">This shift in perspective matters in practice. Traders who approach an evaluation as a performance race – "How quickly can I hit the profit target?" – are more likely to fail. Traders who approach it as a process test – "Can I execute my strategy consistently within these constraints?" – are more likely to pass.</div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Daily Drawdown Limit: How It Works and Common Mistakes</div>
+        <div class="t-descr">The Daily Drawdown Limit, or Max. Daily Loss, is the maximum amount you are allowed to lose during a single trading day. If the limit is exceeded, the account is automatically closed.</div>
+
+        <div class="article-section-subtitle">How Daily Drawdown Is Calculated: Balance vs. Equity</div>
+        <div class="t-descr">There are two common methods, and confusing them is one of the most frequent mistakes traders make.</div>
+        <div class="t-descr"><span class="t-b">Balance-based calculation</span> – the limit is calculated from the account balance at the beginning of the day, or from the previous day's closing balance. If your starting balance is $100,000 and the daily limit is 5%, you can lose up to $5,000 during the day. Open positions are not taken into account until they are closed.</div>
+        <div class="t-descr"><span class="t-b">Equity-based calculation</span> – the limit is calculated using your current real-time equity, including open positions. If the account is at $100,000 and the equity-based drawdown limit is 5%, the account breaches the limit as soon as open positions push equity below $95,000 – even if you have not closed a single trade.</div>
+        <div class="t-descr">Equity-based calculation is stricter and is commonly used. This means that a position moving against you can already count toward the Daily Loss Limit before you close it.</div>
+
+        <div class="article-section-subtitle">How It Works at Hash Hedge</div>
+        <div class="t-descr">On the <span class="article-link" onclick="window.location.href='https://www.hashhedge.com?utm_source=blog&utm_medium=blog&utm_campaign=article'">Hash Hedge</span> Two-Stage Challenge, the Daily Loss Limit is 5% of the initial account balance.</div>
+        <div class="t-descr"><span class="t-b">Daily Loss = Equity − Balance at the Start of the Day</span></div>
+        <div class="t-descr">The trading day resets daily between 00:00 and 00:10 (UTC+4).</div>
+        <div class="t-descr"><span class="t-b">Example for a $10,000 Challenge:</span> Max. Daily Loss = $500. Balance at the start of the day: $10,000. If an open position is at −$400, the balance remains $10,000 while equity falls to $9,600. So: Daily Loss = $9,600 − $10,000 = −$400. That means $400 of the $500 Daily Loss Limit has already been used, leaving only a $100 buffer.</div>
+        <div class="t-descr">If the position is carried into the next trading day, the floating loss does not disappear – its current P&amp;L carries over as well. The new trading day would therefore begin with Daily Loss = −$400, and the floating loss immediately reduces the available Max. Daily Loss buffer for the new day. For simplicity, this example does not include commissions or funding fees, but in real trading they also affect the calculation.</div>
+
+        <div class="article-section-subtitle">The Most Common Daily Loss Limit Breaches and How to Avoid Them</div>
+        <div class="t-descr"><span class="t-b">Holding Positions Through Volatile Events.</span> A position that was slightly profitable near the end of a session can become significantly negative by the next session. In crypto, which trades 24/7, this risk is especially relevant around macro events, Fed announcements, and scheduled on-chain events.</div>
+        <div class="t-descr"><span class="t-b">Adding to Losing Positions.</span> Averaging into a losing trade burns through the Daily Loss Limit faster than almost any other behavior. One losing trade becomes two, then three, while the total loss keeps growing.</div>
+        <div class="t-descr"><span class="t-b">Trading Late in the Day While Already Down.</span> The mindset of "making the loss back before the day ends" often leads to oversized positions and lower-quality setups – exactly the conditions that can turn a manageable loss into a Daily Loss Limit breach.</div>
+        <div class="t-descr"><span class="t-b">What to Do Instead:</span> Set a personal daily <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/stop-loss-prop-trader'">Stop Loss</span> below the firm's limit. If the firm's limit is 5%, your personal stop could be 3%. Once you reach 3%, trading is over for the day. That buffer protects you from one bad decision turning a difficult session into a disqualification.</div>
+
+        <div class="article-section-subtitle">What Happens When You Breach the Daily Loss Limit?</div>
+        <div class="t-descr">At most prop firms, exceeding the Daily Loss Limit results in permanent account closure. Some platforms, however, offer protective features. For example, Hash Hedge offers Daily Loss Protection. If the limit is reached, the system automatically closes all open positions and preserves the account, allowing the trader to continue the Challenge.</div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Get up to 90% profit on a funded account up to $150,000</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://app.hashhedge.com/en/register/'">Start Challenge</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">Maximum Drawdown Limit: The Absolute Threshold of Your Challenge</div>
+        <div class="t-descr">The Maximum Drawdown Limit defines the total loss you are allowed to incur during the entire evaluation. It is the absolute threshold. Cross it at any point, and the evaluation ends.</div>
+
+        <div class="article-section-subtitle">Static vs. Trailing Drawdown</div>
+        <div class="t-descr"><span class="t-b">Static Drawdown.</span> A static drawdown limit is tied to the starting balance. If you start with $100,000 and the limit is 10%, your threshold remains $90,000. Profit does not change it. If the account grows to $115,000 and then loses $25,000, the account falls below the $90,000 threshold and the evaluation ends – even though you were previously in profit.</div>
+        <div class="t-descr"><span class="t-b">Trailing Drawdown.</span> A trailing drawdown follows the highest equity level reached by the account. If the account grows to $115,000, the threshold may rise to $103,500 with a 10% trailing limit. The threshold never moves lower, but it moves higher as your profits increase. This is significantly stricter because a strong period of trading followed by a drawdown can disqualify an account that was previously profitable.</div>
+        <div class="t-descr">Trailing drawdown has become increasingly common in evaluations and requires a specific adjustment in risk management: new equity highs need to be treated carefully. A strong profitable week can permanently raise the threshold. An account that felt comfortable under the original threshold may suddenly operate under much tighter conditions.</div>
+
+        <div class="article-section-subtitle">How It Works at Hash Hedge</div>
+        <div class="t-descr">All Hash Hedge Challenges use a static loss limit, making the structure more transparent and predictable.</div>
+        <div class="t-descr">On the Hash Hedge Two-Stage Challenge, the Total Loss Limit depends on the stage: Stage 1: 10%, Stage 2: 8%, Funded Account: 8%. On the Hash Hedge One-Stage Challenge, the Total Loss Limit is: Stage 1: 6%, Funded Account: 6%.</div>
+        <div class="t-descr"><span class="t-b">Example for a $10K Two-Stage Challenge, Stage 1:</span> Starting balance: $10,000. Total Loss Limit on Stage 1: 10% = $1,000. Threshold: $9,000. If equity, including open positions, falls to $9,000, the loss limit is considered reached. The threshold remains fixed during each Challenge stage. It does not change even if you were previously in profit. For example: Starting balance: $10,000. You make $1,000, bringing the balance to $11,000. The loss threshold still remains at $9,000.</div>
+
+        <div class="article-section-subtitle">How to Calculate Position Size to Protect Your Drawdown Limit</div>
+        <div class="t-descr">The math is simple, but it needs to be done before every trade, not during it. If your Maximum Drawdown Limit gives you a $10,000 buffer from current equity and you risk $500 per trade, you effectively have room for 20 full-risk losing trades before reaching the limit. If you risk 2% per trade based on the original account balance, you may only have room for around 5.</div>
+        <div class="t-descr">Calculate your <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-crypto-risk-management'">position size</span> in advance. That is the difference between a structured risk-management process and relying on discipline in the moment.</div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Profit Target: What Counts and What Doesn't</div>
+        <div class="t-descr">The Profit Target is the minimum profit required to complete an evaluation stage. At first glance, it seems simple. In practice, there are several details that can catch traders off guard.</div>
+
+        <div class="article-section-subtitle">Do Open Positions Count Toward the Profit Target?</div>
+        <div class="t-descr">It depends on the firm. Some firms include unrealized profit from open positions in the target calculation. Others require realized profit – meaning the positions must be closed and the P&amp;L locked in.</div>
+        <div class="t-descr">The conservative approach is to assume that open positions do not count until you confirm otherwise. Do not finish an evaluation with unrealized profit sitting exactly at the target and assume you have passed. Check the firm's specific rules before your final trading session.</div>
+
+        <div class="article-section-subtitle">How Many Trading Days Do You Have to Reach the Target?</div>
+        <div class="t-descr">Many evaluations require a minimum number of trading days in addition to reaching the Profit Target – often somewhere between 5 and 10. You may not be able to hit the entire target on Day 1 and immediately pass. This requirement exists to reduce the impact of one-off lucky results and make sure the evaluation reflects trading behavior over time.</div>
+        <div class="t-descr">Plan your evaluation around the minimum requirement. If 10 trading days are required and you have 30 days for the full evaluation, you do not need to chase the deadline. You have time to be selective and wait for higher-quality setups.</div>
+      </div>
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">The Consistency Rule: The Most Misunderstood Part of a Challenge</div>
+        <div class="t-descr">The Consistency Rule is one of the evaluation requirements that catches traders off guard most often – sometimes on the final day, when they believe they have already passed.</div>
+
+        <div class="article-section-subtitle">What the Consistency Rule Means in Practice</div>
+        <div class="t-descr">The rule limits how much of your total profit can come from a single trading day. A typical requirement might state that no single day can account for more than 30–40% of the total Profit Target.</div>
+        <div class="t-descr">For example, if your Profit Target is $10,000 and the consistency limit is 30%, no single day should contribute more than $3,000 to total P&amp;L. A day with $5,000 in profit may not immediately disqualify the Challenge, but it creates a mathematical constraint. You now need enough additional profit on other days so that the $5,000 day represents less than 30% of the final total.</div>
+        <div class="t-descr">Traders usually run into this problem in two ways. The first is one exceptionally profitable day early in the evaluation, which becomes an anchor problem for the rest of the Challenge. The second is trying to hit the remaining Profit Target in one session near the end, triggering a consistency issue at the exact moment the target appears to have been reached.</div>
+
+        <div class="article-section-subtitle">How to Plan Your Trading Week Around the Consistency Rule</div>
+        <div class="t-descr">A practical approach is to set a daily profit target alongside your daily loss limit. If your overall Profit Target is $10,000 and you expect to trade over 20 days, averaging around $500 per day gets you to the target without creating major consistency issues.</div>
+        <div class="t-descr">That also matches what the rule is designed to test: the firm wants to see that you can generate returns consistently rather than producing one exceptional day surrounded by mediocre results.</div>
+
+        <div class="article-section-subtitle">Structured Entry Methods for More Consistent Results</div>
+        <div class="t-descr">Consistency in results starts with consistency in process. Chasing setups, using different strategies on different days, or changing position size based on how "confident" you feel can all create large swings in daily P&amp;L – exactly what a consistency rule is designed to penalize.</div>
+        <div class="t-descr">A defined, repeatable approach with fixed entry criteria produces more predictable results across sessions. When <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/false-breakout-vs-liquidity-grab-vs-stop-hunt'">setups are predefined</span> and position sizing is systematic, daily P&amp;L variation naturally tends to decrease.</div>
+      </div>
+
+      <div class="article-section" id="section-6">
+        <div class="article-section-title">What Traders Are Most Often Disqualified For</div>
+
+        <div class="article-section-subtitle">Top 5 Rule Violations That End Challenges</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Breaching the Daily Loss Limit because of an open position</div>
+              <div class="article-number-text">One of the most common causes of disqualification, often because the trader did not understand that unrealized losses counted toward the limit.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Holding a position through a volatile event</div>
+              <div class="article-number-text">A position that was manageable during the session becomes a breach overnight.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Breaking the Consistency Rule on the final day</div>
+              <div class="article-number-text">The trader tries to hit the remaining Profit Target in one session after a slow start.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Position-sizing mistakes on a "high-conviction" trade</div>
+              <div class="article-number-text">The trader oversizes a position because they feel certain about the setup, and the trade moves against them.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">5</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Trading during restricted hours, where applicable</div>
+              <div class="article-number-text">Some firms limit trading around major news events or during specific periods.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-section-subtitle">Emotional Trading Patterns That Lead to Disqualification</div>
+        <div class="t-descr">Behind most formal rule breaches is a behavioral pattern.</div>
+        <div class="t-descr"><span class="t-b">Revenge trading</span> – a losing morning followed by larger positions later in the day in an attempt to recover losses. <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/fear-greed-fomo-trading'">The emotional response to a loss</span> often reduces the quality of the next decision.</div>
+        <div class="t-descr"><span class="t-b">Overtrading near the target</span> – when traders get close to the Profit Target, they often increase trade frequency and accept weaker setups. Ironically, this is often where disqualifications happen.</div>
+        <div class="t-descr"><span class="t-b">Undertrading near the loss limit</span> – getting too close to the Daily Loss Limit can create paralysis. The trader hesitates, enters late, misses the move, and then starts chasing the market.</div>
+        <div class="t-descr">Recognizing these patterns in yourself before starting an evaluation can be more valuable than any technical strategy.</div>
+      </div>
+
+      <div class="article-section" id="section-7">
+        <div class="article-section-title">How to Approach an Evaluation Like a Professional</div>
+        <div class="t-descr">Traders who consistently pass evaluations treat them as a professional task with predefined rules, not as a competition to maximize short-term results. That means: The rules are read in full before the first trade. The personal daily risk limit is set below the firm's maximum. Position size is calculated in advance rather than estimated in the moment. The session ends when the personal daily loss limit is reached – not when the firm's limit is reached.</div>
+        <div class="t-descr">Another major factor is the quality of the trading system itself. Having a clearly defined set of setups means that decisions are made before entering the trade rather than while the trade is already open. Subjective decisions during an open position are often where evaluation accounts start to go wrong.</div>
+
+        <div class="article-section-subtitle">Daily Routine During the Evaluation Stage</div>
+        <div class="t-descr">A structured daily routine can look like this:</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Check the Daily Drawdown Limit and how much buffer remains for the day.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Review your trading plan: which setups are valid today, and at which levels?</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Set alerts at those levels instead of watching the chart continuously.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-text">When an alert triggers, evaluate the setup using predefined criteria.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">5</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Enter with a position size calculated in advance.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">6</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Once your personal daily profit or loss limit is reached, close the platform.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-section-subtitle">When to Stop Trading for the Day</div>
+        <div class="t-descr">One of the hardest parts of evaluation discipline is stopping while you are down before you reach the maximum limit. Every instinct tells you to make the loss back. The professional response is to close the platform and preserve the remaining drawdown buffer for tomorrow.</div>
+        <div class="t-descr">A trading day that ends at −2% is a bad day. A trading day that ends at −5%, when that is the limit, is a disqualification. The difference between the two is often a single decision made while already under emotional pressure – the worst possible time to make one.</div>
+      </div>
+
+      <div class="article-section" id="section-takeaways">
+        <div class="article-section-title">Key Takeaways</div>
+        <div class="article-table">
+          <div class="article-table-row article-table-head">
+            <div class="article-table-cell">Rule</div>
+            <div class="article-table-cell">What It Measures</div>
+            <div class="article-table-cell">Key Risk</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell"><span class="t-b">Daily Drawdown Limit</span></div>
+            <div class="article-table-cell">Maximum loss allowed in one day, often based on equity</div>
+            <div class="article-table-cell">Unrealized losses from open positions may count</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell"><span class="t-b">Maximum Drawdown Limit</span></div>
+            <div class="article-table-cell">Total loss from the starting balance, or from the peak with trailing drawdown</div>
+            <div class="article-table-cell">A trailing threshold rises with profit and does not move back down</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell"><span class="t-b">Profit Target</span></div>
+            <div class="article-table-cell">Minimum profit required to complete the stage</div>
+            <div class="article-table-cell">May require realized profit and a minimum number of trading days</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell"><span class="t-b">Consistency Rule</span></div>
+            <div class="article-table-cell">Prevents one trading day from dominating total profit</div>
+            <div class="article-table-cell">Trying to hit the entire target on the final day is a common trigger</div>
+          </div>
+        </div>
+        <div class="article-checklist">
+          <div class="article-check-item">
+            <div class="article-check-icon"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L5.5 10.5L15 1" stroke="#FCD535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="article-check-text">Read the specific rules of your evaluation before placing your first trade. Do not assume they work the same way as another prop firm.</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L5.5 10.5L15 1" stroke="#FCD535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="article-check-text">Set personal risk limits below the firm's maximums to create a buffer against emotional decisions.</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L5.5 10.5L15 1" stroke="#FCD535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="article-check-text">Consistency rules often catch traders by surprise, so where they apply, track each day's contribution to total P&amp;L throughout the evaluation rather than waiting until the end.</div>
+          </div>
+          <div class="article-check-item">
+            <div class="article-check-icon"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L5.5 10.5L15 1" stroke="#FCD535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="article-check-text">An evaluation tests your process, not your luck. Trade accordingly.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-more">
+        <div class="article-section-title">More Useful Articles</div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/why-traders-misuse-leverage-in-crypto-trading'">Why Traders Misuse Leverage</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/best-crypto-prop-firms-2026'">Best Crypto Prop Firms in 2026: How to Choose the Right One</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/prop-firm-payouts-profit-split'">Prop Firm Payouts: How Profit Splits Work in 2026</span></div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Ready to Trade with Prop Firm Capital?</div>
+        <div class="article-final-promo-text">Hash Hedge — #1 crypto prop trading platform. Get funding up to $150K and withdraw up to 90% of profits in USDT directly to your wallet.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://app.hashhedge.com/en/register/'">Start Challenge</div>
+      </div>
+
+    </div>
+  </div>
+</div>

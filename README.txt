@@ -131,6 +131,12 @@ hashhedge-blog/
     статус: готово
     примечание: слаг crypto-prop-firm-evaluation-challenge-rules уже занят (старая версия)
 
+18. «Форекс-трейдер в крипте: Как Ярослав прошёл челлендж и вывел $1,683»
+    папка: blog/trader-story-iaroslav/
+    языки: ru, en, pt
+    статус: готово
+    примечание: hero изображения будут загружены позже (hero-ru.png, hero-en.png, hero-pt.png, inline-ru-2.png, inline-en-2.png, inline-pt-2.png)
+
 (сюда добавляем новые статьи по мере создания)
 
 Ссылки CTA (регистрация, по языкам)

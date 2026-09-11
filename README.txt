@@ -137,6 +137,12 @@ hashhedge-blog/
     статус: готово
     примечание: hero изображения будут загружены позже (hero-ru.png, hero-en.png, hero-pt.png, inline-ru-2.png, inline-en-2.png, inline-pt-2.png)
 
+19. «Как пройти проп-челлендж: разбор с трейдером-наставником Аней»
+    папка: blog/prop-challenge-mentor-anya/
+    языки: ru, en, pt
+    статус: готово
+    примечание: hero изображения нужно загрузить (hero-ru.jpg, hero-en.jpg, hero-pt.jpg); видео (YouTube AaXELO9-6kw) только в RU-версии
+
 (сюда добавляем новые статьи по мере создания)
 
 Ссылки CTA (регистрация, по языкам)

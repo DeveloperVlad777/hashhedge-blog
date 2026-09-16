@@ -1,0 +1,268 @@
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog'">
+        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-text">Hash Hedge Blog</div>
+      </div>
+
+      <div class="article-hook">POSITION SIZING ON A FUNDED ACCOUNT: FORMULA, CALCULATION, AND DRAWDOWN PROTECTION</div>
+
+      <div class="t-title">Position Sizing on a Funded Account: Formula, Calculation, and Drawdown Protection</div>
+
+      <div class="article-meta">
+        <span>11 min read</span>
+        <span class="article-meta-sep">|</span>
+        <span>September 17, 2026</span>
+      </div>
+
+      <img class="article-hero" src="https://raw.githubusercontent.com/DeveloperVlad777/hashhedge-blog/refs/heads/main/blog/position-sizing-funded-crypto-account/hero-en.jpg" alt="Calculating position size on a Funded Account in crypto trading">
+
+      <div class="t-descr">Position size directly determines how much a trader will lose if a trade is closed at the Stop Loss. On a Funded Account, this is especially important: a calculation mistake can not only increase the loss but also bring the account closer to its drawdown limit.</div>
+
+      <div class="t-descr">That's why simply "not taking too much risk" isn't enough.</div>
+
+      <div class="t-descr">You need to know in advance what your position size should be based on the account size, acceptable risk, distance to the Stop Loss, and current drawdown.</div>
+
+      <div class="t-descr">In this article, we'll break down the formula itself, walk through calculations with examples, and explain how to adapt position sizing specifically for the crypto market and a Funded Account.</div>
+
+      <div class="article-toc">
+        <div class="article-toc-title">Table of Contents</div>
+        <div class="article-toc-list">
+          <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">Why Position Size Matters So Much on a Funded Account</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">Basic Formula: How to Calculate Position Size</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">How to Choose Risk per Trade for a Funded Account</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">Adjusting Position Size Based on the Current State of the Account</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">When the Account Is in Drawdown: Reduce Risk Instead of Increasing It</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">Position Sizing for Different Types of Crypto Entries</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">Recalculating Position Size Every Day</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-8').scrollIntoView({behavior:'smooth'})">Common Position-Sizing Mistakes and How to Avoid Them</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-9').scrollIntoView({behavior:'smooth'})">Full Position-Sizing Example</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-10').scrollIntoView({behavior:'smooth'})">Key Takeaways</div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">Why Position Size Matters So Much on a Funded Account</div>
+        <div class="t-descr">On a personal account, a position-sizing mistake can lead to a larger loss than planned. That's unpleasant, but the account usually remains active and the trader can continue trading.</div>
+        <div class="t-descr">On a Funded Account, the consequences can be more serious. A single oversized position closed at the <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/stop-loss-prop-trader'">Stop Loss</span> can:</div>
+        <div class="article-checklist">
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">bring the account significantly closer to the daily or total loss limit;</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">reduce the available drawdown buffer and limit opportunities for future trades;</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">increase psychological pressure and trigger emotional trading.</div></div>
+        </div>
+        <div class="t-descr">That's why position size is best determined before entering a trade rather than adjusted after the position has already been opened.</div>
+        <div class="t-descr">The calculation itself takes less than a minute, but it answers the most important question in advance: how much will you lose if your trade idea turns out to be wrong?</div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Basic Formula: How to Calculate Position Size</div>
+        <div class="t-descr">The calculation starts with the amount you are prepared to risk on a single trade. First, determine the acceptable loss, then calculate the distance to the Stop Loss, and only after that calculate the position size.</div>
+
+        <div class="article-section-subtitle">Step 1. Determine the Risk Amount</div>
+        <div class="t-descr"><span class="t-b">Formula:</span> Risk Amount = Account Balance × Risk per Trade</div>
+        <div class="t-descr">For example, on a $100,000 account with 0.75% risk, the maximum acceptable loss would be:</div>
+        <div class="t-descr">$100,000 × 0.75% = $750</div>
+        <div class="t-descr">This means that if the trade is closed at the Stop Loss, you are planning to lose no more than $750.</div>
+
+        <div class="article-section-subtitle">Step 2. Calculate the Distance to the Stop Loss</div>
+        <div class="t-descr">Now determine how far the <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/stop-loss-prop-trader'">Stop Loss</span> is from the entry point in percentage terms.</div>
+        <div class="t-descr">For example:</div>
+        <div class="t-descr">BTC entry – $42,000</div>
+        <div class="t-descr">Stop Loss – $41,160</div>
+        <div class="t-descr">The difference is $840, or 2% of the entry price.</div>
+
+        <div class="article-section-subtitle">Step 3. Calculate the Position Size</div>
+        <div class="t-descr"><span class="t-b">Formula:</span> Position Size = Risk Amount / Stop Distance in Decimal Form</div>
+        <div class="t-descr">In our example: $750 / 0.02 = $37,500</div>
+        <div class="t-descr">So, with a $37,500 position, a 2% move against the trade would result in a loss of approximately $750 – exactly the 0.75% risk defined in advance.</div>
+        <div class="t-descr">This calculation is best done before every trade. It takes less than a minute and allows you to know exactly how much you will lose if the <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/stop-loss-prop-trader'">Stop Loss</span> is triggered.</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">How to Choose Risk per Trade for a Funded Account</div>
+        <div class="t-descr">Your risk percentage per trade should ideally be defined before you start trading. It should not change depending on how confident you feel about a particular setup.</div>
+        <div class="t-descr">This parameter determines how many consecutive losing trades the account can withstand without reaching a critical drawdown.</div>
+
+        <div class="article-section-subtitle">Why Traders Often Use 0.5–1% Risk</div>
+        <div class="t-descr">Imagine an account with a 5% Daily Loss Limit and a 10% Total Loss Limit.</div>
+        <div class="t-descr">At 1% risk per trade, a series of five consecutive Stop Losses would already bring the trader close to the daily limit. At 0.5% risk, the buffer would be roughly twice as large.</div>
+        <div class="t-descr">That's why a range of 0.5–0.75% per trade can often provide a more comfortable buffer during a losing streak, especially if the trader opens several positions during a session.</div>
+        <div class="t-descr">These figures should be treated as guidelines rather than universal rules. The appropriate risk depends on the strategy, trade frequency, and limits of the specific account.</div>
+
+        <div class="article-section-subtitle">Why Confidence in a Trade Shouldn't Increase Risk</div>
+        <div class="t-descr">One common mistake is increasing position size on trades that look particularly strong.</div>
+        <div class="t-descr">The problem is that subjective confidence does not make a trade objectively more likely to succeed. Even the most attractive setup remains part of your strategy's statistics and can still hit the Stop Loss.</div>
+        <div class="t-descr">That's why it is better to use a consistent risk approach for the same type of setups.</div>
+        <div class="t-descr">If a standard setup receives 0.75% risk, that risk remains the same regardless of how convincing a particular entry may look.</div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Adjusting Position Size Based on the Current State of the Account</div>
+        <div class="t-descr">Position size does not necessarily have to remain the same throughout a Challenge or while trading on a Funded Account. As the balance and available buffer to the loss limit change, so does the amount of risk the account can comfortably handle.</div>
+
+        <div class="article-section-subtitle">If a Trailing Drawdown Is Used</div>
+        <div class="t-descr">With a trailing drawdown, the lower threshold moves upward as the account grows. Because of this, profits do not always increase your available buffer as much as the current balance might suggest.</div>
+        <div class="t-descr">For example, suppose an account grows from $100,000 to $112,000, while the maximum trailing drawdown is 10%. In this case, the lower threshold would be approximately $100,800, leaving an available buffer of $11,200.</div>
+        <div class="t-descr">That's why strong account growth should not automatically lead to higher risk per trade. In some trailing-drawdown models, it may make more sense to keep the same position size or even reduce it slightly.</div>
+
+        <div class="article-section-subtitle">How It Works at Hash Hedge</div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com?utm_source=blog&utm_medium=blog&utm_campaign=article'">Hash Hedge</span> uses a static drawdown limit. Its threshold is calculated from the initial balance and does not move upward as the account grows.</div>
+        <div class="t-descr">Let's look at a $100,000 Two-Stage Challenge.</div>
+        <div class="t-descr">On Stage 1, the Total Loss Limit is 10%, so the lower threshold is $90,000.</div>
+        <div class="t-descr">If the balance grows from $100,000 to $112,000, the threshold still remains at $90,000. This means the available buffer increases to $22,000.</div>
+        <div class="t-descr">On Stage 2, the Total Loss Limit is 8%. With a starting balance of $100,000, the lower threshold is $92,000.</div>
+        <div class="t-descr">If the balance on this stage also grows to $112,000, the available buffer becomes $20,000.</div>
+        <div class="t-descr">This model differs from a trailing drawdown because earned profits genuinely increase the available buffer without moving the lower threshold upward.</div>
+        <div class="t-descr">However, it is better to treat this additional buffer as account protection rather than a reason to increase risk. The greater the distance to the limit, the more resilient the account is to a series of losing trades.</div>
+      </div>
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">When the Account Is in Drawdown: Reduce Risk Instead of Increasing It</div>
+        <div class="t-descr">After a series of losses, traders often feel the urge to increase position size and recover the losses faster. But the closer the account gets to its drawdown limit, the more dangerous this approach becomes.</div>
+        <div class="t-descr">Imagine a $100,000 account with a maximum loss limit of 10%. After a drawdown, the balance falls to $95,000, while the lower threshold remains at $90,000. This leaves an available buffer of $5,000.</div>
+        <div class="t-descr">If the risk per trade is 0.75% of the current balance, that is approximately $712.50. This buffer would allow the account to withstand roughly seven full <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/stop-loss-prop-trader'">Stop Losses</span> in a row before reaching the Total Loss Limit.</div>
+        <div class="t-descr">If the risk is increased to 1.5%, the potential loss rises to $1,425 per trade. In that case, just a few unsuccessful entries could almost completely use up the remaining buffer.</div>
+        <div class="t-descr">That's why, during a drawdown, it is generally better not to accelerate the recovery process but to maintain the same risk or temporarily reduce it.</div>
+        <div class="t-descr">The less pressure each trade puts on the account, the more opportunities the strategy has to realize its edge.</div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Manage risk with up to $200,000 in capital</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://www.hashhedge.com?utm_source=blog&utm_medium=blog&utm_campaign=article'">Start a Challenge</div>
+      </div>
+
+      <div class="article-section" id="section-6">
+        <div class="article-section-title">Position Sizing for Different Types of Crypto Entries</div>
+        <div class="t-descr">The basic formula remains the same for any trade:</div>
+        <div class="t-descr">Position Size = Risk Amount / Stop Distance</div>
+        <div class="t-descr">However, the distance to the Stop Loss can vary significantly depending on the setup and the volatility of the asset. This means that the same risk percentage can result in very different position sizes.</div>
+
+        <div class="article-section-subtitle">Entry After a Liquidity Sweep</div>
+        <div class="t-descr">In trades following a liquidity sweep, the Stop Loss is often placed beyond the extreme of the move. In a volatile market, the distance between the entry and the Stop Loss may be several percent.</div>
+        <div class="t-descr">For example, with 0.75% account risk and a 3% Stop Loss distance: 0.75% / 3% = 25%</div>
+        <div class="t-descr">This means the nominal position size would be approximately 25% of the account balance.</div>
+        <div class="t-descr">A wider Stop Loss automatically reduces the acceptable position size. This is a normal part of risk management: the farther away the invalidation point is, the smaller the position should be for the same amount of risk.</div>
+        <div class="t-descr">If that position size or Stop Loss distance does not fit your trading plan, you can wait for a more precise entry after a pullback.</div>
+        <div class="t-descr">A tighter Stop Loss allows you to increase position size without increasing the dollar risk while also improving the risk-to-reward ratio.</div>
+
+        <div class="article-section-subtitle">Fair Value Gap (FVG) Entries</div>
+        <div class="t-descr">An FVG entry is built around a price zone rather than one specific price. In a bullish scenario, the Stop Loss is usually placed below the lower boundary of the FVG; in a bearish scenario, above the upper boundary, with a small additional buffer.</div>
+        <div class="t-descr">This makes position sizing convenient because the boundaries of the zone are known in advance, allowing you to calculate the distance to the Stop Loss before price returns to the FVG.</div>
+        <div class="t-descr">The wider the zone and the farther away the Stop Loss, the smaller the position should be at the same risk percentage.</div>
+        <div class="t-descr">If the Stop Loss becomes too wide, it is more logical to reduce position size rather than move the Stop Loss closer simply to take a larger position.</div>
+
+        <div class="article-section-subtitle">2-2 Reversal Entries</div>
+        <div class="t-descr">With a 2-2 Reversal, the invalidation point is usually relatively clear. For a bullish reversal, the Stop Loss can be placed below the low of the first candle; for a bearish reversal, above its high.</div>
+        <div class="t-descr">Because the distance to the Stop Loss is known in advance, the position size can also be calculated before the actual entry.</div>
+        <div class="t-descr">The trader can define the acceptable risk, position size, and Stop Loss level in advance, and then enter the trade only after confirmation from the second candle.</div>
+        <div class="t-descr">This approach reduces the number of decisions that need to be made at the moment of entry and lowers the risk of making a position-sizing mistake under time pressure.</div>
+      </div>
+
+      <div class="article-section" id="section-7">
+        <div class="article-section-title">Recalculating Position Size Every Day</div>
+        <div class="t-descr">Position size is best recalculated at the beginning of each trading session rather than automatically carried over from the previous day.</div>
+        <div class="t-descr">The reason is simple: your balance, equity, and available buffer to the Daily Loss Limit may have changed.</div>
+        <div class="t-descr">Before trading, check several key parameters.</div>
+        <div class="t-descr"><span class="t-b">Start-of-Day Balance.</span> This is the balance used to calculate the Daily Loss Limit. If you finished the previous day with a $300 profit, the new starting balance would be $100,300 rather than $100,000.</div>
+        <div class="t-descr"><span class="t-b">Equity Including Open Positions.</span> If a position was held overnight and is currently in a loss, the actual buffer to the Daily Loss Limit is already smaller. Before opening the first new trade, it is important to check not only the balance but also the current equity.</div>
+        <div class="t-descr"><span class="t-b">Current Daily P&amp;L.</span> This shows how much of the Daily Loss Limit has already been used. If the day begins with a floating loss on an open position, that risk needs to be taken into account before opening any new trades.</div>
+
+        <div class="article-section-subtitle">Checklist Before the Trading Session</div>
+        <div class="article-checklist">
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Start-of-Day Balance: $___</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Current Equity: $___</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Current Daily P&amp;L: $___</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Risk per Trade: $___</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Remaining Buffer to the Daily Loss Limit: $___</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Number of Full Stop Losses the Account Can Withstand at the Current Risk: _</div></div>
+        </div>
+        <div class="t-descr">This calculation takes only a few minutes but provides a clear framework for the entire session. You know your maximum acceptable risk in advance rather than making position-sizing decisions after taking your first loss.</div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com?utm_source=blog&utm_medium=blog&utm_campaign=article'">Hash Hedge</span> has no consistency rule, so there is no need to separately track the percentage of total profit generated by your best trading day. The main focus remains on the Daily Loss Limit and Total Loss Limit.</div>
+      </div>
+
+      <div class="article-section" id="section-8">
+        <div class="article-section-title">Common Position-Sizing Mistakes and How to Avoid Them</div>
+        <div class="t-descr">Even the correct formula will not help if you enter the wrong data or start changing your risk under the influence of emotions.</div>
+
+        <div class="article-section-subtitle">Basing Risk on the Previous Day's Result</div>
+        <div class="t-descr">After a profitable session, it is easy to feel that you can now afford to take more risk. But a good day by itself does not change the rules of position sizing.</div>
+        <div class="t-descr">If your standard risk per trade is 0.75%, yesterday's profit does not make today's trade safer.</div>
+        <div class="t-descr">Position size should depend on the current state of the account, <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/stop-loss-prop-trader'">Stop Loss</span> distance, and predefined risk – not on the feeling that "things are going well right now."</div>
+
+        <div class="article-section-subtitle">Ignoring Open Positions When Calculating the Daily Limit</div>
+        <div class="t-descr">It is important to distinguish between balance and equity.</div>
+        <div class="t-descr"><span class="t-b">Balance</span> reflects closed trades only. <span class="t-b">Equity</span> reflects the current state of the account, including open positions.</div>
+        <div class="t-descr"><span class="t-b">Formula:</span> Equity = Balance + Floating P&amp;L</div>
+        <div class="t-descr">At <span class="article-link" onclick="window.location.href='https://www.hashhedge.com?utm_source=blog&utm_medium=blog&utm_campaign=article'">Hash Hedge</span>, the Daily Loss Limit is calculated relative to the balance at the start of the trading day, which is fixed when the trading day resets.</div>
+        <div class="t-descr">At the same time, a floating loss on an open position already reduces equity and therefore reduces the available buffer to the Daily Loss Limit.</div>
+        <div class="t-descr">For example, if the daily limit is $500 and an open position is already showing a −$400 floating loss, the actual remaining buffer is only $100.</div>
+        <div class="t-descr">This is especially important when carrying positions overnight. If a new trading day begins with an open position in a loss, part of the Daily Loss Limit has already been used before the first new trade is opened.</div>
+        <div class="t-descr">That's why you should consider the combined floating P&amp;L of all open positions before every session.</div>
+
+        <div class="article-section-subtitle">Rounding Position Size to a Convenient Number</div>
+        <div class="t-descr">A phrase like "I'll take 0.1 BTC" tells you nothing about the actual risk.</div>
+        <div class="t-descr">With one Stop Loss, that position might risk 0.3% of the account. With another, it could risk 2% or more.</div>
+        <div class="t-descr">The correct sequence is the opposite: Define the acceptable loss → determine the Stop Loss distance → calculate the position size.</div>
+        <div class="t-descr">Only then should the resulting position size be converted into BTC, ETH, or another asset.</div>
+
+        <div class="article-section-subtitle">Ignoring Correlation Between Positions</div>
+        <div class="t-descr">Several open trades do not always represent several independent risks.</div>
+        <div class="t-descr">For example, BTC and ETH often move in the same direction. If a trader risks 0.75% on each position, a strong market-wide move could cause both trades to hit their Stop Losses at the same time.</div>
+        <div class="t-descr">In that case, the combined risk is already 1.5% of the account.</div>
+        <div class="t-descr">When trading correlated assets, it is therefore important to calculate not only the risk of each individual trade but also the portfolio's total exposure.</div>
+      </div>
+
+      <div class="article-section" id="section-9">
+        <div class="article-section-title">Full Position-Sizing Example</div>
+        <div class="t-descr">Let's imagine a $100,000 Hash Hedge Two-Stage Challenge.</div>
+        <div class="t-descr">The current balance has grown to $103,500.</div>
+        <div class="t-descr">Risk per trade is set at 0.75%: $103,500 × 0.75% = $776.25</div>
+        <div class="t-descr">The trader has also set a personal Daily Loss Limit of 3%: $103,500 × 3% = $3,105</div>
+        <div class="t-descr">At $776.25 risk per trade, this personal limit allows the trader to withstand approximately four full Stop Losses during the session.</div>
+        <div class="t-descr">Now a bullish BTC FVG appears:</div>
+        <div class="t-descr">Entry: $43,500 Stop Loss: $42,630 Stop Distance: $870, or 2%</div>
+        <div class="t-descr">Position Size: $776.25 / 0.02 = $38,812.50</div>
+        <div class="t-descr">If price reaches the Stop Loss, the loss will be approximately $776.25, or exactly the 0.75% defined in advance.</div>
+        <div class="t-descr">That is the essence of proper position sizing: before entering the trade, the trader already knows the potential loss, the distance to the Stop Loss, and how the trade will affect the available drawdown buffer.</div>
+      </div>
+
+      <div class="article-section" id="section-10">
+        <div class="article-section-title">Key Takeaways</div>
+        <div class="t-descr">Position size is calculated using a simple formula: Position Size = Risk Amount / Stop Distance</div>
+        <div class="t-descr">It is better to perform this calculation before every trade rather than estimate position size approximately.</div>
+        <div class="t-descr">Risk per trade should be defined in advance. For many prop accounts, 0.5-1% can serve as a reference range, but the exact value depends on the strategy, trade frequency, and account limits. Subjective confidence in a setup should not be a reason to increase risk.</div>
+        <div class="t-descr">If an account uses a trailing drawdown, balance growth may also move the lower threshold upward. That means a profitable period does not automatically mean that position size can be increased.</div>
+        <div class="t-descr">During a drawdown, the logic is the opposite: the smaller the remaining buffer to the loss limit, the more important it becomes to maintain or reduce risk rather than trying to recover the account faster with larger positions.</div>
+        <div class="t-descr">The Daily Loss Limit should be monitored using current equity. Losing open positions already reduce the available buffer even if they have not yet been closed. This is especially important when carrying positions into the next trading day.</div>
+        <div class="t-descr">Correlated trades should also be considered together. If BTC and ETH positions are open simultaneously with 0.75% risk each, the potential combined loss if both Stop Losses are triggered is already 1.5%.</div>
+        <div class="t-descr">Finally, risk parameters should be recalculated at the beginning of each session. Balance, equity, and the available drawdown buffer change over time, so position size should reflect the account's current state rather than only its starting conditions.</div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Ready to Trade with Prop Firm Capital?</div>
+        <div class="article-final-promo-descr">Hash Hedge is a prop trading platform for trading RWA and crypto 24/7. Get funded with up to <span class="t-b">$200,000</span> and withdraw up to <span class="t-b">90% of your profits</span> in USDT directly to your wallet.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://www.hashhedge.com?utm_source=blog&utm_medium=blog&utm_campaign=article'">Start a Challenge</div>
+      </div>
+
+      <div class="article-section">
+        <div class="article-section-title">More Useful Articles</div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/crypto-prop-firm-evaluation-challenge-rules'">How a Prop Challenge Works: Drawdown, Profit Target, and the Consistency Rule</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/why-traders-fail-prop-firm-challenge'">Why Traders Fail Prop Challenges: Reasons and Solutions</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-crypto-risk-management'">Position Sizing and Risk Management in Crypto Trading</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>

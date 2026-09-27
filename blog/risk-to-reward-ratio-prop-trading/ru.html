@@ -1,0 +1,301 @@
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog/ru'">
+        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-text">Hash Hedge Blog</div>
+      </div>
+
+      <div class="article-hook">СООТНОШЕНИЕ РИСКА К ПРИБЫЛИ НА ПРОП-ЧЕЛЛЕНДЖЕ: КАКИЕ ЦЕЛИ ДЕЙСТВИТЕЛЬНО РАБОТАЮТ</div>
+
+      <div class="t-title">Соотношение риска к прибыли на проп-челлендже: какие цели действительно работают</div>
+
+      <div class="article-meta">
+        <span>13 мин чтения</span>
+        <span class="article-meta-sep">|</span>
+        <span>28 сентября 2026</span>
+      </div>
+
+      <img class="article-hero" src="https://raw.githubusercontent.com/DeveloperVlad777/hashhedge-blog/refs/heads/main/blog/risk-to-reward-ratio-prop-trading/hero-ru.webp" alt="Соотношение риска к прибыли на проп-челлендже: расчет целей по структуре рынка">
+
+      <div class="t-descr">Соотношение риска к прибыли – один из базовых показателей в трейдинге, но на практике его часто используют слишком механически.</div>
+
+      <div class="t-descr">Например, трейдер заранее решает, что будет открывать только сделки с R:R не ниже 1:2, не учитывая структуру рынка и то, где находится реальная цель для движения цены.</div>
+
+      <div class="t-descr">На проп-челлендже к этому добавляются еще 2 фактора: лимиты просадки и цель по прибыли.</div>
+
+      <div class="t-descr">Поэтому важно не просто искать максимальное R:R, а понимать, какой риск вы берете на сделку, насколько реалистична выбранная цель и как потенциальный убыток повлияет на запас до лимитов.</div>
+
+      <div class="t-descr">В этой статье разберем, как рассчитывать R:R на проп-челлендже, выбирать реалистичные цели и почему правило «торговать только от 1:2» подходит далеко не для каждой ситуации.</div>
+
+      <div class="article-toc">
+        <div class="article-toc-title">Содержание</div>
+        <div class="article-toc-list">
+          <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">Что показывает соотношение риска к прибыли</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">Почему правило «всегда торгуй минимум 1:2» не работает</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">Как выбирать цели по структуре рынка</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">Как R:R связан с целью по прибыли на челлендже</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">Частичная фиксация прибыли и реальное R:R</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">Типичные ошибки при работе с R:R на проп-челлендже</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">Ключевые выводы</div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">Что показывает соотношение риска к прибыли</div>
+        <div class="t-descr">Risk-to-Reward Ratio (R:R) показывает, сколько трейдер готов потерять в сделке относительно потенциальной прибыли.</div>
+        <div class="t-descr">Например, при R:R 1:2 потенциальная прибыль в 2 раза превышает риск. Если при срабатывании стоп-лосса трейдер потеряет $500, потенциальная прибыль должна составлять $1,000.</div>
+        <div class="t-descr">При R:R 1:3 с тем же риском в $500 потенциальная цель составит уже $1,500.</div>
+        <div class="t-descr">R:R напрямую связан с долей прибыльных сделок. Чем выше потенциальная прибыль относительно риска, тем меньше прибыльных сделок требуется для выхода в безубыток.</div>
+
+        <div class="article-table">
+          <div class="article-table-row article-table-head">
+            <div class="article-table-cell">R:R</div>
+            <div class="article-table-cell">Минимальный win rate для безубыточности</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:1</div>
+            <div class="article-table-cell">50%</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:1,5</div>
+            <div class="article-table-cell">40%</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:2</div>
+            <div class="article-table-cell">33,3%</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:3</div>
+            <div class="article-table-cell">25%</div>
+          </div>
+        </div>
+
+        <div class="t-descr">Например, при R:R 1:3 стратегия теоретически выходит в безубыток уже при 25% прибыльных сделок. При R:R 1:1 для этого требуется 50%.</div>
+        <div class="t-descr">Но это математическая модель без учета комиссий, проскальзывания и других торговых издержек. Кроме того, заявленное R:R ничего не говорит о том, насколько часто цена действительно достигает тейк-профита.</div>
+        <div class="t-descr">Именно поэтому большое R:R само по себе не делает сделку лучше. Если график дает реалистичную цель только на 1:1,5, установка тейк-профита на 1:3 ради красивого соотношения может просто снизить вероятность его достижения.</div>
+        <div class="t-descr">На проп-челлендже к этому добавляются лимиты по дневной и общей просадке, а также цель по прибыли. Поэтому R:R стоит рассматривать вместе с вероятностью достижения цели, риском на сделку и доступным запасом до лимитов, а не как отдельную цифру.</div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Почему правило «всегда торгуй минимум 1:2» не работает</div>
+        <div class="t-descr">Правило использовать только сделки с R:R от 1:2 выглядит логично с точки зрения математики, но не учитывает главное - реальную структуру рынка.</div>
+        <div class="t-descr">Тейк-профит стоит определять не по желаемому соотношению риска к прибыли, а по уровню, до которого у цены есть основания дойти.</div>
+        <div class="t-descr">Представим, что ближайшее значимое сопротивление находится на уровне, соответствующем R:R 1:1,5. Если поставить тейк-профит на 1:2 только ради соблюдения правила, рынок не станет двигаться дальше. Цена может дойти до сопротивления, развернуться и в итоге закрыть позицию по стопу.</div>
+        <div class="t-descr">В такой ситуации проблема не в R:R 1:1,5, а в том, что цель 1:2 не соответствовала структуре рынка.</div>
+        <div class="t-descr">Поэтому логика должна быть обратной: сначала трейдер определяет потенциальную цель по графику, затем рассчитывает получившееся R:R и оценивает, подходит ли такая сделка его торговой системе.</div>
+        <div class="t-descr">Если структурно обоснованная цель дает R:R 1:1,5, это не делает сделку автоматически плохой. Важно учитывать ее вместе с вероятностью реализации сетапа, размещением стопа и статистикой стратегии.</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">Как выбирать цели по структуре рынка</div>
+        <div class="t-descr">Рынок сам дает ориентиры для размещения тейк-профита. Для этого можно использовать те же элементы структуры, которые помогают находить точки входа.</div>
+
+        <div class="article-section-subtitle">Свинг-хаи и свинг-лоу</div>
+        <div class="t-descr">Один из самых понятных ориентиров - предыдущие значимые максимумы и минимумы.</div>
+        <div class="t-descr">Для лонга потенциальной целью может стать ближайший свинг-хай, для шорта - ближайший свинг-лоу. В этих областях ранее происходила реакция цены, а за самими экстремумами может находиться ликвидность.</div>
+        <div class="t-descr">Например, если лонг открыт от <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/order-blocks-crypto-trading/ru'">ордер-блока</span>, а стоп расположен ниже него, ближайший значимый свинг-хай можно рассматривать как первую потенциальную цель.</div>
+        <div class="t-descr">Если этот максимум также связан с предыдущим <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/break-of-structure-change-of-character-crypto/ru'">сломом структуры</span>, уровень получает дополнительное структурное значение.</div>
+
+        <div class="article-section-subtitle">Зоны справедливой стоимости</div>
+        <div class="t-descr">FVG также можно использовать как промежуточный ориентир для фиксации прибыли.</div>
+        <div class="t-descr">Например, если выше точки входа в лонг находится FVG, а следующая структурная цель расположена еще выше, трейдер может рассмотреть частичную фиксацию в области FVG и оставить оставшуюся часть позиции до следующего значимого уровня.</div>
+        <div class="t-descr">Такой подход позволяет не выбирать между полным закрытием позиции и ожиданием дальней цели, а управлять сделкой по мере движения цены.</div>
+
+        <div class="article-section-subtitle">Пулы ликвидности</div>
+        <div class="t-descr">Еще одним ориентиром могут быть области скопления ликвидности: равные максимумы и минимумы, предыдущие свинг-точки и другие заметные уровни.</div>
+        <div class="t-descr">Для лонга потенциальная ликвидность выше текущей цены может использоваться как ориентир для цели. Для шорта логика обратная - внимание смещается на ликвидность ниже цены.</div>
+        <div class="t-descr">Эта концепция связана с <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/false-breakout-vs-liquidity-grab-vs-stop-hunt/ru'">захватами ликвидности</span>. Например, после снятия ликвидности под минимумами и последующего подтверждения движения вверх следующая область ликвидности над ценой может стать одной из потенциальных целей.</div>
+        <div class="t-descr">Главный принцип остается прежним: сначала определяется логичная цель на графике, а уже затем рассчитывается R:R сделки.</div>
+        <div class="t-descr">Не стоит переносить тейк-профит на случайный уровень только ради того, чтобы получить красивое соотношение 1:2 или 1:3.</div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Как R:R связан с целью по прибыли на челлендже</div>
+        <div class="t-descr">Цель по прибыли на челлендже можно заранее разложить на отдельные сделки. Для этого достаточно знать 3 показателя: риск на сделку, среднее R:R и win rate стратегии.</div>
+        <div class="t-descr">Так можно примерно оценить, сколько сделок потребуется для достижения цели при сохранении текущей торговой системы.</div>
+
+        <div class="article-section-subtitle">Сколько сделок нужно для достижения цели</div>
+        <div class="t-descr">Представим, что цель по прибыли составляет 10%, риск на одну сделку - 0,75%, а среднее R:R - 1:2.</div>
+        <div class="t-descr">При таких параметрах:</div>
+        <div class="article-checklist">
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">прибыльная сделка приносит 1,5%</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">убыточная сделка забирает 0,75%</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">при win rate 50% среднее математическое ожидание составляет 0,375% на сделку</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">для достижения 10% потребуется в среднем около 27 сделок</div></div>
+        </div>
+        <div class="t-descr">Это не означает, что цель будет достигнута ровно на 27-й сделке. Прибыльные и убыточные сделки могут распределяться по-разному, поэтому фактический результат будет отличаться.</div>
+        <div class="t-descr">Но такой расчет помогает увидеть главное: цель челленджа не обязательно пытаться закрыть несколькими крупными сделками. Если стратегия имеет положительное математическое ожидание, результат можно набирать постепенно, сохраняя одинаковый риск и следуя торговому плану.</div>
+        <div class="t-descr">При этом в Hash Hedge максимального срока прохождения челленджа нет, поэтому трейдер не ограничен жестким дедлайном и может ждать подходящие сетапы.</div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Торгуйте по своему плану с капиталом до $200 000</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://app.hashhedge.live/ru/?utm_source=blog&utm_medium=blog&utm_campaign=article'">Начать челлендж</div>
+      </div>
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">Частичная фиксация прибыли и реальное R:R</div>
+        <div class="t-descr">R:R не обязательно остается неизменным до самого закрытия сделки. Трейдер может фиксировать позицию частями по мере достижения ценой заранее определенных уровней.</div>
+        <div class="t-descr">Например, первоначальная цель сделки составляет 1:3, но на пути к ней находятся несколько значимых структурных уровней. Вместо ожидания одной конечной цели часть позиции можно закрывать раньше.</div>
+        <div class="t-descr">При этом важно понимать: частичная фиксация меняет итоговое R:R всей сделки. Если половина позиции закрыта на 1:1, а вторая половина дошла до 1:3, итоговый результат будет ниже, чем если бы вся позиция была закрыта на 1:3.</div>
+        <div class="t-descr">Поэтому оценивать стоит не первоначальное R:R на графике, а фактическое среднее соотношение риска к прибыли по завершенным сделкам.</div>
+
+        <div class="article-section-subtitle">Частичная фиксация на 1:1</div>
+        <div class="t-descr">Один из вариантов управления позицией - закрыть часть объема после того, как цена пройдет расстояние, равное первоначальному риску.</div>
+        <div class="t-descr">Например, при достижении 1:1 трейдер закрывает 50% позиции. Оставшаяся часть продолжает работать до следующей структурной цели.</div>
+        <div class="t-descr">После этого стоп по оставшейся позиции можно перенести ближе к точке входа, если такое действие предусмотрено торговой системой и подтверждается структурой рынка.</div>
+        <div class="t-descr">Такой подход позволяет зафиксировать часть результата, сохранив возможность заработать на дальнейшем движении.</div>
+        <div class="t-descr">Но у него есть обратная сторона. Если цена сразу достигнет дальней цели, итоговая прибыль окажется меньше, чем при удержании всей позиции до тейк-профита.</div>
+        <div class="t-descr">Поэтому частичная фиксация не является автоматически более выгодной стратегией. Ее эффективность зависит от статистики конкретной торговой системы.</div>
+
+        <div class="article-section-subtitle">Поэтапный выход из позиции</div>
+        <div class="t-descr">Если потенциальное движение позволяет рассчитывать на R:R 1:3 и выше, позицию можно разделить на несколько частей.</div>
+        <div class="t-descr">Например:</div>
+
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Первая часть на 1:1.</div>
+              <div class="article-number-text">Закрывается часть позиции и фиксируется первый результат.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Вторая часть на 1:2.</div>
+              <div class="article-number-text">Еще часть позиции закрывается при продолжении движения.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Третья часть на структурной цели.</div>
+              <div class="article-number-text">Оставшийся объем удерживается до свинг-хая, зоны ликвидности или другого заранее определенного уровня.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-descr">Так трейдер не зависит от одной точки выхода и может постепенно фиксировать прибыль по мере развития движения.</div>
+        <div class="t-descr">Но уровни и объем каждой фиксации лучше определить до открытия сделки. Если постоянно менять тейк-профиты после входа под влиянием текущего P&amp;L, из заранее рассчитанного R:R торговля быстро превращается в эмоциональное управление позицией.</div>
+        <div class="t-descr">На проп-челлендже это особенно важно: задача не в том, чтобы выжать максимум из каждой отдельной сделки, а в том, чтобы сохранять контролируемый риск и последовательно двигаться к цели по прибыли.</div>
+      </div>
+
+      <div class="article-section" id="section-6">
+        <div class="article-section-title">Типичные ошибки при работе с R:R на проп-челлендже</div>
+
+        <div class="article-section-subtitle">Цель находится за несколькими сильными уровнями</div>
+        <div class="t-descr">Если для достижения R:R 1:3 цене нужно пройти через несколько значимых уровней сопротивления или поддержки, такая цель может оказаться слишком оптимистичной.</div>
+        <div class="t-descr">Например, трейдер открывает лонг с целью 1:3, но уже на уровне 1:1,5 находится сильное сопротивление. Цена может дойти до него, развернуться и в итоге закрыть сделку по стопу, так и не достигнув первоначального тейк-профита.</div>
+        <div class="t-descr">Поэтому цель лучше определять по ближайшему значимому структурному уровню, а не подгонять под заранее выбранное R:R.</div>
+        <div class="t-descr">Если структура дает 1:1,5, именно такое соотношение стоит оценивать при принятии решения. Если торговая система требует минимум 1:3, лучше дождаться другого сетапа, где структурная цель действительно находится достаточно далеко.</div>
+
+        <div class="article-section-subtitle">Расширение стопа после входа</div>
+        <div class="t-descr">Еще одна распространенная ошибка - переносить стоп дальше от точки входа, когда цена начинает двигаться против позиции.</div>
+        <div class="t-descr">Например, изначально сделка рассчитана с R:R 1:2. Но после входа трейдер расширяет стоп, чтобы дать цене «больше пространства». Потенциальный убыток увеличивается, а первоначальный расчет риска перестает работать.</div>
+        <div class="t-descr">Стоп лучше определять до открытия позиции на основе структуры рынка. Именно расстояние до него используется при <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-funded-crypto-account/ru'">расчете размера позиции</span>.</div>
+        <div class="t-descr">Если после входа уровень отмены торгового сценария пробит, перенос стопа дальше не делает первоначальную идею сильнее. Он только увеличивает потенциальный убыток.</div>
+
+        <div class="article-section-subtitle">Оценка только потенциальной прибыли</div>
+        <div class="t-descr">Высокое R:R выглядит привлекательно, но крупная потенциальная прибыль не должна становиться причиной увеличивать риск.</div>
+        <div class="t-descr">Например, при риске 0,75% сделка с R:R 1:3 потенциально принесет 2,25%. Но если она закроется по стопу, трейдер все равно потеряет заранее определенные 0,75%.</div>
+        <div class="t-descr">Поэтому перед входом важно оценить не только потенциальную прибыль, но и размер возможного убытка и запас до дневного и общего лимитов просадки.</div>
+
+        <div class="article-section-subtitle">Игнорирование правила консистентности</div>
+        <div class="t-descr">В некоторых проп-фирмах действует правило консистентности, которое ограничивает долю общей прибыли, полученную за одну сделку или торговый день.</div>
+        <div class="t-descr">Поэтому крупная прибыль при высоком R:R может влиять на выполнение условий конкретного челленджа.</div>
+        <div class="t-descr">Например, при риске 0,75% сделка с R:R 1:4 потенциально принесет 3%. Если в проп-фирме действует правило консистентности, такой результат может составить слишком большую долю общей прибыли и потребовать учитывать дополнительные ограничения.</div>
+        <div class="t-descr">В <span class="article-link" onclick="window.location.href='https://app.hashhedge.live/ru/?utm_source=blog&utm_medium=blog&utm_campaign=article'">Hash Hedge</span> правило консистентности не применяется вообще - ни на этапе челленджа, ни на Funded-счете. Поэтому крупная прибыль за отдельный торговый день сама по себе не нарушает правила.</div>
+        <div class="t-descr">При этом отсутствие правила консистентности не отменяет риск-менеджмент. Высокое R:R не должно становиться причиной увеличивать размер позиции или выходить за заранее установленный риск.</div>
+      </div>
+
+      <div class="article-section" id="section-7">
+        <div class="article-section-title">Ключевые выводы</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">R:R показывает соотношение потенциального убытка и прибыли</div>
+              <div class="article-number-text">Но тейк-профит стоит определять по структуре рынка, а не подгонять под желаемое соотношение.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Реалистичная цель важнее красивого R:R</div>
+              <div class="article-number-text">Структурно обоснованная цель 1:1,5 может быть логичнее, чем 1:2 или 1:3, для достижения которых цене придется пройти несколько сильных уровней.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">R:R нужно оценивать вместе с win rate</div>
+              <div class="article-number-text">Чем выше средняя прибыль относительно среднего убытка, тем меньшая доля прибыльных сделок требуется для безубыточности. Но это работает только в том случае, если заявленные цели действительно достигаются на практике.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Цель челленджа можно разложить на серию сделок</div>
+              <div class="article-number-text">Расчет через риск, среднее R:R и win rate помогает оценить необходимое количество сделок и не пытаться пройти челлендж несколькими агрессивными входами.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">5</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Частичная фиксация меняет итоговое R:R</div>
+              <div class="article-number-text">Закрытие части позиции позволяет зафиксировать результат раньше, но одновременно уменьшает потенциальную прибыль, если цена впоследствии достигает дальней цели.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">6</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Стоп определяется до входа</div>
+              <div class="article-number-text">Его положение должно зависеть от структуры рынка и точки отмены торгового сценария. Если стоп получается широким, корректируется размер позиции, а не допустимый риск.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">7</div>
+            <div class="article-number-content">
+              <div class="article-number-title">На проп-челлендже R:R нужно рассматривать вместе с лимитами просадки</div>
+              <div class="article-number-text">Потенциальная прибыль важна, но еще важнее заранее понимать размер возможного убытка и его влияние на оставшийся запас счета.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">8</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Правило консистентности зависит от условий конкретной проп-фирмы</div>
+              <div class="article-number-text">При высоком R:R одна прибыльная сделка может дать значительную часть общего результата, что важно учитывать, если в компании действует правило консистентности. В Hash Hedge такого правила нет ни на челлендже, ни на Funded-счете.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Готовы торговать на капитале проп-фирмы?</div>
+        <div class="article-final-promo-descr">Hash Hedge – проп-трейдинговая платформа для торговли RWA и криптовалютами 24/7. Получите фондирование до <span class="t-b">$200 000</span> и выводите до <span class="t-b">90% прибыли</span> в USDT прямо на свой кошелёк.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://app.hashhedge.live/ru/?utm_source=blog&utm_medium=blog&utm_campaign=article'">Начать челлендж</div>
+      </div>
+
+      <div class="article-section">
+        <div class="article-section-title">Больше полезных статей</div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/order-blocks-crypto-trading/ru'">Ордер-блоки в криптотрейдинге: как находить и торговать</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/break-of-structure-change-of-character-crypto/ru'">BOS и CHOCH: как читать рыночную структуру в крипте</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-funded-crypto-account/ru'">Размер позиции и риск-менеджмент на funded-аккаунте</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>

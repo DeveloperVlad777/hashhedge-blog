@@ -1,0 +1,302 @@
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog/pt'">
+        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-text">Hash Hedge Blog</div>
+      </div>
+
+      <div class="article-hook">RISK-TO-REWARD RATIO EM UM PROP CHALLENGE: QUAIS ALVOS REALMENTE FUNCIONAM</div>
+
+      <div class="t-title">Risk-to-Reward Ratio em um Prop Challenge: Quais Alvos Realmente Funcionam</div>
+
+      <div class="article-meta">
+        <span>13 min de leitura</span>
+        <span class="article-meta-sep">|</span>
+        <span>28 de setembro de 2026</span>
+      </div>
+
+      <img class="article-hero" src="https://raw.githubusercontent.com/DeveloperVlad777/hashhedge-blog/refs/heads/main/blog/risk-to-reward-ratio-prop-trading/hero-pt.webp" alt="Risk-to-reward ratio em um prop challenge: como definir alvos com base na estrutura de mercado">
+
+      <div class="t-descr">O Risk-to-Reward Ratio (R:R) é uma das métricas fundamentais do trading, mas, na prática, muitas vezes é usado de forma mecânica demais.</div>
+
+      <div class="t-descr">Por exemplo, um trader pode decidir antecipadamente operar apenas setups com R:R de pelo menos 1:2, sem considerar a estrutura do mercado ou onde realmente está um alvo de preço realista.</div>
+
+      <div class="t-descr">Em um prop Challenge, existem dois fatores adicionais a considerar: os limites de drawdown e a meta de lucro.</div>
+
+      <div class="t-descr">Por isso, é importante não apenas buscar o maior R:R possível, mas entender quanto você está arriscando em cada trade, quão realista é o alvo e como uma possível perda afetará o buffer restante antes de atingir os limites.</div>
+
+      <div class="t-descr">Neste artigo, vamos analisar como calcular o R:R durante um prop Challenge, como escolher alvos realistas e por que a regra de "operar apenas setups com pelo menos 1:2" não funciona em todas as situações.</div>
+
+      <div class="article-toc">
+        <div class="article-toc-title">Índice</div>
+        <div class="article-toc-list">
+          <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">O Que o Risk-to-Reward Ratio Mostra?</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">Por Que a Regra "Sempre Opere com Pelo Menos 1:2" Não Funciona</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">Como Escolher Alvos com Base na Estrutura de Mercado</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">Como o R:R se Relaciona com a Meta de Lucro do Challenge</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">Realização Parcial de Lucro e o R:R Real</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">Erros Comuns de R:R Durante um Prop Challenge</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">Principais Conclusões</div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">O Que o Risk-to-Reward Ratio Mostra?</div>
+        <div class="t-descr">O Risk-to-Reward Ratio (R:R) mostra quanto um trader está disposto a perder em um trade em relação ao lucro potencial.</div>
+        <div class="t-descr">Por exemplo, com um R:R de 1:2, o lucro potencial é duas vezes maior que o valor em risco. Se o trader pode perder US$500 caso o Stop Loss seja acionado, o lucro potencial deve ser de US$1.000.</div>
+        <div class="t-descr">Com um R:R de 1:3 e o mesmo risco de US$500, o alvo potencial seria de US$1.500.</div>
+        <div class="t-descr">O R:R está diretamente relacionado ao win rate. Quanto maior o lucro potencial em relação ao risco, menor o win rate necessário para atingir o breakeven.</div>
+
+        <div class="article-table">
+          <div class="article-table-row article-table-head">
+            <div class="article-table-cell">R:R</div>
+            <div class="article-table-cell">Win Rate Mínimo para Breakeven</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:1</div>
+            <div class="article-table-cell">50%</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:1,5</div>
+            <div class="article-table-cell">40%</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:2</div>
+            <div class="article-table-cell">33,3%</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:3</div>
+            <div class="article-table-cell">25%</div>
+          </div>
+        </div>
+
+        <div class="t-descr">Por exemplo, com um R:R de 1:3, uma estratégia teoricamente atinge o breakeven com um win rate de apenas 25%. Com um R:R de 1:1, é necessário um win rate de 50%.</div>
+        <div class="t-descr">No entanto, esse é um modelo matemático que não considera comissões, slippage ou outros custos de trading. O R:R indicado também não diz nada sobre a frequência com que o preço realmente atinge o Take Profit.</div>
+        <div class="t-descr">Por isso, um R:R alto não torna automaticamente um trade melhor. Se o gráfico oferece um alvo realista de apenas 1:1,5, definir o Take Profit em 1:3 apenas para obter uma relação mais atraente pode simplesmente reduzir a probabilidade de o preço atingir o alvo.</div>
+        <div class="t-descr">Em um prop Challenge, também entram em jogo os limites de drawdown diário e total, além da meta de lucro. Portanto, o R:R deve ser considerado em conjunto com a probabilidade de atingir o alvo, o risco por trade e o buffer restante antes dos limites, e não como um número isolado.</div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Por Que a Regra "Sempre Opere com Pelo Menos 1:2" Não Funciona</div>
+        <div class="t-descr">A regra de operar apenas trades com um R:R de pelo menos 1:2 faz sentido matematicamente, mas ignora o fator mais importante – a estrutura real do mercado.</div>
+        <div class="t-descr">O Take Profit deve ser determinado não pela relação risco/retorno desejada, mas pelo nível que o preço tem uma chance razoável de atingir.</div>
+        <div class="t-descr">Imagine que o nível de resistência significativo mais próximo corresponda a um R:R de 1:1,5. Se você definir o Take Profit em 1:2 apenas para seguir a regra, o mercado não vai continuar se movimentando simplesmente porque você quer. O preço pode atingir a resistência, reverter e acabar acionando o Stop Loss da posição.</div>
+        <div class="t-descr">Nesse caso, o problema não é o R:R de 1:1,5. O problema é que o alvo de 1:2 não estava alinhado com a estrutura do mercado.</div>
+        <div class="t-descr">Portanto, a lógica deve funcionar ao contrário: primeiro, o trader identifica um potencial alvo no gráfico; depois, calcula o R:R resultante e determina se o trade se encaixa em seu sistema de trading.</div>
+        <div class="t-descr">Se um alvo estruturalmente justificado resultar em um R:R de 1:1,5, isso não torna automaticamente o trade ruim. Ele deve ser avaliado em conjunto com a probabilidade de o setup funcionar, o posicionamento do Stop Loss e as estatísticas históricas da estratégia.</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">Como Escolher Alvos com Base na Estrutura de Mercado</div>
+        <div class="t-descr">O próprio mercado fornece pontos de referência para o posicionamento do Take Profit. Traders podem usar os mesmos elementos estruturais que ajudam a identificar entradas.</div>
+
+        <div class="article-section-subtitle">Swing Highs e Swing Lows</div>
+        <div class="t-descr">Um dos pontos de referência mais claros são as máximas e mínimas significativas anteriores.</div>
+        <div class="t-descr">Para uma posição long, o swing high mais próximo pode servir como um potencial alvo; para uma posição short, o swing low mais próximo. O preço já reagiu nessas áreas anteriormente, e pode haver liquidez além desses extremos.</div>
+        <div class="t-descr">Por exemplo, se uma posição long for aberta a partir de um <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/order-blocks-crypto-trading/pt'">order block</span>, com o Stop Loss abaixo dele, o swing high significativo mais próximo pode ser considerado o primeiro alvo potencial.</div>
+        <div class="t-descr">Se essa máxima também estiver relacionada a um Break of Structure anterior, o nível ganha relevância estrutural adicional.</div>
+
+        <div class="article-section-subtitle">Fair Value Gaps</div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://hashhedge.com/blog/fair-value-gap-crypto-trading/pt'">FVGs</span> também podem ser usados como alvos intermediários para realização de lucro.</div>
+        <div class="t-descr">Por exemplo, se houver um FVG acima de uma entrada long enquanto o próximo alvo estrutural estiver ainda mais acima, o trader pode considerar realizar parte do lucro próximo ao FVG e manter o restante da posição aberto até o próximo nível significativo.</div>
+        <div class="t-descr">Essa abordagem permite ao trader gerenciar o trade conforme o preço se movimenta, em vez de escolher entre fechar toda a posição ou esperar por um alvo distante.</div>
+
+        <div class="article-section-subtitle">Liquidity Pools</div>
+        <div class="t-descr">Áreas onde a liquidez está concentrada também podem servir como potenciais alvos: equal highs e equal lows, swing points anteriores e outros níveis visíveis.</div>
+        <div class="t-descr">Para uma posição long, a liquidez potencial acima do preço atual pode servir como referência de alvo. Para uma posição short, a lógica é inversa – a atenção se volta para a liquidez abaixo do preço atual.</div>
+        <div class="t-descr">Esse conceito está relacionado aos <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/false-breakout-vs-liquidity-grab-vs-stop-hunt/pt'">liquidity grabs</span>. Por exemplo, depois que a liquidez abaixo das mínimas é varrida e um movimento de alta é confirmado, a próxima área de liquidez acima do preço pode se tornar um dos potenciais alvos.</div>
+        <div class="t-descr">O princípio principal continua o mesmo: primeiro identifique um alvo lógico no gráfico e, depois, calcule o R:R do trade.</div>
+        <div class="t-descr">O Take Profit não deve ser movido para um nível arbitrário apenas para alcançar uma relação atraente de 1:2 ou 1:3.</div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Como o R:R se Relaciona com a Meta de Lucro do Challenge</div>
+        <div class="t-descr">A meta de lucro de um Challenge pode ser dividida antecipadamente em uma série de trades individuais. Para isso, são necessárias três métricas: risco por trade, R:R médio e win rate da estratégia.</div>
+        <div class="t-descr">Isso fornece uma estimativa aproximada de quantos trades podem ser necessários para atingir a meta seguindo o sistema de trading existente.</div>
+
+        <div class="article-section-subtitle">Quantos Trades São Necessários para Atingir a Meta?</div>
+        <div class="t-descr">Suponha que a meta de lucro seja de 10%, o risco por trade seja de 0,75% e o R:R médio seja de 1:2.</div>
+        <div class="t-descr">Com esses parâmetros:</div>
+        <div class="article-checklist">
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Um trade vencedor gera 1,5%</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Um trade perdedor custa 0,75%</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Com um win rate de 50%, a expectativa matemática média é de 0,375% por trade</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Para atingir 10%, seriam necessários aproximadamente 27 trades, em média</div></div>
+        </div>
+        <div class="t-descr">Isso não significa que a meta será atingida exatamente no 27º trade. Trades vencedores e perdedores podem ocorrer em sequências diferentes, portanto o resultado real pode variar.</div>
+        <div class="t-descr">No entanto, esse cálculo destaca um ponto importante: você não precisa necessariamente atingir a meta do Challenge com apenas alguns trades grandes.</div>
+        <div class="t-descr">Se a estratégia tiver expectativa positiva, é possível avançar gradualmente, mantendo um risco consistente e seguindo o plano de trading.</div>
+        <div class="t-descr">Na Hash Hedge, não há limite máximo de tempo para concluir um Challenge, portanto traders não ficam presos a um prazo rígido e podem esperar pelos setups adequados.</div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Opere com seu próprio plano com até US$200.000 em capital</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://www.hashhedge.com/pt?utm_source=blog&utm_medium=blog&utm_campaign=article'">Comece um Challenge</div>
+      </div>
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">Realização Parcial de Lucro e o R:R Real</div>
+        <div class="t-descr">O R:R não precisa permanecer inalterado até que o trade seja completamente fechado. O trader pode fechar partes da posição conforme o preço atinge níveis predefinidos.</div>
+        <div class="t-descr">Por exemplo, o alvo inicial pode ser 1:3, mas pode haver vários níveis estruturais significativos ao longo do caminho. Em vez de esperar por um único alvo final, parte da posição pode ser fechada antes.</div>
+        <div class="t-descr">É importante entender que a realização parcial de lucro altera o R:R final de todo o trade. Se metade da posição for fechada em 1:1 e a outra metade atingir 1:3, o resultado final será menor do que se toda a posição tivesse sido fechada em 1:3.</div>
+        <div class="t-descr">Portanto, traders devem avaliar a relação risco/retorno média real dos trades concluídos, e não apenas o R:R inicial mostrado no gráfico.</div>
+
+        <div class="article-section-subtitle">Realizando Parte do Lucro em 1:1</div>
+        <div class="t-descr">Uma forma de gerenciar uma posição é fechar parte dela depois que o preço se movimentar uma distância equivalente ao risco inicial.</div>
+        <div class="t-descr">Por exemplo, quando o preço atinge 1:1, o trader fecha 50% da posição. A parte restante continua aberta até o próximo alvo estrutural.</div>
+        <div class="t-descr">O <span class="article-link" onclick="window.location.href='https://hashhedge.com/blog/stop-loss-prop-trader/pt'">Stop Loss</span> da posição restante pode então ser movido para mais perto do ponto de entrada, caso isso faça parte do sistema de trading e seja sustentado pela estrutura do mercado.</div>
+        <div class="t-descr">Essa abordagem permite ao trader garantir parte do lucro enquanto mantém exposição a um movimento adicional do preço.</div>
+        <div class="t-descr">No entanto, existe um trade-off. Se o preço for diretamente até o alvo mais distante, o lucro final será menor do que seria se toda a posição tivesse sido mantida até o Take Profit.</div>
+        <div class="t-descr">Portanto, a realização parcial de lucro não é automaticamente uma estratégia mais lucrativa. Sua eficácia depende das estatísticas do sistema de trading específico.</div>
+
+        <div class="article-section-subtitle">Scaling Out de uma Posição</div>
+        <div class="t-descr">Se o movimento potencial oferecer um R:R de 1:3 ou superior, a posição pode ser dividida em várias partes.</div>
+        <div class="t-descr">Por exemplo:</div>
+
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Primeira parte em 1:1.</div>
+              <div class="article-number-text">Parte da posição é fechada para garantir o primeiro lucro.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Segunda parte em 1:2.</div>
+              <div class="article-number-text">Outra parte é fechada caso o movimento continue.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Terceira parte no alvo estrutural.</div>
+              <div class="article-number-text">O restante da posição é mantido até um swing high, zona de liquidez ou outro nível predefinido.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-descr">Dessa forma, o trader não depende de um único ponto de saída e pode garantir lucros gradualmente conforme o movimento se desenvolve.</div>
+        <div class="t-descr">No entanto, os níveis e o tamanho de cada saída parcial devem, idealmente, ser definidos antes da entrada no trade. Alterar constantemente os níveis de Take Profit após a entrada com base no P&amp;L atual pode rapidamente transformar um setup com R:R predefinido em um gerenciamento emocional da posição.</div>
+        <div class="t-descr">Em um prop <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/pt?utm_source=blog&utm_medium=blog&utm_campaign=article'">Challenge</span>, isso é especialmente importante: o objetivo não é extrair o máximo de lucro possível de cada trade individual, mas manter o risco controlado e avançar de forma consistente em direção à meta de lucro.</div>
+      </div>
+
+      <div class="article-section" id="section-6">
+        <div class="article-section-title">Erros Comuns de R:R Durante um Prop Challenge</div>
+
+        <div class="article-section-subtitle">O Alvo Está Além de Vários Níveis Fortes</div>
+        <div class="t-descr">Se o preço precisar atravessar vários níveis significativos de suporte ou resistência para atingir um R:R de 1:3, o alvo pode ser otimista demais.</div>
+        <div class="t-descr">Por exemplo, um trader abre uma posição long com alvo de 1:3, mas já existe uma forte resistência no nível de 1:1,5. O preço pode chegar até ela, reverter e acabar acionando o Stop Loss sem nunca atingir o Take Profit original.</div>
+        <div class="t-descr">Por isso, é melhor determinar o alvo com base no nível estrutural significativo mais próximo, em vez de forçá-lo a se encaixar em um R:R predefinido.</div>
+        <div class="t-descr">Se a estrutura do mercado oferece 1:1,5, essa é a relação que deve ser avaliada ao decidir se vale a pena entrar no trade. Se o sistema de trading exige um mínimo de 1:3, pode ser melhor esperar por outro setup em que o alvo estrutural esteja realmente distante o suficiente.</div>
+
+        <div class="article-section-subtitle">Ampliar o Stop Loss Depois da Entrada</div>
+        <div class="t-descr">Outro erro comum é mover o Stop Loss para mais longe da entrada quando o preço começa a se movimentar contra a posição.</div>
+        <div class="t-descr">Por exemplo, um trade é inicialmente planejado com um R:R de 1:2. Depois da entrada, porém, o trader amplia o Stop Loss para dar "mais espaço" ao preço. A perda potencial aumenta e o cálculo original de risco deixa de ser válido.</div>
+        <div class="t-descr">O Stop Loss deve, idealmente, ser definido antes da abertura da posição com base na estrutura do mercado. A distância entre ele e a entrada é então usada ao <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-funded-crypto-account/pt'">calcular o tamanho da posição.</span></div>
+        <div class="t-descr">Se o nível que invalida o setup for rompido depois da entrada, mover o Stop Loss para mais longe não torna a ideia original mais forte. Apenas aumenta a perda potencial.</div>
+
+        <div class="article-section-subtitle">Focar Apenas no Lucro Potencial</div>
+        <div class="t-descr">Um R:R alto pode parecer atraente, mas um grande lucro potencial não deve se tornar motivo para aumentar o risco.</div>
+        <div class="t-descr">Por exemplo, com 0,75% de risco, um trade com R:R de 1:3 pode gerar potencialmente 2,25%. Mas, se o Stop Loss for acionado, o trader ainda perde os 0,75% predefinidos.</div>
+        <div class="t-descr">Por isso, antes de entrar, é importante avaliar não apenas o lucro potencial, mas também o tamanho da possível perda e o buffer restante antes dos limites de drawdown diário e total.</div>
+
+        <div class="article-section-subtitle">Ignorar a Consistency Rule</div>
+        <div class="t-descr">Algumas prop firms têm uma consistency rule que limita a porcentagem do lucro total que pode ser gerada por um único trade ou dia de trading.</div>
+        <div class="t-descr">Portanto, um lucro elevado em um trade com R:R alto pode afetar o cumprimento das condições de um determinado Challenge.</div>
+        <div class="t-descr">Por exemplo, com 0,75% de risco, um trade com R:R de 1:4 pode gerar potencialmente 3%. Se a prop firm tiver uma consistency rule, esse resultado pode representar uma parcela grande demais do lucro total e exigir que o trader considere restrições adicionais.</div>
+        <div class="t-descr">Na <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/pt?utm_source=blog&utm_medium=blog&utm_campaign=article'">Hash Hedge</span>, a consistency rule não se aplica – nem durante o Challenge, nem na Funded Account. Portanto, um grande lucro em um único dia de trading não viola as regras.</div>
+        <div class="t-descr">No entanto, a ausência de uma consistency rule não elimina a necessidade de gestão de risco. Um R:R alto não deve ser usado como motivo para aumentar o tamanho da posição ou exceder o valor de risco predefinido.</div>
+      </div>
+
+      <div class="article-section" id="section-7">
+        <div class="article-section-title">Principais Conclusões</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">O R:R mostra a relação entre a perda potencial e o lucro potencial.</div>
+              <div class="article-number-text">No entanto, o Take Profit deve ser baseado na estrutura do mercado, e não ajustado para se encaixar em uma relação desejada.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Um alvo realista é mais importante do que um R:R atraente.</div>
+              <div class="article-number-text">Um alvo estruturalmente justificado de 1:1,5 pode fazer mais sentido do que 1:2 ou 1:3 se o preço precisar atravessar vários níveis fortes para alcançá-los.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">O R:R deve ser avaliado em conjunto com o win rate.</div>
+              <div class="article-number-text">Quanto maior o lucro médio em relação à perda média, menor o win rate necessário para atingir o breakeven. Mas isso só funciona se os alvos definidos forem realmente atingidos na prática.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-title">A meta do Challenge pode ser dividida em uma série de trades.</div>
+              <div class="article-number-text">Fazer o cálculo com base no risco, R:R médio e win rate pode ajudar a estimar o número de trades necessários e evitar a tentativa de passar no Challenge com algumas entradas agressivas.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">5</div>
+            <div class="article-number-content">
+              <div class="article-number-title">A realização parcial de lucro altera o R:R final.</div>
+              <div class="article-number-text">Fechar parte de uma posição permite ao trader garantir lucro mais cedo, mas também reduz o lucro potencial caso o preço posteriormente atinja o alvo mais distante.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">6</div>
+            <div class="article-number-content">
+              <div class="article-number-title">O Stop Loss é definido antes da entrada.</div>
+              <div class="article-number-text">Seu posicionamento deve depender da estrutura do mercado e do nível em que o setup se torna inválido. Se o Stop Loss for amplo, o tamanho da posição deve ser ajustado – e não o nível de risco aceitável.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">7</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Durante um prop Challenge, o R:R deve ser considerado em conjunto com os limites de drawdown.</div>
+              <div class="article-number-text">O lucro potencial importa, mas é ainda mais importante entender antecipadamente a possível perda e como ela afeta o buffer restante da conta.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">8</div>
+            <div class="article-number-content">
+              <div class="article-number-title">A consistency rule depende das condições específicas de cada prop firm.</div>
+              <div class="article-number-text">Com um R:R alto, um único trade vencedor pode representar uma parcela significativa do resultado total, o que importa se a empresa tiver uma consistency rule. Na <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/pt?utm_source=blog&utm_medium=blog&utm_campaign=article'">Hash Hedge</span>, não há consistency rule nem durante o Challenge nem na etapa de Funded Account.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Pronto para Operar com Capital de uma Prop Firm?</div>
+        <div class="article-final-promo-descr">A Hash Hedge é uma plataforma de prop trading para operar RWA e cripto 24/7. Receba Funding de até <span class="t-b">US$200.000</span> e saque até <span class="t-b">90% dos seus lucros</span> em USDT diretamente para sua carteira.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://www.hashhedge.com/pt?utm_source=blog&utm_medium=blog&utm_campaign=article'">Comece um Challenge</div>
+      </div>
+
+      <div class="article-section">
+        <div class="article-section-title">Mais Artigos Úteis</div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://hashhedge.com/blog/the-strat-2-2-reversal-crypto/pt'">Strat 2-2 Reversal em Cripto: Como Identificar e Operar o Padrão de Reversão</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://hashhedge.com/blog/why-traders-fail-challenge/pt'">Por Que a Maioria dos Traders Falha em Prop Challenges e Como Evitar Isso</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://hashhedge.com/blog/why-traders-fail-prop-firm-challenge/pt'">5 razões pelas quais traders fracassam no prop challenge e como evitá-las</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>

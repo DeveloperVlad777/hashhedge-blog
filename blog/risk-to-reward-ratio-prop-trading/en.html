@@ -1,0 +1,302 @@
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog'">
+        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-text">Hash Hedge Blog</div>
+      </div>
+
+      <div class="article-hook">RISK-TO-REWARD RATIO IN A PROP CHALLENGE: WHAT TARGETS ACTUALLY WORK</div>
+
+      <div class="t-title">Risk-to-Reward Ratio in a Prop Challenge: What Targets Actually Work</div>
+
+      <div class="article-meta">
+        <span>13 min read</span>
+        <span class="article-meta-sep">|</span>
+        <span>September 28, 2026</span>
+      </div>
+
+      <img class="article-hero" src="https://raw.githubusercontent.com/DeveloperVlad777/hashhedge-blog/refs/heads/main/blog/risk-to-reward-ratio-prop-trading/hero-en.webp" alt="Risk-to-reward ratio in a prop challenge: setting targets based on market structure">
+
+      <div class="t-descr">Risk-to-Reward Ratio (R:R) is one of the fundamental metrics in trading, but in practice, it is often used too mechanically.</div>
+
+      <div class="t-descr">For example, a trader may decide in advance to take only trades with an R:R of at least 1:2, without considering market structure or where the realistic price target actually is.</div>
+
+      <div class="t-descr">On a prop Challenge, there are two additional factors to consider: <span class="article-link" onclick="window.location.href='https://hashhedge.com/blog/crypto-prop-firm-evaluation-challenge-rules'">drawdown limits</span> and the profit target.</div>
+
+      <div class="t-descr">That is why it is important not just to look for the highest possible R:R, but to understand how much you are risking on each trade, how realistic the target is, and how a potential loss will affect your remaining buffer before reaching the limits.</div>
+
+      <div class="t-descr">In this article, we'll break down how to calculate R:R during a prop Challenge, how to choose realistic targets, and why the "only trade setups with at least 1:2" rule does not work in every situation.</div>
+
+      <div class="article-toc">
+        <div class="article-toc-title">Table of Contents</div>
+        <div class="article-toc-list">
+          <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">What Does the Risk-to-Reward Ratio Show?</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">Why the "Always Trade at Least 1:2" Rule Doesn't Work</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">How to Choose Targets Based on Market Structure</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">How R:R Relates to the Challenge Profit Target</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">Partial Profit-Taking and the Actual R:R</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">Common R:R Mistakes During a Prop Challenge</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">Key Takeaways</div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">What Does the Risk-to-Reward Ratio Show?</div>
+        <div class="t-descr">The Risk-to-Reward Ratio (R:R) shows how much a trader is willing to lose on a trade relative to the potential profit.</div>
+        <div class="t-descr">For example, with an R:R of 1:2, the potential profit is twice the amount at risk. If the trader stands to lose $500 if the Stop Loss is triggered, the potential profit should be $1,000.</div>
+        <div class="t-descr">With an R:R of 1:3 and the same $500 risk, the potential target would be $1,500.</div>
+        <div class="t-descr">R:R is directly related to win rate. The higher the potential profit relative to risk, the lower the win rate required to break even.</div>
+
+        <div class="article-table">
+          <div class="article-table-row article-table-head">
+            <div class="article-table-cell">R:R</div>
+            <div class="article-table-cell">Minimum Win Rate to Break Even</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:1</div>
+            <div class="article-table-cell">50%</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:1.5</div>
+            <div class="article-table-cell">40%</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:2</div>
+            <div class="article-table-cell">33.3%</div>
+          </div>
+          <div class="article-table-row">
+            <div class="article-table-cell">1:3</div>
+            <div class="article-table-cell">25%</div>
+          </div>
+        </div>
+
+        <div class="t-descr">For example, with an R:R of 1:3, a strategy theoretically breaks even with a win rate of just 25%. With an R:R of 1:1, it requires a 50% win rate.</div>
+        <div class="t-descr">However, this is a mathematical model that does not account for commissions, slippage, or other trading costs. The stated R:R also says nothing about how often price actually reaches the Take Profit.</div>
+        <div class="t-descr">That is why a high R:R does not automatically make a trade better. If the chart provides a realistic target of only 1:1.5, setting the Take Profit at 1:3 just to achieve a more attractive ratio may simply reduce the probability of reaching it.</div>
+        <div class="t-descr">On a prop Challenge, daily and total drawdown limits as well as the profit target also come into play. Therefore, R:R should be considered together with the probability of reaching the target, risk per trade, and the remaining buffer before the limits, rather than as an isolated number.</div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Why the "Always Trade at Least 1:2" Rule Doesn't Work</div>
+        <div class="t-descr">The rule of taking only trades with an R:R of at least 1:2 makes sense mathematically, but it ignores the most important factor – actual market structure.</div>
+        <div class="t-descr">The Take Profit should be determined not by the desired risk-to-reward ratio, but by the level that price has a reasonable chance of reaching.</div>
+        <div class="t-descr">Imagine that the nearest significant resistance level corresponds to an R:R of 1:1.5. If you set the Take Profit at 1:2 just to follow the rule, the market will not move further simply because you want it to. Price may reach resistance, reverse, and eventually stop out the position.</div>
+        <div class="t-descr">In this situation, the problem is not the 1:1.5 R:R. The problem is that the 1:2 target did not align with market structure.</div>
+        <div class="t-descr">The logic should therefore work in reverse: first, the trader identifies a potential target on the chart, then calculates the resulting R:R and determines whether the trade fits their trading system.</div>
+        <div class="t-descr">If a structurally justified target gives an R:R of 1:1.5, that does not automatically make the trade bad. It should be evaluated together with the probability of the setup playing out, Stop Loss placement, and the strategy's historical statistics.</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">How to Choose Targets Based on Market Structure</div>
+        <div class="t-descr">The market itself provides reference points for Take Profit placement. Traders can use the same structural elements that help identify entries.</div>
+
+        <div class="article-section-subtitle">Swing Highs and Swing Lows</div>
+        <div class="t-descr">One of the clearest reference points is previous significant highs and lows.</div>
+        <div class="t-descr">For a long position, the nearest swing high can serve as a potential target; for a short position, the nearest swing low. Price has reacted in these areas before, and liquidity may be located beyond these extremes.</div>
+        <div class="t-descr">For example, if a long position is opened from an <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/order-blocks-crypto-trading'">order block</span> with the Stop Loss below it, the nearest significant swing high can be considered the first potential target.</div>
+        <div class="t-descr">If that high is also connected to a previous <span class="article-link" onclick="window.location.href='https://hashhedge.com/blog/algorithmic-trading-in-crypto-how-bots-influence-market-structure'">Break of Structure</span>, the level gains additional structural significance.</div>
+
+        <div class="article-section-subtitle">Fair Value Gaps</div>
+        <div class="t-descr">FVGs can also be used as intermediate profit-taking targets.</div>
+        <div class="t-descr">For example, if an FVG is located above a long entry while the next structural target is even higher, the trader can consider taking partial profit around the FVG and leaving the remaining portion of the position open until the next significant level.</div>
+        <div class="t-descr">This approach allows the trader to manage the trade as price moves rather than choosing between closing the entire position or waiting for a distant target.</div>
+
+        <div class="article-section-subtitle">Liquidity Pools</div>
+        <div class="t-descr">Areas where liquidity is concentrated can also serve as potential targets: equal highs and lows, previous swing points, and other visible levels.</div>
+        <div class="t-descr">For a long position, potential liquidity above the current price can serve as a target reference. For a short position, the logic is reversed – attention shifts to liquidity below the current price.</div>
+        <div class="t-descr">This concept is connected to <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/false-breakout-vs-liquidity-grab-vs-stop-hunt'">liquidity grabs</span>. For example, after liquidity below the lows has been swept and an upward move is confirmed, the next liquidity area above price may become one of the potential targets.</div>
+        <div class="t-descr">The main principle remains the same: first identify a logical target on the chart, then calculate the trade's R:R.</div>
+        <div class="t-descr">The Take Profit should not be moved to an arbitrary level just to achieve an attractive 1:2 or 1:3 ratio.</div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">How R:R Relates to the Challenge Profit Target</div>
+        <div class="t-descr">A Challenge profit target can be broken down into a series of individual trades in advance. To do this, you need three metrics: risk per trade, average R:R, and the strategy's win rate.</div>
+        <div class="t-descr">This provides a rough estimate of how many trades may be needed to reach the target while following the existing trading system.</div>
+
+        <div class="article-section-subtitle">How Many Trades Does It Take to Reach the Target?</div>
+        <div class="t-descr">Suppose the profit target is 10%, risk per trade is 0.75%, and the average R:R is 1:2.</div>
+        <div class="t-descr">With these parameters:</div>
+        <div class="article-checklist">
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">A winning trade generates 1.5%</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">A losing trade costs 0.75%</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">With a 50% win rate, the average mathematical expectancy is 0.375% per trade</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">Reaching 10% would require approximately 27 trades on average</div></div>
+        </div>
+        <div class="t-descr">This does not mean the target will be reached exactly on the 27th trade. Winning and losing trades can occur in different sequences, so the actual result will vary.</div>
+        <div class="t-descr">However, this calculation highlights an important point: you do not necessarily need to complete the Challenge target with just a few large trades. If the strategy has positive expectancy, progress can be made gradually while maintaining consistent risk and following the trading plan.</div>
+        <div class="t-descr">Hash Hedge has no maximum time limit for completing a Challenge, so traders are not constrained by a strict deadline and can wait for suitable setups.</div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Trade your own plan with up to $200,000 in capital</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://www.hashhedge.com?utm_source=blog&utm_medium=blog&utm_campaign=article'">Start a Challenge</div>
+      </div>
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">Partial Profit-Taking and the Actual R:R</div>
+        <div class="t-descr">R:R does not necessarily remain unchanged until a trade is fully closed. A trader can close portions of a position as price reaches predefined levels.</div>
+        <div class="t-descr">For example, the initial target may be 1:3, but there may be several significant structural levels along the way. Instead of waiting for one final target, part of the position can be closed earlier.</div>
+        <div class="t-descr">It is important to understand that partial profit-taking changes the final R:R of the entire trade. If half of the position is closed at 1:1 and the other half reaches 1:3, the final result will be lower than if the entire position had been closed at 1:3.</div>
+        <div class="t-descr">Therefore, traders should evaluate the actual average risk-to-reward ratio across completed trades rather than only the initial R:R shown on the chart.</div>
+
+        <div class="article-section-subtitle">Taking Partial Profit at 1:1</div>
+        <div class="t-descr">One way to manage a position is to close part of it after price has moved a distance equal to the initial risk.</div>
+        <div class="t-descr">For example, when price reaches 1:1, the trader closes 50% of the position. The remaining portion stays open until the next structural target.</div>
+        <div class="t-descr">The Stop Loss on the remaining position can then be moved closer to the entry point if this is part of the trading system and is supported by market structure.</div>
+        <div class="t-descr">This approach allows the trader to lock in part of the profit while maintaining exposure to further price movement.</div>
+        <div class="t-descr">However, there is a trade-off. If price moves directly to the more distant target, the final profit will be lower than if the entire position had been held until Take Profit.</div>
+        <div class="t-descr">Therefore, partial profit-taking is not automatically a more profitable strategy. Its effectiveness depends on the statistics of the specific trading system.</div>
+
+        <div class="article-section-subtitle">Scaling Out of a Position</div>
+        <div class="t-descr">If the potential move offers an R:R of 1:3 or higher, the position can be divided into several parts.</div>
+        <div class="t-descr">For example:</div>
+
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">First portion at 1:1.</div>
+              <div class="article-number-text">Part of the position is closed to lock in the first profit.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Second portion at 1:2.</div>
+              <div class="article-number-text">Another part is closed if the move continues.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Third portion at the structural target.</div>
+              <div class="article-number-text">The remaining position is held until a swing high, liquidity zone, or another predefined level.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-descr">This way, the trader does not depend on a single exit point and can gradually lock in profits as the move develops.</div>
+        <div class="t-descr">However, the levels and size of each partial exit should ideally be determined before entering the trade.</div>
+        <div class="t-descr">Constantly changing Take Profit levels after entry based on the current P&amp;L can quickly turn a predefined R:R setup into emotional position management.</div>
+        <div class="t-descr">On a prop <span class="article-link" onclick="window.location.href='https://www.hashhedge.com?utm_source=blog&utm_medium=blog&utm_campaign=article'">Challenge</span>, this is particularly important: the goal is not to squeeze the maximum possible profit out of every individual trade, but to maintain controlled risk and consistently progress toward the profit target.</div>
+      </div>
+
+      <div class="article-section" id="section-6">
+        <div class="article-section-title">Common R:R Mistakes During a Prop Challenge</div>
+
+        <div class="article-section-subtitle">The Target Is Beyond Several Strong Levels</div>
+        <div class="t-descr">If price needs to move through several significant support or resistance levels to reach a 1:3 R:R, the target may be too optimistic.</div>
+        <div class="t-descr">For example, a trader opens a long position with a 1:3 target, but strong resistance is already located at the 1:1.5 level. Price may reach it, reverse, and eventually stop out the position without ever reaching the original Take Profit.</div>
+        <div class="t-descr">That is why it is better to determine the target based on the nearest significant structural level rather than forcing it to fit a predefined R:R.</div>
+        <div class="t-descr">If market structure provides 1:1.5, that is the ratio that should be evaluated when deciding whether to take the trade. If the trading system requires a minimum of 1:3, it may be better to wait for another setup where the structural target is genuinely far enough away.</div>
+
+        <div class="article-section-subtitle">Widening the Stop Loss After Entry</div>
+        <div class="t-descr">Another common mistake is moving the Stop Loss farther away from the entry when price begins moving against the position.</div>
+        <div class="t-descr">For example, a trade is initially planned with an R:R of 1:2. After entering, however, the trader widens the Stop Loss to give price "more room." The potential loss increases, and the original risk calculation no longer applies.</div>
+        <div class="t-descr">The Stop Loss should ideally be determined before opening the position based on market structure. Its distance from the entry is then used when <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-funded-crypto-account'">calculating position size</span>.</div>
+        <div class="t-descr">If the level that invalidates the trade setup is broken after entry, moving the Stop Loss farther away does not make the original idea stronger. It only increases the potential loss.</div>
+
+        <div class="article-section-subtitle">Focusing Only on Potential Profit</div>
+        <div class="t-descr">A high R:R may look attractive, but a large potential profit should not become a reason to increase risk.</div>
+        <div class="t-descr">For example, with 0.75% risk, a trade with an R:R of 1:3 can potentially generate 2.25%. But if the Stop Loss is triggered, the trader still loses the predefined 0.75%.</div>
+        <div class="t-descr">Before entering, it is therefore important to evaluate not only the potential profit but also the size of the potential loss and the remaining buffer before the daily and total drawdown limits.</div>
+
+        <div class="article-section-subtitle">Ignoring the Consistency Rule</div>
+        <div class="t-descr">Some prop firms have a consistency rule that limits the percentage of total profit that can be generated from a single trade or trading day.</div>
+        <div class="t-descr">Therefore, a large profit from a high-R:R trade may affect whether the conditions of a particular Challenge are met.</div>
+        <div class="t-descr">For example, with 0.75% risk, a trade with an R:R of 1:4 can potentially generate 3%. If the prop firm has a consistency rule, such a result may represent too large a share of the total profit and require the trader to account for additional restrictions.</div>
+        <div class="t-descr">At <span class="article-link" onclick="window.location.href='https://www.hashhedge.com?utm_source=blog&utm_medium=blog&utm_campaign=article'">Hash Hedge</span>, the consistency rule does not apply at all – neither during the Challenge nor on the Funded Account. Therefore, a large profit on a single trading day does not violate the rules.</div>
+        <div class="t-descr">However, the absence of a consistency rule does not eliminate the need for risk management. A high R:R should not be used as a reason to increase position size or exceed the predefined amount of risk.</div>
+      </div>
+
+      <div class="article-section" id="section-7">
+        <div class="article-section-title">Key Takeaways</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">R:R shows the relationship between potential loss and potential profit.</div>
+              <div class="article-number-text">However, the Take Profit should be based on market structure rather than adjusted to fit a desired ratio.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">A realistic target matters more than an attractive R:R.</div>
+              <div class="article-number-text">A structurally justified 1:1.5 target may make more sense than 1:2 or 1:3 if price would need to move through several strong levels to reach them.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">R:R should be evaluated together with win rate.</div>
+              <div class="article-number-text">The higher the average profit relative to the average loss, the lower the win rate required to break even. But this only works if the stated targets are actually reached in practice.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-title">The Challenge target can be broken down into a series of trades.</div>
+              <div class="article-number-text">Calculating based on risk, average R:R, and win rate can help estimate the number of trades required and avoid trying to pass the Challenge with a few aggressive entries.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">5</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Partial profit-taking changes the final R:R.</div>
+              <div class="article-number-text">Closing part of a position allows the trader to lock in profit earlier, but it also reduces potential profit if price subsequently reaches the more distant target.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">6</div>
+            <div class="article-number-content">
+              <div class="article-number-title">The Stop Loss is determined before entry.</div>
+              <div class="article-number-text">Its placement should depend on market structure and the level at which the trade setup becomes invalid. If the Stop Loss is wide, the position size should be adjusted – not the acceptable level of risk.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">7</div>
+            <div class="article-number-content">
+              <div class="article-number-title">During a prop Challenge, R:R should be considered together with drawdown limits.</div>
+              <div class="article-number-text">Potential profit matters, but it is even more important to understand the potential loss in advance and how it affects the remaining account buffer.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">8</div>
+            <div class="article-number-content">
+              <div class="article-number-title">The consistency rule depends on the specific prop firm's conditions.</div>
+              <div class="article-number-text">With a high R:R, a single winning trade can account for a significant share of the total result, which matters if the firm has a consistency rule. Hash Hedge has no consistency rule during either the Challenge or the Funded Account stage.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Ready to Trade with Prop Firm Capital?</div>
+        <div class="article-final-promo-descr">Hash Hedge is a prop trading platform for trading RWA and crypto 24/7. Get funded with up to <span class="t-b">$200,000</span> and withdraw up to <span class="t-b">90% of your profits</span> in USDT directly to your wallet.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://www.hashhedge.com?utm_source=blog&utm_medium=blog&utm_campaign=article'">Start a Challenge</div>
+      </div>
+
+      <div class="article-section">
+        <div class="article-section-title">More Useful Articles</div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://hashhedge.com/blog/trading-psychology-losing-streaks-prop-challenge'">Trading Psychology During a Prop Challenge: How to Survive a Losing Streak and Keep Your Account</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://hashhedge.com/blog/false-breakout-vs-liquidity-grab-vs-stop-hunt'">False Breakout vs. Liquidity Sweep vs. Stop Hunt: What's the Difference and How to Identify Each on the Chart</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-funded-crypto-account'">Position Sizing and Risk Management on a Funded Account</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>

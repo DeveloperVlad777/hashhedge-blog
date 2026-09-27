@@ -167,6 +167,12 @@ hashhedge-blog/
     статус: готово
     примечание: hero-изображения в webp (hero-ru.webp, hero-en.webp, hero-pt.webp); inline-payout.png общий для всех языков; видео (YouTube 8F8oYzJG4f8) только в RU-версии
 
+24. «Ордер-блоки в криптотрейдинге: что это такое и как их торговать»
+    папка: blog/order-blocks-crypto-trading/
+    языки: ru, en, pt
+    статус: готово
+    примечание: hero-изображения извлечены из документа и сконвертированы в webp (hero-ru.webp, hero-en.webp, hero-pt.webp)
+
 (сюда добавляем новые статьи по мере создания)
 
 Ссылки CTA (регистрация, по языкам)

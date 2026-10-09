@@ -29,7 +29,16 @@
 
       <div class="t-descr">В интервью он рассказал, как потерял деньги на обучении, почему отказался от бинарных опционов, как выстроил свою торговую систему и что помогает ему зарабатывать на трейдинге.</div>
 
-      <div class="t-descr">📺 Полное интервью с Адамом на YouTube: СМОТРЕТЬ</div>
+      <div class="t-descr">📺 Полное интервью с Адамом на YouTube: <span class="article-link" onclick="window.location.href='https://youtu.be/S-nci3vCGQw'">СМОТРЕТЬ</span></div>
+
+      <div class="article-video" onclick="playYouTube(this,'S-nci3vCGQw')">
+        <img src="https://img.youtube.com/vi/S-nci3vCGQw/maxresdefault.jpg" alt="Полное интервью с Адамом на YouTube">
+        <div class="article-video-play-btn">
+          <svg width="32" height="36" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 18L2 35.3205L2 0.679491L32 18Z" fill="#101012"/>
+          </svg>
+        </div>
+      </div>
 
       <div class="article-toc">
         <div class="article-toc-title">Содержание</div>
@@ -316,4 +325,23 @@
 
     </div>
   </div>
+
+  <script>
+    function playYouTube(el, id) {
+      if (!id) return;
+      var wrapper = document.createElement('div');
+      wrapper.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%';
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.style.cssText = 'width:100%;height:100%;border:0';
+      wrapper.appendChild(iframe);
+      el.innerHTML = '';
+      el.appendChild(wrapper);
+      el.style.cursor = 'default';
+      el.onclick = null;
+    }
+  </script>
+
 </div>

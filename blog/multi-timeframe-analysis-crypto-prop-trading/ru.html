@@ -1,0 +1,339 @@
+<div class="t-article-wrapper">
+  <div class="t-container">
+    <div class="article-content">
+
+      <div class="article-backlink" onclick="window.location.href='https://hashhedge.com/blog/ru'">
+        <div class="article-backlink-arrow">←</div>
+        <div class="article-backlink-text">Hash Hedge Blog</div>
+      </div>
+
+      <div class="article-hook">МУЛЬТИТАЙМФРЕЙМОВЫЙ АНАЛИЗ: КАК НАХОДИТЬ ТОЧКИ ВХОДА С УЧЕТОМ СТАРШИХ ТАЙМФРЕЙМОВ</div>
+
+      <div class="t-title">Мультитаймфреймовый анализ: как находить точки входа с учетом старших таймфреймов</div>
+
+      <div class="article-meta">
+        <span>14 мин чтения</span>
+        <span class="article-meta-sep">|</span>
+        <span>13 октября 2026</span>
+      </div>
+
+      <img class="article-hero" src="https://raw.githubusercontent.com/DeveloperVlad777/hashhedge-blog/refs/heads/main/blog/multi-timeframe-analysis-crypto-prop-trading/hero-ru.webp" alt="Мультитаймфреймовый анализ в крипто-трейдинге: HTF, ITF и LTF">
+
+      <div class="t-descr">Ордер-блоки, <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/fair-value-gap-crypto-trading/ru'">Fair Value Gap (FVG)</span>, захваты ликвидности, премиум и дисконт зоны нельзя рассматривать в отрыве от общей структуры рынка.</div>
+
+      <div class="t-descr">Сетап может выглядеть убедительно на 15-минутном графике, но противоречить движению на старшем таймфрейме.</div>
+
+      <div class="t-descr">Мультитаймфреймовый анализ (MTA) – это анализ рынка сразу на нескольких таймфреймах. Старший таймфрейм помогает определить общий контекст и направление рынка, а младший - найти конкретный сетап и точку входа.</div>
+
+      <div class="t-descr">Идея проста: сначала понять, что происходит на рынке в целом, и только потом искать вход на младшем таймфрейме.</div>
+
+      <div class="article-toc">
+        <div class="article-toc-title">Содержание</div>
+        <div class="article-toc-list">
+          <div class="article-toc-item" onclick="document.getElementById('section-1').scrollIntoView({behavior:'smooth'})">Почему одного таймфрейма может быть недостаточно</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-2').scrollIntoView({behavior:'smooth'})">Фреймворк 3 таймфреймов</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-3').scrollIntoView({behavior:'smooth'})">Чтение старшего таймфрейма: с чего начать анализ</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-4').scrollIntoView({behavior:'smooth'})">Что делать, если направление на HTF неясно</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-5').scrollIntoView({behavior:'smooth'})">Промежуточный таймфрейм: как найти зону интереса</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-6').scrollIntoView({behavior:'smooth'})">Младший таймфрейм: как найти триггер для входа</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-7').scrollIntoView({behavior:'smooth'})">Размещение стопа с учетом структуры LTF</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-8').scrollIntoView({behavior:'smooth'})">Практический алгоритм анализа сверху вниз</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-9').scrollIntoView({behavior:'smooth'})">Типичные ошибки мультитаймфреймового анализа</div>
+          <div class="article-toc-item" onclick="document.getElementById('section-10').scrollIntoView({behavior:'smooth'})">Ключевые выводы</div>
+        </div>
+      </div>
+
+      <div class="article-section" id="section-1">
+        <div class="article-section-title">Почему одного таймфрейма может быть недостаточно</div>
+        <div class="t-descr">Представим, что на 15-минутном графике цена возвращается к бычьему ордер-блоку. Зона выглядит подходящей для лонга: есть реакция цены, понятная точка входа и уровень для стоп-лосса.</div>
+        <div class="t-descr">Но на 4-часовом графике картина может быть другой. Цена формирует понижающиеся максимумы и минимумы, а сам ордер-блок на 15-минутке находится в премиум зоне старшего диапазона.</div>
+        <div class="t-descr">Получается, что на младшем таймфрейме трейдер видит потенциальный лонг, а на старшем - рынок все еще сохраняет медвежью структуру.</div>
+        <div class="t-descr">Именно здесь помогает мультитаймфреймовый анализ. Он позволяет проверить сетап в более широком контексте и понять, соответствует ли идея текущей структуре рынка или идет против нее.</div>
+        <div class="t-descr">При этом старший таймфрейм не отменяет сигнал на младшем автоматически. Он дает дополнительный контекст, который трейдер учитывает вместе со структурой, ликвидностью и другими условиями своей торговой системы.</div>
+      </div>
+
+      <div class="article-section" id="section-2">
+        <div class="article-section-title">Фреймворк 3 таймфреймов</div>
+        <div class="t-descr">В мультитаймфреймовом анализе каждый <span class="article-link" onclick="window.location.href='https://hashhedge.com/blog/multiple-timeframes/ru'">таймфрейм</span> выполняет свою задачу: старший задает контекст, промежуточный помогает найти зону интереса, а младший используется для поиска точки входа.</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Старший таймфрейм (HTF)</div>
+              <div class="article-number-text">показывает общую структуру рынка. На нем трейдер определяет направление тренда или диапазон, отмечает крупные свинговые максимумы и минимумы, ордер-блоки, зоны премиум и дисконт и другие значимые уровни. Для дейтрейдинга в качестве HTF часто используют дневной или 4-часовой график.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Промежуточный таймфрейм (ITF)</div>
+              <div class="article-number-text">помогает детализировать картину. На нем можно определить более конкретную зону интереса и посмотреть, как цена ведет себя внутри структуры старшего таймфрейма. Например, в связке 4H - 1H - 15M промежуточным будет часовой график.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Младший таймфрейм (LTF)</div>
+              <div class="article-number-text">используется для поиска самого входа. Здесь трейдер следит за локальной структурой, реакцией на отмеченную зону, захватом ликвидности, FVG, ордер-блоком или другим триггером своей стратегии. Обычно для этого используют 15- или 5-минутный график.</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-descr">Таким образом, анализ идет от старшего таймфрейма к младшему: HTF → ITF → LTF. Сначала определяется общий контекст, затем зона интереса и только после этого конкретный сетап.</div>
+      </div>
+
+      <div class="article-section" id="section-3">
+        <div class="article-section-title">Чтение старшего таймфрейма: с чего начать анализ</div>
+        <div class="t-descr">Перед поиском точки входа стоит сначала понять, что происходит на старшем таймфрейме.</div>
+        <div class="t-descr">Для этого можно открыть дневной или 4-часовой график и ответить на 3 вопроса:</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Какая сейчас структура рынка?</div>
+              <div class="article-number-text">Цена формирует повышающиеся максимумы и минимумы, понижающиеся максимумы и минимумы или остается внутри диапазона? Это помогает определить бычий, медвежий или боковой контекст.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Где цена находится внутри текущего диапазона?</div>
+              <div class="article-number-text">Отметьте последний значимый диапазон и его середину. <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/premium-discount-zones-crypto-trading/ru'">Зоны премиум и дисконт</span> помогают понять, находится ли цена выше равновесия, ниже него или рядом с серединой диапазона.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-title">Какие важные уровни находятся рядом?</div>
+              <div class="article-number-text">Отметьте крупные максимумы и минимумы, зоны ликвидности, ордер-блоки и FVG. Они помогают заранее определить области, где стоит внимательнее следить за реакцией цены.</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-descr">После этого можно сформировать рабочий сценарий, а не сразу искать сделку. Например, при бычьей структуре и возврате цены в дисконт трейдер может в первую очередь искать подтверждения для лонга.</div>
+        <div class="t-descr">При медвежьей структуре и цене в премиуме - рассматривать сценарии для шорта.</div>
+        <div class="t-descr">При этом положение цены в премиуме или дисконте само по себе не является сигналом для входа, а направление старшего таймфрейма не гарантирует продолжения движения. Это контекст, который затем уточняется на промежуточном и младшем таймфреймах.</div>
+      </div>
+
+      <div class="article-section" id="section-4">
+        <div class="article-section-title">Что делать, если направление на HTF неясно</div>
+        <div class="t-descr">Не всегда старший таймфрейм дает понятную картину. Цена может находиться в середине широкого диапазона, а структура не показывать выраженного бычьего или медвежьего направления.</div>
+        <div class="t-descr">В такой ситуации необязательно искать направление на младшем таймфрейме только ради того, чтобы открыть сделку.</div>
+        <div class="t-descr">Если HTF не дает понятного контекста, можно дождаться выхода цены к значимому уровню или формирования более четкой структуры.</div>
+        <div class="t-descr">Неопределенность на старшем таймфрейме - это тоже часть анализа.</div>
+        <div class="t-descr">Она говорит о том, что сейчас может быть сложнее сформировать направленный сценарий, поэтому решение об отсутствии сделки вполне может быть частью торгового плана.</div>
+      </div>
+
+      <div class="article-section" id="section-5">
+        <div class="article-section-title">Промежуточный таймфрейм: как найти зону интереса</div>
+        <div class="t-descr">После анализа HTF можно перейти на промежуточный таймфрейм и уточнить, где именно стоит искать потенциальный вход.</div>
+        <div class="t-descr">Представим, что на старшем таймфрейме сохраняется бычья структура, а цена возвращается в дисконт. На часовом графике внутри этой области могут находиться дополнительные структурные элементы:</div>
+        <div class="article-checklist">
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">ордер-блок;</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">FVG;</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">предыдущий уровень <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/break-of-structure-change-of-character-crypto/ru'">слома структуры</span> (BOS), к которому возвращается цена;</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">локальный максимум или минимум;</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">зона ликвидности.</div></div>
+        </div>
+        <div class="t-descr">Совпадение нескольких элементов помогает определить зону интереса, за которой трейдер будет следить. Само достижение этой области еще не означает, что нужно открывать позицию.</div>
+        <div class="t-descr">Следующий этап - посмотреть на реакцию цены на младшем таймфрейме.</div>
+
+        <div class="article-section-subtitle">Что показывает структура ITF</div>
+        <div class="t-descr">Промежуточный таймфрейм также помогает понять, что происходит внутри более крупного движения.</div>
+        <div class="t-descr">Например, HTF может оставаться бычьим, в то время как на часовом графике цена временно формирует понижающиеся максимумы и минимумы. Это может быть обычным откатом внутри более крупного восходящего движения.</div>
+        <div class="t-descr">Но если структура ITF начинает меняться сильнее, первоначальный сценарий стоит пересмотреть.</div>
+        <div class="t-descr">Например, CHOCH (Change of Character) против направления старшего таймфрейма может указывать на то, что коррекция продолжается или структура начинает меняться.</div>
+        <div class="t-descr">Вместо автоматического входа в таком случае можно дождаться новых подтверждений и посмотреть, восстановится ли структура в направлении первоначального сценария.</div>
+      </div>
+
+      <div class="article-banner">
+        <div class="article-banner-content">
+          <div class="article-banner-logo">
+            <svg width="602" height="567" viewBox="0 0 602 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535"/>
+              <path d="M507.435 265.841L300.586 469.72L301.222 566.465L601.846 265.841L336.005 0V370.19L400.602 310.562V161.492L507.435 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535"/>
+              <path d="M94.4666 265.841L300.473 469.72L301.109 566.465L0.0557861 265.841L265.897 0V370.19L201.3 310.562V161.492L94.4666 265.841Z" fill="#FCD535" fill-opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="article-banner-title">Торгуйте по плану с капиталом до $200 000</div>
+        </div>
+        <div class="article-banner-button" onclick="window.location.href='https://app.hashhedge.live/ru/?utm_source=blog&utm_medium=blog&utm_campaign=article'">Начать челлендж</div>
+      </div>
+
+      <div class="article-section" id="section-6">
+        <div class="article-section-title">Младший таймфрейм: как найти триггер для входа</div>
+        <div class="t-descr">Когда на HTF определен общий контекст, а на ITF найдена зона интереса, трейдер переходит на 15- или 5-минутный график.</div>
+        <div class="t-descr">Задача LTF - не определить направление заново, а найти подтверждение торгового сценария внутри заранее отмеченной области.</div>
+        <div class="t-descr">На младшем таймфрейме можно следить за:</div>
+        <div class="article-checklist">
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">изменением локальной структуры через BOS или CHOCH;</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/liquidity-sweep-crypto-trading/ru'">захватом ликвидности</span> за локальным максимумом или минимумом;</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">реакцией цены на ордер-блок;</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">формированием FVG и последующей реакцией на него;</div></div>
+          <div class="article-check-item"><div class="article-check-icon">✓</div><div class="article-check-text">сильной реакцией цены после теста зоны интереса.</div></div>
+        </div>
+        <div class="t-descr">Например, цена приходит в бычью зону интереса с часового графика, снимает локальный минимум на 5M, возвращается выше уровня и формирует бычье изменение структуры.</div>
+        <div class="t-descr">Такой сценарий уже можно оценивать как потенциальный триггер в рамках заранее сформированной идеи.</div>
+        <div class="t-descr">Младший таймфрейм позволяет точнее определить момент входа и уровень отмены сценария, но не делает сделку автоматически надежнее.</div>
+        <div class="t-descr">Если контекст HTF или ITF изменился, сигнал на 5M сам по себе не должен становиться причиной игнорировать более широкую структуру рынка.</div>
+      </div>
+
+      <div class="article-section" id="section-7">
+        <div class="article-section-title">Размещение стопа с учетом структуры LTF</div>
+        <div class="t-descr">После появления триггера на младшем таймфрейме стоп-лосс стоит размещать там, где торговый сценарий перестает быть актуальным, а не просто на минимально возможном расстоянии от точки входа.</div>
+        <div class="t-descr">Например, после захвата ликвидности и бычьего изменения структуры таким уровнем может быть минимум, возврат ниже которого отменяет сформированный сценарий.</div>
+        <div class="t-descr">Использование LTF позволяет точнее определить уровень отмены идеи и в некоторых случаях получить более короткий стоп по сравнению со стопом за всей зоной HTF или ITF.</div>
+        <div class="t-descr">Это может улучшить <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/risk-to-reward-ratio-prop-trading/ru'">соотношение риска к прибыли</span>.</div>
+        <div class="t-descr">При этом короткий стоп сам по себе не делает сделку лучше. Сначала определяется логичный уровень отмены сценария, затем расстояние до стопа используется для расчета <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-funded-crypto-account/ru'">размера позиции</span> с заранее установленным риском.</div>
+        <div class="t-descr">Если стоп сработал, но цена все еще остается внутри зоны интереса ITF, первоначальная идея не обязательно полностью отменена.</div>
+        <div class="t-descr">Однако это не повод сразу перезаходить в позицию. Для нового входа должен сформироваться новый полноценный триггер на LTF.</div>
+      </div>
+
+      <div class="article-section" id="section-8">
+        <div class="article-section-title">Практический алгоритм анализа сверху вниз</div>
+        <div class="t-descr">Мультитаймфреймовый анализ удобнее проводить последовательно: от общей структуры к конкретной точке входа.</div>
+
+        <div class="article-section-subtitle">До торговой сессии</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Начните с дневного или 4-часового графика. Определите структуру рынка, положение цены относительно премиум и дисконт зон и отметьте значимые уровни: максимумы и минимумы, ордер-блоки, FVG и зоны ликвидности.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Сформируйте рабочий сценарий. Определите области, в которых потенциально может появиться интересующий вас сетап.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Установите алерты. Это позволит не следить за графиком постоянно, а вернуться к анализу, когда цена приблизится к отмеченной зоне.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-section-subtitle">Когда цена приходит в зону интереса</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Перейдите на промежуточный таймфрейм и проверьте, сохраняется ли первоначальный сценарий.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Уточните область интереса внутри более крупной зоны.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Перейдите на 15M или 5M и дождитесь триггера своей торговой системы: изменения структуры, захвата ликвидности, реакции на ордер-блок, FVG или другого заранее определенного сигнала.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Если условия для входа выполнены, рассчитайте размер позиции исходя из заранее установленного риска и расстояния до стопа.</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-descr">Главный принцип: нахождение цены в зоне интереса еще не означает, что нужно входить в сделку. Зона показывает, где искать сетап, а младший таймфрейм помогает определить, появился ли он.</div>
+
+        <div class="article-section-subtitle">После открытия позиции</div>
+        <div class="t-descr">Уровни старших таймфреймов можно использовать и для планирования выхода.</div>
+        <div class="t-descr">Например, ближайшие структурные уровни ITF могут выступать промежуточными целями, а более крупные максимумы, минимумы или зоны ликвидности HTF - следующими ориентирами для цены.</div>
+        <div class="t-descr">Конкретный способ фиксации позиции должен быть частью торговой системы и определяться до входа, а не меняться по ходу сделки без заранее установленных правил.</div>
+      </div>
+
+      <div class="article-section" id="section-9">
+        <div class="article-section-title">Типичные ошибки мультитаймфреймового анализа</div>
+
+        <div class="article-section-subtitle">Менять контекст HTF из-за каждого движения на LTF</div>
+        <div class="t-descr">Одна медвежья свеча на 15M не отменяет бычью структуру на 4H. Каждый таймфрейм отражает движение рынка в своем масштабе, поэтому краткосрочный откат может происходить внутри более крупного тренда.</div>
+        <div class="t-descr">Постоянная смена направления после каждого локального движения приводит к тому, что трейдер начинает переключаться между лонгами и шортами и искать подтверждение уже принятому эмоциональному решению. Это может стать одной из причин <span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/overtrading-prop-challenges/ru'">овертрейдинга</span>.</div>
+        <div class="t-descr">Пересматривать контекст HTF стоит тогда, когда изменяется сама структура выбранного старшего таймфрейма, а не просто появляется противоположное движение на LTF.</div>
+
+        <div class="article-section-subtitle">Входить только потому, что цена пришла в зону HTF</div>
+        <div class="t-descr">Ордер-блок или FVG на 4H показывает область потенциального интереса, но сам по себе не требует немедленного входа.</div>
+        <div class="t-descr">Цена может пройти глубже внутрь зоны, снять расположенную рядом ликвидность или вообще пробить ее. Поэтому в рамках мультитаймфреймового подхода после прихода цены в область HTF трейдер может перейти на младший таймфрейм и дождаться условий, предусмотренных его стратегией.</div>
+        <div class="t-descr">Это позволяет не угадывать точку разворота внутри большой зоны, а принимать решение после появления конкретного триггера.</div>
+
+        <div class="article-section-subtitle">Использовать слишком много таймфреймов</div>
+        <div class="t-descr">Больше таймфреймов не обязательно означает более качественный анализ. Если одновременно смотреть месячный, недельный, дневной, 4H, 2H, 1H, 15M и 5M, практически всегда можно найти противоречащие друг другу сигналы.</div>
+        <div class="t-descr">Для большинства внутридневных сценариев достаточно заранее определить несколько таймфреймов и закрепить за каждым конкретную задачу:</div>
+        <div class="t-descr"><span class="t-b">HTF - контекст → ITF - зона интереса → LTF - триггер.</span></div>
+        <div class="t-descr">Конкретные таймфреймы могут отличаться в зависимости от стратегии. Важнее не их количество, а последовательность анализа.</div>
+      </div>
+
+      <div class="article-section" id="section-10">
+        <div class="article-section-title">Ключевые выводы</div>
+        <div class="article-number-list">
+          <div class="article-number-item">
+            <div class="article-number-badge">1</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Мультитаймфреймовый анализ идет сверху вниз: HTF → ITF → LTF.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">2</div>
+            <div class="article-number-content">
+              <div class="article-number-text">HTF задает общий контекст: структуру рынка, ключевые уровни и положение цены внутри диапазона.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">3</div>
+            <div class="article-number-content">
+              <div class="article-number-text">ITF помогает найти зону интереса, в которой стоит искать потенциальный сетап.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">4</div>
+            <div class="article-number-content">
+              <div class="article-number-text">LTF используется для поиска конкретного триггера, а не для повторного определения общего направления рынка.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">5</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Стоп размещается там, где торговый сценарий становится недействительным. LTF помогает точнее определить этот уровень, но короткий стоп не является целью сам по себе.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">6</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Движение на младшем таймфрейме не отменяет автоматически структуру HTF. Для пересмотра контекста должны измениться условия, на которых первоначальный сценарий был построен.</div>
+            </div>
+          </div>
+          <div class="article-number-item">
+            <div class="article-number-badge">7</div>
+            <div class="article-number-content">
+              <div class="article-number-text">Нет необходимости добавлять как можно больше таймфреймов. Для системного анализа достаточно заранее определить роль каждого используемого графика.</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-descr">В <span class="article-link" onclick="window.location.href='https://app.hashhedge.live/ru/?utm_source=blog&utm_medium=blog&utm_campaign=article'">Hash Hedge</span> максимального срока прохождения челленджа нет, поэтому трейдер не ограничен жестким дедлайном.</div>
+        <div class="t-descr">Это позволяет дождаться условий своей торговой системы и не открывать позицию только ради того, чтобы быстрее выполнить цель челленджа.</div>
+      </div>
+
+      <div class="article-final-promo">
+        <div class="article-final-promo-title">Готовы торговать на капитале проп-фирмы?</div>
+        <div class="article-final-promo-descr">Hash Hedge – проп-трейдинговая платформа для торговли RWA и криптовалютами 24/7. Получите фондирование до <span class="t-b">$200 000</span> и выводите до <span class="t-b">90% прибыли</span> в USDT прямо на свой кошелёк.</div>
+        <div class="article-final-promo-button" onclick="window.location.href='https://app.hashhedge.live/ru/?utm_source=blog&utm_medium=blog&utm_campaign=article'">Начать челлендж</div>
+      </div>
+
+      <div class="article-section">
+        <div class="article-section-title">Больше полезных статей</div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/premium-discount-zones-crypto-trading/ru'">Премиум и дисконт зоны в криптотрейдинге</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/break-of-structure-change-of-character-crypto/ru'">BOS и CHOCH: как читать рыночную структуру в крипте</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/order-blocks-crypto-trading/ru'">Ордер-блоки в криптотрейдинге: как находить и торговать</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/risk-to-reward-ratio-prop-trading/ru'">Соотношение риска к прибыли на проп-оценке</span></div>
+        <div class="t-descr"><span class="article-link" onclick="window.location.href='https://www.hashhedge.com/blog/position-sizing-funded-crypto-account/ru'">Размер позиции на funded-аккаунте</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>

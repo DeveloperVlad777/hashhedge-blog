@@ -211,6 +211,24 @@ hashhedge-blog/
     и сконвертированы в webp (hero-ru/en/pt.webp; inline-payout-1/2/3.webp —
     общие для всех языков); видео будет только в RU-версии — ссылку добавить позже
 
+31. «Мультитаймфреймовый анализ: как находить точки входа с учетом старших таймфреймов»
+    папка: blog/multi-timeframe-analysis-crypto-prop-trading/
+    языки: ru, en, pt
+    статус: готово
+    примечание: hero-изображения извлечены из документа в webp (hero-ru/en/pt.webp)
+
+32. «Торговля на новостях на Funded-счете: возможности и риски»
+    папка: blog/trading-news-events-funded-account/
+    языки: ru, en, pt
+    статус: готово
+    примечание: hero-изображения извлечены из документа в webp (hero-ru/en/pt.webp)
+
+33. «Чем торговать на проп-челлендже: Bitcoin, Ethereum или альткоины»
+    папка: blog/altcoin-vs-bitcoin-ethereum-prop-challenge/
+    языки: ru, en, pt
+    статус: готово
+    примечание: hero-изображения извлечены из документа в webp (hero-ru/en/pt.webp)
+
 (сюда добавляем новые статьи по мере создания)
 
 Ссылки CTA (регистрация, по языкам)
